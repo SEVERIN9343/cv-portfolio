@@ -1,13 +1,9 @@
 :root{
   --blue:#2aa7df;
-  --blue-deep:#1E88C9;
-
-  /* Background un peu plus gris foncé (comme tu demandes) */
-  --bg:#EEF2F6;
-
+  --navy:#0B1F3B;          /* ✅ bleu marine */
+  --bg:#EEF2F6;            /* ✅ contenu inchangé */
   --black:#0b1220;
   --text:#1f2937;
-  --muted:#556170;
   --line:#e6edf4;
 
   /* 2 cm ≈ 76px */
@@ -43,7 +39,6 @@ section{ scroll-margin-top: 92px; }
   opacity:0;
   transform: translateY(18px);
   transition: opacity .65s ease, transform .65s ease;
-  will-change: opacity, transform;
 }
 .reveal.is-visible{
   opacity:1;
@@ -56,13 +51,13 @@ section{ scroll-margin-top: 92px; }
   .rail-bottom.is-visible::after{animation:none;}
 }
 
-/* ===== Header bleu + texte blanc ===== */
+/* ===== Header (bleu marine) ===== */
 .topbar{
   position:sticky;
   top:0;
   z-index:50;
-  background: var(--blue-deep);
-  border-bottom:none;
+  background: var(--navy);
+  border-bottom: none;
 }
 .topbar__inner{
   display:flex;
@@ -79,11 +74,10 @@ section{ scroll-margin-top: 92px; }
   text-decoration:none;
   font-weight:900;
   color:#fff;
-  letter-spacing:.2px;
 }
 .brand__dot{
   width:11px;height:11px;border-radius:999px;
-  background: #fff;
+  background:#fff;
   box-shadow: 0 0 0 6px rgba(255,255,255,.18);
 }
 .brand__text{color:#fff;}
@@ -101,13 +95,21 @@ section{ scroll-margin-top: 92px; }
   border-radius:999px;
 }
 .nav a:hover{
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.14);
   color:#fff;
 }
 
-.topbar__cta{display:flex;gap:10px;}
+/* ✅ Bloc télécharger (tout le bloc en bleu marine) */
+.topbar__cta{
+  display:flex;
+  gap:10px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08); /* bloc dans la bande */
+  border: 1px solid rgba(255,255,255,0.15);
+}
 
-/* Boutons petits dans la bande */
+/* Boutons (petits) */
 .btn--top{
   padding: 8px 12px;
   font-size: 13px;
@@ -118,7 +120,6 @@ section{ scroll-margin-top: 92px; }
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
   padding: 11px 15px;
   border-radius:999px;
   border:2px solid var(--blue);
@@ -126,7 +127,6 @@ section{ scroll-margin-top: 92px; }
   color:#fff;
   text-decoration:none;
   font-weight:900;
-  letter-spacing:.2px;
   transition: transform .15s ease;
   font-size: 14px;
 }
@@ -137,16 +137,15 @@ section{ scroll-margin-top: 92px; }
   background: transparent;
   color: var(--blue);
 }
-
 .btn--small{
   padding: 9px 13px;
   font-size: 13px;
 }
 
-/* Header buttons override (blanc / transparent) */
+/* ✅ Boutons header : blancs (pro + lisible sur bleu marine) */
 .topbar .btn{
   background:#fff;
-  color: var(--blue-deep);
+  color: var(--navy);
   border-color:#fff;
 }
 .topbar .btn--outline{
@@ -168,23 +167,23 @@ section{ scroll-margin-top: 92px; }
   display:block;
   height:2px;
   width:20px;
-  background: #fff;
+  background:#fff;
   margin: 5px auto;
   border-radius:2px;
 }
 
 .mobile-nav{
   display:none;
-  border-top:1px solid rgba(255,255,255,.25);
+  border-top:1px solid rgba(255,255,255,.22);
   padding: 10px 0 16px;
-  background: var(--blue-deep);
+  background: var(--navy);
 }
 .mobile-nav a{
   display:block;
   padding:12px 0;
   text-decoration:none;
   font-weight:900;
-  color: #fff;
+  color:#fff;
 }
 .mobile-nav__actions{
   display:flex;
@@ -252,7 +251,6 @@ section{ scroll-margin-top: 92px; }
   height: 420px;
   object-fit: cover;
 }
-
 .kicker{
   margin:0 0 10px;
   font-weight:900;
@@ -268,7 +266,6 @@ section{ scroll-margin-top: 92px; }
   color: var(--black);
 }
 .accent{ color: var(--blue); }
-
 .lead{
   margin:0 0 16px;
   color: rgba(11,18,32,.72);
@@ -286,7 +283,6 @@ section{ scroll-margin-top: 92px; }
 }
 .info{
   display:flex;
-  align-items:flex-start;
   gap:10px;
   font-weight:800;
   color: rgba(11,18,32,.72);
@@ -297,9 +293,7 @@ section{ scroll-margin-top: 92px; }
   border-radius:999px;
   background: var(--blue);
   margin-top: 7px;
-  flex:0 0 auto;
 }
-
 .hero__actions{
   margin-top: 20px;
   display:flex;
@@ -322,7 +316,7 @@ section{ scroll-margin-top: 92px; }
   box-shadow: 0 14px 40px rgba(11,18,32,.06);
 }
 
-/* Bande bleue UNIQUEMENT en bas (À propos) */
+/* Bande bleue en bas (À propos) */
 .rail-bottom{
   overflow:hidden;
 }
@@ -332,7 +326,7 @@ section{ scroll-margin-top: 92px; }
   left:16px;
   right:16px;
   bottom:0;
-  height:7px;                 /* plus visible */
+  height:7px;
   background: var(--blue);
   border-radius: 12px;
   opacity: .98;
@@ -401,14 +395,15 @@ section{ scroll-margin-top: 92px; }
   font-size: 13px;
 }
 
-/* ===== Timeline CENTRÉE ===== */
+/* ===== Experiences (fix propre) ===== */
 .timeline{
   display:grid;
   gap: 18px;
 }
-.timeline--center .t{ display:block; }
-.timeline--center .t__body{ max-width: 820px; margin: 0 auto; }
-
+.timeline--center .t__body{
+  max-width: 820px;
+  margin: 0 auto;
+}
 .t__body{
   background: rgba(255,255,255,.85);
   border:1px solid rgba(11,18,32,.08);
@@ -459,7 +454,6 @@ section{ scroll-margin-top: 92px; }
   gap: 10px;
 }
 
-/* Flottement léger */
 .floaty.is-visible{
   animation: float 3.4s ease-in-out infinite;
 }
@@ -486,14 +480,13 @@ section{ scroll-margin-top: 92px; }
 }
 .contact__actions{ margin-top: 16px; }
 
-/* ===== Footer même couleur que header ===== */
+/* ===== Footer (bleu marine) ===== */
 .footer{
   margin-top: 46px;
   padding: 34px 0;
-  background: var(--blue-deep);
+  background: var(--navy);
   color:#fff;
   text-align:center;
-  border-top:none;
 }
 .footer__actions{
   display:flex;
@@ -511,10 +504,9 @@ section{ scroll-margin-top: 92px; }
   color:#fff;
   text-decoration:underline;
 }
-
 .footer__actions .btn{
   background:#fff;
-  color: var(--blue-deep);
+  color: var(--navy);
   border-color:#fff;
 }
 .footer__actions .btn--outline{
