@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top" aria-label="Retour en haut">
@@ -26,10 +25,10 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- PDF uniquement en haut + bas -->
+      <!-- Boutons plus petits dans la bande -->
       <div class="topbar__cta">
-        <a class="btn btn--outline" href="cv.pdf.pdf" target="_blank" rel="noopener">Télécharger CV</a>
-        <a class="btn" href="portfolio.pdf.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+        <a class="btn btn--outline btn--top" href="cv.pdf.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+        <a class="btn btn--top" href="portfolio.pdf.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
       </div>
 
       <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -56,23 +55,15 @@
     <!-- HERO -->
     <section class="hero section">
       <div class="container hero__grid">
-        <!-- IMAGE à GAUCHE -->
         <div class="hero__left reveal" data-delay="0">
           <div class="photo">
-            <img
-              src="assets/img/WhatsApp Image 2026-01-08 at 22.41.37.jpeg"
-              alt="Photo de profil — OGAH Séverin"
-            />
+            <img src="assets/img/WhatsApp Image 2026-01-08 at 22.41.37.jpeg" alt="Photo de profil — OGAH Séverin" />
           </div>
         </div>
 
-        <!-- TEXTE à DROITE -->
         <div class="hero__right reveal" data-delay="120">
           <p class="kicker">Marketing Digital • Développement web • SEO</p>
-
-          <h1 class="h1">
-            OGAH <span class="accent">Sévérin</span>
-          </h1>
+          <h1 class="h1">OGAH <span class="accent">Sévérin</span></h1>
 
           <p class="lead">
             En cours de formation en <strong>Master 2 Marketing Digital</strong>, spécialisé en développement web,
@@ -99,19 +90,14 @@
       <div class="container">
         <div class="section__head reveal" data-delay="0">
           <h2 class="h2">À propos</h2>
-          <p class="sub">
-            Profil orienté performance : création web, optimisation SEO et suivi des données (tracking & analytics).
-          </p>
+          <p class="sub">Profil orienté performance : création web, optimisation SEO et suivi des données (tracking & analytics).</p>
         </div>
 
-        <!-- blocs horizontaux (2 cartes côte à côte) -->
+        <!-- Bande bleue UNIQUEMENT en bas des 2 blocs -->
         <div class="cards">
-          <article class="card reveal" data-delay="0">
+          <article class="card reveal rail-bottom floaty" data-delay="0">
             <h3 class="h3">Objectif</h3>
-            <p>
-              Mettre mes compétences en développement web et marketing digital au service de projets concrets
-              (site, référencement, acquisition, analytics).
-            </p>
+            <p>Mettre mes compétences en développement web et marketing digital au service de projets concrets (site, référencement, acquisition, analytics).</p>
             <ul class="list">
               <li>Création / optimisation WordPress</li>
               <li>SEO technique + contenu</li>
@@ -119,11 +105,9 @@
             </ul>
           </article>
 
-          <article class="card reveal" data-delay="120">
+          <article class="card reveal rail-bottom floaty" data-delay="140">
             <h3 class="h3">Atouts</h3>
-            <p>
-              Sérieux, autonome, orienté résultat, avec un bon sens relationnel et une capacité à apprendre vite.
-            </p>
+            <p>Sérieux, autonome, orienté résultat, avec un bon sens relationnel et une capacité à apprendre vite.</p>
             <ul class="list">
               <li>Sens relationnel</li>
               <li>Prise d’initiative</li>
@@ -145,26 +129,17 @@
 
         <div class="skills">
           <div class="skill reveal" data-delay="0">
-            <div class="skill__top">
-              <strong>Création & gestion de sites (WordPress)</strong>
-              <span>70%</span>
-            </div>
+            <div class="skill__top"><strong>Création & gestion de sites (WordPress)</strong><span>70%</span></div>
             <div class="bar"><span style="width:70%"></span></div>
           </div>
 
-          <div class="skill reveal" data-delay="120">
-            <div class="skill__top">
-              <strong>SEO & optimisation</strong>
-              <span>70%</span>
-            </div>
+          <div class="skill reveal" data-delay="140">
+            <div class="skill__top"><strong>SEO & optimisation</strong><span>70%</span></div>
             <div class="bar"><span style="width:70%"></span></div>
           </div>
 
-          <div class="skill reveal" data-delay="240">
-            <div class="skill__top">
-              <strong>Tracking & Traffic (GTM, GA4, Ads, Pixel)</strong>
-              <span>65%</span>
-            </div>
+          <div class="skill reveal" data-delay="280">
+            <div class="skill__top"><strong>Tracking & Traffic (GTM, GA4, Ads, Pixel)</strong><span>65%</span></div>
             <div class="bar"><span style="width:65%"></span></div>
           </div>
         </div>
@@ -182,7 +157,7 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE (blocs horizontaux + apparition l’un après l’autre) -->
+    <!-- EXPERIENCES (centré) -->
     <section id="experience" class="section">
       <div class="container">
         <div class="section__head reveal" data-delay="0">
@@ -190,10 +165,10 @@
           <p class="sub">Ce que j’ai fait, concrètement.</p>
         </div>
 
-        <div class="timeline">
+        <div class="timeline timeline--center">
           <article class="t reveal" data-delay="0">
-            <div class="t__date">Avr 2024 → Oct 2025</div>
             <div class="t__body">
+              <div class="t__meta">Avr 2024 → Oct 2025</div>
               <div class="t__title">Manager & Chargé de la stratégie de fidélisation</div>
               <div class="t__place">COTON DOUX — Paris</div>
               <ul>
@@ -206,8 +181,8 @@
           </article>
 
           <article class="t reveal" data-delay="140">
-            <div class="t__date">Fév 2021 → Juin 2023</div>
             <div class="t__body">
+              <div class="t__meta">Fév 2021 → Juin 2023</div>
               <div class="t__title">Responsable magasin & Community Manager</div>
               <div class="t__place">Mario Exclusive (Flanad Sarl) — Lomé</div>
               <ul>
@@ -219,8 +194,8 @@
           </article>
 
           <article class="t reveal" data-delay="280">
-            <div class="t__date">Mar 2020 → Juin 2020</div>
             <div class="t__body">
+              <div class="t__meta">Mar 2020 → Juin 2020</div>
               <div class="t__title">Stagiaire Commercial (terrain)</div>
               <div class="t__place">ADK Consulting — Lomé</div>
               <ul>
@@ -252,7 +227,7 @@
             </ul>
           </article>
 
-          <article class="card reveal" data-delay="120">
+          <article class="card reveal" data-delay="140">
             <h3 class="h3">Master 1 Marketing — Stratégie Commerciale</h3>
             <p class="muted">IPAG Business School — Paris (depuis sept. 2023)</p>
             <ul class="list">
@@ -265,7 +240,7 @@
       </div>
     </section>
 
-    <!-- PROJETS : blocs horizontaux + apparition 1 par 1 + flottement -->
+    <!-- PROJETS -->
     <section id="projets" class="section">
       <div class="container">
         <div class="section__head reveal" data-delay="0">
@@ -275,9 +250,7 @@
 
         <div class="projects">
           <article class="project reveal floaty" data-delay="0">
-            <div class="project__img">
-              <img src="assets/img/Image1.png" alt="Projet 1">
-            </div>
+            <div class="project__img"><img src="assets/img/Image1.png" alt="Projet 1"></div>
             <div class="project__body">
               <h3 class="h3">Site mannequinat (WordPress)</h3>
               <p class="muted">Premier site créé pour pratiquer le développement web et la mise en ligne.</p>
@@ -286,9 +259,7 @@
           </article>
 
           <article class="project reveal floaty" data-delay="140">
-            <div class="project__img">
-              <img src="assets/img/Image2.png" alt="Projet 2">
-            </div>
+            <div class="project__img"><img src="assets/img/Image2.png" alt="Projet 2"></div>
             <div class="project__body">
               <h3 class="h3">Catalogue en ligne (Mario Exclusive)</h3>
               <p class="muted">Projet orienté présentation et prospection commerciale.</p>
@@ -297,9 +268,7 @@
           </article>
 
           <article class="project reveal floaty" data-delay="280">
-            <div class="project__img">
-              <img src="assets/img/Image3.png" alt="Projet 3">
-            </div>
+            <div class="project__img"><img src="assets/img/Image3.png" alt="Projet 3"></div>
             <div class="project__body">
               <h3 class="h3">Site entreprise anti-nuisibles</h3>
               <p class="muted">Création + personnalisation WordPress + optimisation SEO.</p>
@@ -310,7 +279,7 @@
       </div>
     </section>
 
-    <!-- CONTACT + FOOTER PDF -->
+    <!-- CONTACT -->
     <section id="contact" class="section section--soft">
       <div class="container">
         <div class="section__head reveal" data-delay="0">
@@ -319,11 +288,10 @@
         </div>
 
         <div class="contact reveal" data-delay="0">
-          <div class="contact__box">
+          <div class="contact__box contact__box--center">
             <div class="contact__row">📞 <strong>+33 6 61 06 95 06</strong></div>
             <div class="contact__row">✉️ <strong>severinolagassou@gmail.com</strong></div>
             <div class="contact__row">📍 Arpajon / Paris</div>
-
             <div class="contact__actions">
               <a class="btn" href="mailto:severinolagassou@gmail.com">Envoyer un email</a>
             </div>
@@ -345,7 +313,6 @@
   </main>
 
   <script>
-    // Burger menu
     const burger = document.querySelector('.burger');
     const mobileNav = document.querySelector('[data-mobile-nav]');
 
@@ -362,7 +329,6 @@
       });
     });
 
-    // Reveal + delay (apparition 1 par 1)
     const items = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -377,7 +343,6 @@
 
     items.forEach(el => io.observe(el));
 
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
