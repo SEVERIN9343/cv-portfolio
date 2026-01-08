@@ -1,1 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OGAH Séverin — CV & Portfolio</title>
+  <meta name="description" content="CV numérique et portfolio de OGAH Séverin (Marketing digital, Développement web, SEO)." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER (seulement les PDF ici + menu) -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand__dot"></span>
+        <span class="brand__text">OGAH Séverin</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#experience">Expériences</a>
+        <a href="#formation">Formation</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="topbar__cta">
+        <!-- IMPORTANT: garde ces noms si tes PDF s'appellent bien comme ça -->
+        <a class="btn btn--outline" href="cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+        <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+      </div>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" data-mobile-nav>
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#experience">Expériences</a>
+      <a href="#formation">Formation</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+
+      <div class="mobile-nav__actions">
+        <a class="btn btn--outline" href="cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+        <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO PRO : photo à gauche, texte + contacts à droite -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left reveal">
+          <div class="photo">
+            <img
+              src="assets/img/WhatsApp Image 2026-01-08 at 22.41.37.jpeg"
+              alt="Photo de profil — OGAH Séverin"
+            />
+          </div>
+        </div>
+
+        <div class="hero__right reveal">
+          <p class="kicker">Marketing Digital • Développement web • SEO</p>
+
+          <h1 class="h1">
+            OGAH <span class="accent">Sévérin</span>
+          </h1>
+
+          <p class="lead">
+            En cours de formation en <strong>Master 2 Marketing Digital</strong>, spécialisé en développement web,
+            UX/UI et stratégie social media. <strong>Recherche :</strong> stage à partir de janvier 2026 (6 mois minimum).
+          </p>
+
+          <div class="infos">
+            <div class="info"><span class="dot"></span> 📍 Arpajon (91290) / Paris</div>
+            <div class="info"><span class="dot"></span> 📞 +33 6 61 06 95 06</div>
+            <div class="info"><span class="dot"></span> ✉️ severinolagassou@gmail.com</div>
+            <div class="info"><span class="dot"></span> 🚗 Permis B</div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--outline" href="#projets">Voir mes projets</a>
+            <a class="btn" href="#contact">Me contacter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section id="apropos" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="h2">À propos</h2>
+          <p class="sub">
+            Profil orienté performance : création web, optimisation SEO et suivi des données (tracking & analytics).
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3 class="h3">Objectif</h3>
+            <p>
+              Mettre mes compétences en développement web et marketing digital au service de projets concrets
+              (site, référencement, acquisition, analytics).
+            </p>
+            <ul class="list">
+              <li>Création / optimisation WordPress</li>
+              <li>SEO technique + contenu</li>
+              <li>Tracking : GTM, GA4, Meta Pixel</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="h3">Atouts</h3>
+            <p>
+              Sérieux, autonome, orienté résultat, avec un bon sens relationnel et une capacité à apprendre vite.
+            </p>
+            <ul class="list">
+              <li>Sens relationnel</li>
+              <li>Prise d’initiative</li>
+              <li>Esprit d’équipe</li>
+              <li>Sens des responsabilités</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section section--soft">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="h2">Compétences</h2>
+          <p class="sub">Web + data + social media, orienté efficacité.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill reveal">
+            <div class="skill__top">
+              <strong>Création & gestion de sites (WordPress)</strong>
+              <span>70%</span>
+            </div>
+            <div class="bar"><span style="width:70%"></span></div>
+          </div>
+
+          <div class="skill reveal">
+            <div class="skill__top">
+              <strong>SEO & optimisation</strong>
+              <span>70%</span>
+            </div>
+            <div class="bar"><span style="width:70%"></span></div>
+          </div>
+
+          <div class="skill reveal">
+            <div class="skill__top">
+              <strong>Tracking & Traffic (GTM, GA4, Ads, Pixel)</strong>
+              <span>65%</span>
+            </div>
+            <div class="bar"><span style="width:65%"></span></div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag reveal">WordPress</span>
+          <span class="tag reveal">Canva</span>
+          <span class="tag reveal">Meta Business</span>
+          <span class="tag reveal">Hootsuite</span>
+          <span class="tag reveal">Power BI</span>
+          <span class="tag reveal">Excel</span>
+          <span class="tag reveal">PowerPoint</span>
+          <span class="tag reveal">ChatGPT / Gemini</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="h2">Expériences</h2>
+          <p class="sub">Ce que j’ai fait, concrètement.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="t reveal">
+            <div class="t__date">Avr 2024 → Oct 2025</div>
+            <div class="t__body">
+              <div class="t__title">Manager & Chargé de la stratégie de fidélisation</div>
+              <div class="t__place">COTON DOUX — Paris</div>
+              <ul>
+                <li>Management de l’équipe de vente</li>
+                <li>Gestion des stocks + formation continue</li>
+                <li>E-mailing & SMS marketing</li>
+                <li>Suivi client + enquêtes de satisfaction</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="t reveal">
+            <div class="t__date">Fév 2021 → Juin 2023</div>
+            <div class="t__body">
+              <div class="t__title">Responsable magasin & Community Manager</div>
+              <div class="t__place">Mario Exclusive (Flanad Sarl) — Lomé</div>
+              <ul>
+                <li>Gestion relation client & stock</li>
+                <li>Mise à jour site web + analyse performance</li>
+                <li>SEO + création/animation réseaux sociaux</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="t reveal">
+            <div class="t__date">Mar 2020 → Juin 2020</div>
+            <div class="t__body">
+              <div class="t__title">Stagiaire Commercial (terrain)</div>
+              <div class="t__place">ADK Consulting — Lomé</div>
+              <ul>
+                <li>Prospection B2C (formations)</li>
+                <li>Prospection téléphonique B2B + prise de RDV</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATION -->
+    <section id="formation" class="section section--soft">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="h2">Formation</h2>
+          <p class="sub">Parcours académique + modules utiles.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3 class="h3">Master 2 Marketing Digital</h3>
+            <p class="muted">IPAG Business School — Paris (depuis oct. 2024)</p>
+            <ul class="list">
+              <li>Certification Google Ads & GA4</li>
+              <li>Google Tag Manager : balises (Ads, GA, Pixel…)</li>
+              <li>Stratégie digitale / CRM & Data</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="h3">Master 1 Marketing — Stratégie Commerciale</h3>
+            <p class="muted">IPAG Business School — Paris (depuis sept. 2023)</p>
+            <ul class="list">
+              <li>Diagnostic de marché / marque</li>
+              <li>Segmentation • ciblage • positionnement</li>
+              <li>Compréhension du consommateur</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="h2">Projets</h2>
+          <p class="sub">Quelques réalisations web.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__img">
+              <img src="assets/img/Image1.png" alt="Projet 1">
+            </div>
+            <div class="project__body">
+              <h3 class="h3">Site mannequinat (WordPress)</h3>
+              <p class="muted">Premier site créé pour pratiquer le développement web et la mise en ligne.</p>
+              <a class="btn btn--outline btn--small" href="https://acteurmode.wordpress.com/" target="_blank" rel="noopener">Voir</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__img">
+              <img src="assets/img/Image2.png" alt="Projet 2">
+            </div>
+            <div class="project__body">
+              <h3 class="h3">Catalogue en ligne (Mario Exclusive)</h3>
+              <p class="muted">Projet orienté présentation et prospection commerciale.</p>
+              <a class="btn btn--outline btn--small" href="https://marioexlusiveparis.wordpress.com/" target="_blank" rel="noopener">Voir</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__img">
+              <img src="assets/img/Image3.png" alt="Projet 3">
+            </div>
+            <div class="project__body">
+              <h3 class="h3">Site entreprise anti-nuisibles</h3>
+              <p class="muted">Création + personnalisation WordPress + optimisation SEO.</p>
+              <a class="btn btn--outline btn--small" href="https://www.vpce-expert.com/" target="_blank" rel="noopener">Voir</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + FOOTER PDF (seulement en bas ici) -->
+    <section id="contact" class="section section--soft">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="h2">Contact</h2>
+          <p class="sub">Disponible à partir de janvier 2026.</p>
+        </div>
+
+        <div class="contact reveal">
+          <div class="contact__box">
+            <div class="contact__row">📞 <strong>+33 6 61 06 95 06</strong></div>
+            <div class="contact__row">✉️ <strong>severinolagassou@gmail.com</strong></div>
+            <div class="contact__row">📍 Arpajon / Paris</div>
+
+            <div class="contact__actions">
+              <a class="btn" href="mailto:severinolagassou@gmail.com">Envoyer un email</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__actions">
+            <a class="btn btn--outline" href="cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+            <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+          </div>
+
+          <div class="footer__meta">
+            © <span id="year"></span> OGAH Séverin • <a href="#top">Retour en haut</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Burger menu
+    const burger = document.querySelector('.burger');
+    const mobileNav = document.querySelector('[data-mobile-nav]');
+
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      mobileNav.classList.toggle('is-open', !open);
+    });
+
+    mobileNav?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('is-open');
+      });
+    });
+
+    // Reveal on scroll
+    const items = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    items.forEach(el => io.observe(el));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
