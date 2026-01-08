@@ -425,6 +425,7 @@ section{ scroll-margin-top: 92px; }
   padding: 24px;
   box-shadow: 0 14px 40px rgba(11,18,32,.06);
   max-width: 760px;
+  self-align:center;
 }
 .contact__row{
   font-weight:900;
