@@ -100,6 +100,39 @@ section{ scroll-margin-top: 92px; }
 
 .topbar__cta{display:flex;gap:10px;}
 
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#1E88C9;
+  border-bottom:none;
+}
+
+.brand,
+.brand__text,
+.nav a{
+  color:#FFFFFF;
+}
+
+.nav a:hover{
+  background: rgba(255,255,255,0.15);
+  color:#FFFFFF;
+}
+
+/* Boutons dans le header */
+.topbar .btn{
+  background:#FFFFFF;
+  color:#1E88C9;
+  border-color:#FFFFFF;
+}
+
+.topbar .btn--outline{
+  background:transparent;
+  color:#FFFFFF;
+  border-color:#FFFFFF;
+}
+
+
 /* ===== Buttons ===== */
 .btn{
   display:inline-flex;
