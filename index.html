@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OGAH Séverin — CV & Portfolio</title>
   <meta name="description" content="CV numérique et portfolio de OGAH Séverin (Marketing digital, Développement web, SEO)." />
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <!-- HEADER (seulement les PDF ici + menu) -->
+  <!-- HEADER -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top" aria-label="Retour en haut">
@@ -26,10 +26,10 @@
         <a href="#contact">Contact</a>
       </nav>
 
+      <!-- PDF uniquement en haut + bas -->
       <div class="topbar__cta">
-        <!-- IMPORTANT: garde ces noms si tes PDF s'appellent bien comme ça -->
-        <a class="btn btn--outline" href="cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
-        <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+        <a class="btn btn--outline" href="cv.pdf.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+        <a class="btn" href="portfolio.pdf.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
       </div>
 
       <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -46,17 +46,18 @@
       <a href="#contact">Contact</a>
 
       <div class="mobile-nav__actions">
-        <a class="btn btn--outline" href="cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
-        <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+        <a class="btn btn--outline" href="cv.pdf.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+        <a class="btn" href="portfolio.pdf.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- HERO PRO : photo à gauche, texte + contacts à droite -->
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero section">
       <div class="container hero__grid">
-        <div class="hero__left reveal">
+        <!-- IMAGE à GAUCHE -->
+        <div class="hero__left reveal" data-delay="0">
           <div class="photo">
             <img
               src="assets/img/WhatsApp Image 2026-01-08 at 22.41.37.jpeg"
@@ -65,7 +66,8 @@
           </div>
         </div>
 
-        <div class="hero__right reveal">
+        <!-- TEXTE à DROITE -->
+        <div class="hero__right reveal" data-delay="120">
           <p class="kicker">Marketing Digital • Développement web • SEO</p>
 
           <h1 class="h1">
@@ -95,15 +97,16 @@
     <!-- A PROPOS -->
     <section id="apropos" class="section">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head reveal" data-delay="0">
           <h2 class="h2">À propos</h2>
           <p class="sub">
             Profil orienté performance : création web, optimisation SEO et suivi des données (tracking & analytics).
           </p>
         </div>
 
+        <!-- blocs horizontaux (2 cartes côte à côte) -->
         <div class="cards">
-          <article class="card reveal">
+          <article class="card reveal" data-delay="0">
             <h3 class="h3">Objectif</h3>
             <p>
               Mettre mes compétences en développement web et marketing digital au service de projets concrets
@@ -116,7 +119,7 @@
             </ul>
           </article>
 
-          <article class="card reveal">
+          <article class="card reveal" data-delay="120">
             <h3 class="h3">Atouts</h3>
             <p>
               Sérieux, autonome, orienté résultat, avec un bon sens relationnel et une capacité à apprendre vite.
@@ -135,13 +138,13 @@
     <!-- COMPETENCES -->
     <section id="competences" class="section section--soft">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head reveal" data-delay="0">
           <h2 class="h2">Compétences</h2>
           <p class="sub">Web + data + social media, orienté efficacité.</p>
         </div>
 
         <div class="skills">
-          <div class="skill reveal">
+          <div class="skill reveal" data-delay="0">
             <div class="skill__top">
               <strong>Création & gestion de sites (WordPress)</strong>
               <span>70%</span>
@@ -149,7 +152,7 @@
             <div class="bar"><span style="width:70%"></span></div>
           </div>
 
-          <div class="skill reveal">
+          <div class="skill reveal" data-delay="120">
             <div class="skill__top">
               <strong>SEO & optimisation</strong>
               <span>70%</span>
@@ -157,7 +160,7 @@
             <div class="bar"><span style="width:70%"></span></div>
           </div>
 
-          <div class="skill reveal">
+          <div class="skill reveal" data-delay="240">
             <div class="skill__top">
               <strong>Tracking & Traffic (GTM, GA4, Ads, Pixel)</strong>
               <span>65%</span>
@@ -167,28 +170,28 @@
         </div>
 
         <div class="tags">
-          <span class="tag reveal">WordPress</span>
-          <span class="tag reveal">Canva</span>
-          <span class="tag reveal">Meta Business</span>
-          <span class="tag reveal">Hootsuite</span>
-          <span class="tag reveal">Power BI</span>
-          <span class="tag reveal">Excel</span>
-          <span class="tag reveal">PowerPoint</span>
-          <span class="tag reveal">ChatGPT / Gemini</span>
+          <span class="tag reveal" data-delay="0">WordPress</span>
+          <span class="tag reveal" data-delay="60">Canva</span>
+          <span class="tag reveal" data-delay="120">Meta Business</span>
+          <span class="tag reveal" data-delay="180">Hootsuite</span>
+          <span class="tag reveal" data-delay="240">Power BI</span>
+          <span class="tag reveal" data-delay="300">Excel</span>
+          <span class="tag reveal" data-delay="360">PowerPoint</span>
+          <span class="tag reveal" data-delay="420">ChatGPT / Gemini</span>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE (blocs horizontaux + apparition l’un après l’autre) -->
     <section id="experience" class="section">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head reveal" data-delay="0">
           <h2 class="h2">Expériences</h2>
           <p class="sub">Ce que j’ai fait, concrètement.</p>
         </div>
 
         <div class="timeline">
-          <article class="t reveal">
+          <article class="t reveal" data-delay="0">
             <div class="t__date">Avr 2024 → Oct 2025</div>
             <div class="t__body">
               <div class="t__title">Manager & Chargé de la stratégie de fidélisation</div>
@@ -202,7 +205,7 @@
             </div>
           </article>
 
-          <article class="t reveal">
+          <article class="t reveal" data-delay="140">
             <div class="t__date">Fév 2021 → Juin 2023</div>
             <div class="t__body">
               <div class="t__title">Responsable magasin & Community Manager</div>
@@ -215,7 +218,7 @@
             </div>
           </article>
 
-          <article class="t reveal">
+          <article class="t reveal" data-delay="280">
             <div class="t__date">Mar 2020 → Juin 2020</div>
             <div class="t__body">
               <div class="t__title">Stagiaire Commercial (terrain)</div>
@@ -233,13 +236,13 @@
     <!-- FORMATION -->
     <section id="formation" class="section section--soft">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head reveal" data-delay="0">
           <h2 class="h2">Formation</h2>
           <p class="sub">Parcours académique + modules utiles.</p>
         </div>
 
         <div class="cards">
-          <article class="card reveal">
+          <article class="card reveal" data-delay="0">
             <h3 class="h3">Master 2 Marketing Digital</h3>
             <p class="muted">IPAG Business School — Paris (depuis oct. 2024)</p>
             <ul class="list">
@@ -249,7 +252,7 @@
             </ul>
           </article>
 
-          <article class="card reveal">
+          <article class="card reveal" data-delay="120">
             <h3 class="h3">Master 1 Marketing — Stratégie Commerciale</h3>
             <p class="muted">IPAG Business School — Paris (depuis sept. 2023)</p>
             <ul class="list">
@@ -262,16 +265,16 @@
       </div>
     </section>
 
-    <!-- PROJETS -->
+    <!-- PROJETS : blocs horizontaux + apparition 1 par 1 + flottement -->
     <section id="projets" class="section">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head reveal" data-delay="0">
           <h2 class="h2">Projets</h2>
           <p class="sub">Quelques réalisations web.</p>
         </div>
 
         <div class="projects">
-          <article class="project reveal">
+          <article class="project reveal floaty" data-delay="0">
             <div class="project__img">
               <img src="assets/img/Image1.png" alt="Projet 1">
             </div>
@@ -282,7 +285,7 @@
             </div>
           </article>
 
-          <article class="project reveal">
+          <article class="project reveal floaty" data-delay="140">
             <div class="project__img">
               <img src="assets/img/Image2.png" alt="Projet 2">
             </div>
@@ -293,7 +296,7 @@
             </div>
           </article>
 
-          <article class="project reveal">
+          <article class="project reveal floaty" data-delay="280">
             <div class="project__img">
               <img src="assets/img/Image3.png" alt="Projet 3">
             </div>
@@ -307,15 +310,15 @@
       </div>
     </section>
 
-    <!-- CONTACT + FOOTER PDF (seulement en bas ici) -->
+    <!-- CONTACT + FOOTER PDF -->
     <section id="contact" class="section section--soft">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head reveal" data-delay="0">
           <h2 class="h2">Contact</h2>
           <p class="sub">Disponible à partir de janvier 2026.</p>
         </div>
 
-        <div class="contact reveal">
+        <div class="contact reveal" data-delay="0">
           <div class="contact__box">
             <div class="contact__row">📞 <strong>+33 6 61 06 95 06</strong></div>
             <div class="contact__row">✉️ <strong>severinolagassou@gmail.com</strong></div>
@@ -329,8 +332,8 @@
 
         <footer class="footer">
           <div class="footer__actions">
-            <a class="btn btn--outline" href="cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
-            <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
+            <a class="btn btn--outline" href="cv.pdf.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+            <a class="btn" href="portfolio.pdf.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
           </div>
 
           <div class="footer__meta">
@@ -359,11 +362,13 @@
       });
     });
 
-    // Reveal on scroll
+    // Reveal + delay (apparition 1 par 1)
     const items = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
+          const delay = e.target.getAttribute('data-delay') || "0";
+          e.target.style.transitionDelay = delay + "ms";
           e.target.classList.add('is-visible');
           io.unobserve(e.target);
         }
@@ -372,8 +377,8 @@
 
     items.forEach(el => io.observe(el));
 
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
