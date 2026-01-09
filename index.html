@@ -26,7 +26,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Bloc télécharger -->
+      <!-- Bloc télécharger en bleu marine -->
       <div class="topbar__cta">
         <a class="btn btn--outline btn--top" href="cv.pdf.pdf" target="_blank" rel="noopener">Télécharger CV</a>
         <a class="btn btn--top" href="portfolio.pdf.pdf" target="_blank" rel="noopener">Télécharger Portfolio</a>
@@ -54,38 +54,38 @@
   </header>
 
   <main id="top">
-  <!-- HERO (bande collée au header, pleine largeur) -->
-<section class="hero-band" id="top">
-  <!-- Partie image (70%) -->
-  <div class="hero-band__media reveal" data-delay="0">
-    <img src="assets/img/WhatsApp Image 2026-01-08 at 22.41.37.jpeg" alt="Photo de profil — OGAH Séverin">
-  </div>
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__left reveal" data-delay="0">
+          <div class="photo">
+            <img src="assets/img/WhatsApp Image 2026-01-08 at 22.41.37.jpeg" alt="Photo de profil — OGAH Séverin" />
+          </div>
+        </div>
 
-  <!-- Partie infos (30%) -->
-  <div class="hero-band__panel reveal" data-delay="120">
-    <p class="kicker">MARKETING DIGITAL • DÉVELOPPEMENT WEB • SEO</p>
-    <h1 class="h1">OGAH <span class="accent">Sévérin</span></h1>
+        <div class="hero__right reveal" data-delay="120">
+          <p class="kicker">Marketing Digital • Développement web • SEO</p>
+          <h1 class="h1">OGAH <span class="accent">Sévérin</span></h1>
 
-    <p class="lead">
-      En cours de formation en <strong>Master 2 Marketing Digital</strong>, spécialisé en développement web,
-      UX/UI et stratégie social media.
-      <strong>Recherche :</strong> stage à partir de janvier 2026 (6 mois minimum).
-    </p>
+          <p class="lead">
+            En cours de formation en <strong>Master 2 Marketing Digital</strong>, spécialisé en développement web,
+            UX/UI et stratégie social media. <strong>Recherche :</strong> stage à partir de janvier 2026 (6 mois minimum).
+          </p>
 
-    <div class="infos">
-      <div class="info"><span class="dot"></span> 📍 Arpajon (91290) / Paris</div>
-      <div class="info"><span class="dot"></span> 📞 +33 6 61 06 95 06</div>
-      <div class="info"><span class="dot"></span> ✉️ severinolagassou@gmail.com</div>
-      <div class="info"><span class="dot"></span> 🚗 Permis B</div>
-    </div>
+          <div class="infos">
+            <div class="info"><span class="dot"></span> 📍 Arpajon (91290) / Paris</div>
+            <div class="info"><span class="dot"></span> 📞 +33 6 61 06 95 06</div>
+            <div class="info"><span class="dot"></span> ✉️ severinolagassou@gmail.com</div>
+            <div class="info"><span class="dot"></span> 🚗 Permis B</div>
+          </div>
 
-    <div class="hero__actions">
-      <a class="btn btn--outline" href="#projets">Voir mes projets</a>
-      <a class="btn" href="#contact">Me contacter</a>
-    </div>
-  </div>
-</section>
-
+          <div class="hero__actions">
+            <a class="btn btn--outline" href="#projets">Voir mes projets</a>
+            <a class="btn" href="#contact">Me contacter</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- A PROPOS -->
     <section id="apropos" class="section">
@@ -129,7 +129,7 @@
         </div>
 
         <div class="skills">
-          <!-- 90% -->
+          <!-- ✅ 90% -->
           <div class="skill reveal" data-delay="0">
             <div class="skill__top"><strong>Création & gestion de sites (WordPress)</strong><span>90%</span></div>
             <div class="bar"><span style="width:90%"></span></div>
@@ -159,7 +159,7 @@
       </div>
     </section>
 
-    <!-- EXPERIENCES -->
+    <!-- EXPERIENCES (fix propre, centré, stable) -->
     <section id="experience" class="section">
       <div class="container">
         <div class="section__head reveal" data-delay="0">
@@ -347,6 +347,7 @@
     }, { threshold: 0.18 });
 
     items.forEach(el => io.observe(el));
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
