@@ -326,24 +326,18 @@ section{scroll-margin-top:92px;}
 
 .accent{color:var(--blue);}
 
-.lead{
-  margin:0 0 18px;
-  color:rgba(11,18,32,.75);
+.hero__right .lead{
+  text-align:left !important;
+  hyphens:none !important;
+  -webkit-hyphens:none !important;
+  -ms-hyphens:none !important;
 
-  /* 🔥 lisibilité premium */
-  font-size:clamp(15px, 1.05vw, 17px);
-  line-height:1.9;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+  white-space:normal !important;
 
-  /* 🔥 largeur optimale (clé du rendu pro) */
   max-width:60ch;
-
-  /* 🔥 rendu moderne */
-  text-align:left;
-
-  /* 🔥 clean total */
-  hyphens:none;
-  word-break:normal;
-  overflow-wrap:normal;
+  line-height:1.9;
 }
 .infos{
   margin-top:16px;
