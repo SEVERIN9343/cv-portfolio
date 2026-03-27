@@ -327,19 +327,23 @@ section{scroll-margin-top:92px;}
 .accent{color:var(--blue);}
 
 .lead{
-  margin:0 0 16px;
-  color:rgba(11,18,32,.72);
-  max-width:62ch;
-  text-align: justify !important;
-  hyphens: auto;
-  line-height: 1.85;
-}
+  margin:0 0 18px;
+  color:rgba(11,18,32,.75);
 
-@media (max-width: 768px){
-  .lead{
-    text-align:left !important;
-    hyphens:none;
-  }
+  /* 🔥 lisibilité premium */
+  font-size:clamp(15px, 1.05vw, 17px);
+  line-height:1.9;
+
+  /* 🔥 largeur optimale (clé du rendu pro) */
+  max-width:60ch;
+
+  /* 🔥 rendu moderne */
+  text-align:left;
+
+  /* 🔥 clean total */
+  hyphens:none;
+  word-break:normal;
+  overflow-wrap:normal;
 }
 .infos{
   margin-top:16px;
