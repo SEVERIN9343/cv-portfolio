@@ -26,7 +26,6 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Bloc télécharger -->
       <div class="topbar__cta">
         <a class="btn btn--outline btn--top" href="Développement web - SEO (2).pdf" target="_blank" rel="noopener">
           Télécharger mon CV
@@ -36,7 +35,6 @@
         </a>
       </div>
 
-      <!-- Bouton menu mobile -->
       <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
         <span></span><span></span><span></span>
       </button>
@@ -63,7 +61,6 @@
   </header>
 
   <main id="top">
-
     <!-- HERO -->
     <section class="hero section">
       <div class="container hero__grid">
@@ -185,7 +182,7 @@
           <span class="tag reveal" data-delay="240">Power BI</span>
           <span class="tag reveal" data-delay="300">Excel</span>
           <span class="tag reveal" data-delay="360">PowerPoint</span>
-          <span class="tag reveal" data-delay="420">ChatGPT / Gemini / Claude</span>
+          <span class="tag reveal" data-delay="420">ChatGPT / Gemini /Claude</span>
         </div>
       </div>
     </section>
@@ -215,7 +212,7 @@
             </div>
           </article>
 
-          <article class="t reveal" data-delay="100">
+          <article class="t reveal" data-delay="0">
             <div class="t__body">
               <div class="t__meta">Avr 2024 → Oct 2025</div>
               <div class="t__title">Manager & Chargé de la stratégie de fidélisation</div>
@@ -237,13 +234,12 @@
               <ul>
                 <li>Accueil clientèle amical et professionnel, optimisant l'expérience d'achat</li>
                 <li>Gestion de la relation client</li>
-                <li>Gestion du stock</li>
+                <li>Gestion du Stock</li>
               </ul>
-
               <div class="t__place">Digital</div>
               <ul>
                 <li>Participation à la création du site e-Commerce</li>
-                <li>Gestion du site web : mise à jour et analyse de performance</li>
+                <li>Gestion du site web : mise à jour, et analyse de performance</li>
                 <li>Gestion des moyens de paiement et livraison</li>
                 <li>Suivi des commandes et parcours client</li>
               </ul>
@@ -285,7 +281,7 @@
 
           <article class="card reveal" data-delay="0">
             <h3 class="h3">Licence en Marketing-Communication</h3>
-            <p class="muted">I.A.E.C — Togo-Lomé (de janvier 2017 à décembre 2020)</p>
+            <p class="muted">I.A.E.C — Togo-Lomé (De janvier 2017 à décembre 2020)</p>
             <ul class="list">
               <li>Marketing digital</li>
               <li>Communication d’entreprise</li>
@@ -372,7 +368,6 @@
           </div>
         </div>
 
-        <!-- FOOTER -->
         <footer class="footer">
           <div class="footer__actions">
             <a class="btn btn--outline" href="Développement web - SEO (2).pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
@@ -385,11 +380,9 @@
         </footer>
       </div>
     </section>
-
   </main>
 
   <script>
-    // Burger menu
     const burger = document.querySelector('.burger');
     const mobileNav = document.querySelector('[data-mobile-nav]');
 
@@ -402,11 +395,10 @@
     mobileNav?.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         burger?.setAttribute('aria-expanded', 'false');
-        mobileNav.classList.remove('is-open');
+        mobileNav?.classList.remove('is-open');
       });
     });
 
-    // Reveal + delay
     const items = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -421,7 +413,8 @@
 
     items.forEach(el => io.observe(el));
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
   </script>
 
 </body>
