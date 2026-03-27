@@ -330,8 +330,17 @@ section{scroll-margin-top:92px;}
   margin:0 0 16px;
   color:rgba(11,18,32,.72);
   max-width:62ch;
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
 }
 
+@media (max-width: 768px){
+  .lead{
+    text-align:left;
+    hyphens:none;
+  }
+}
 .infos{
   margin-top:16px;
   display:grid;
