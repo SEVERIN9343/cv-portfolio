@@ -371,6 +371,9 @@ section{scroll-margin-top:92px;}
     white-space: normal !important;
   }
 }
+.no-break{
+  white-space: nowrap;
+}
 
 .info{
   display:flex;
