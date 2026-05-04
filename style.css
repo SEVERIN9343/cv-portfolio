@@ -7,33 +7,89 @@
   --line:#e6edf4;
 
   /* 2 cm ≈ 76px */
-  --section-gap: 76px;
+  --section-gap:76px;
 
   /* police pro */
-  --fs: 15px;
+  --fs:15px;
 }
 
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.72;
+  line-height:1.65;
   font-size:var(--fs);
+  letter-spacing:.01em;
+  text-rendering:optimizeLegibility;
 }
 
-a{color:inherit;}
-img{max-width:100%;display:block;}
+a{
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
 
 .container{
   width:min(1120px, calc(100% - 32px));
   margin:auto;
 }
 
-section{scroll-margin-top:92px;}
+section{
+  scroll-margin-top:92px;
+}
+
+/* ===== Fix textes propres / espaces bizarres ===== */
+p,
+li,
+.sub,
+.muted,
+.lead,
+.card p,
+.list li,
+.t__body li,
+.contact__row{
+  text-align:justify;
+  text-align-last:left;
+  text-justify:inter-word;
+  hyphens:none;
+  -webkit-hyphens:none;
+  -ms-hyphens:none;
+  word-break:normal;
+  overflow-wrap:normal;
+  letter-spacing:.005em;
+}
+
+/* Sur petits blocs, on évite les grands trous du justify */
+.h1,
+.h2,
+.h3,
+.kicker,
+.info,
+.skill__top,
+.tag,
+.t__meta,
+.t__title,
+.t__place,
+.btn,
+.brand,
+.nav a,
+.mobile-nav a,
+.footer__meta{
+  text-align:left;
+  text-align-last:auto;
+}
 
 /* ===== Animations ===== */
 .reveal{
@@ -41,18 +97,29 @@ section{scroll-margin-top:92px;}
   transform:translateY(18px);
   transition:opacity .65s ease, transform .65s ease;
 }
+
 .reveal.is-visible{
   opacity:1;
   transform:none;
 }
 
 @media (prefers-reduced-motion: reduce){
-  .reveal{opacity:1;transform:none;transition:none;}
-  .floaty.is-visible{animation:none;}
-  .rail-bottom.is-visible::after{animation:none;}
+  .reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+
+  .floaty.is-visible{
+    animation:none;
+  }
+
+  .rail-bottom.is-visible::after{
+    animation:none;
+  }
 }
 
-/* ===== Header (mobile first) ===== */
+/* ===== Header mobile first ===== */
 .topbar{
   position:sticky;
   top:0;
@@ -126,12 +193,6 @@ section{scroll-margin-top:92px;}
   border:1px solid rgba(255,255,255,.15);
 }
 
-/* Boutons header */
-.btn--top{
-  padding:8px 12px;
-  font-size:13px;
-}
-
 /* ===== Buttons ===== */
 .btn{
   display:inline-flex;
@@ -146,10 +207,16 @@ section{scroll-margin-top:92px;}
   font-weight:900;
   transition:transform .15s ease;
   font-size:14px;
+  line-height:1.2;
 }
 
-.btn:hover{transform:translateY(-1px);}
-.btn:active{transform:none;}
+.btn:hover{
+  transform:translateY(-1px);
+}
+
+.btn:active{
+  transform:none;
+}
 
 .btn--outline{
   background:transparent;
@@ -158,6 +225,11 @@ section{scroll-margin-top:92px;}
 
 .btn--small{
   padding:9px 13px;
+  font-size:13px;
+}
+
+.btn--top{
+  padding:8px 12px;
   font-size:13px;
 }
 
@@ -265,6 +337,7 @@ section{scroll-margin-top:92px;}
   letter-spacing:.35px;
   text-transform:uppercase;
   font-weight:1000;
+  line-height:1.18;
 }
 
 .h3{
@@ -272,24 +345,19 @@ section{scroll-margin-top:92px;}
   color:var(--black);
   font-weight:1000;
   font-size:17px;
+  line-height:1.25;
 }
 
 .sub{
   margin:0;
   color:rgba(11,18,32,.70);
   font-weight:700;
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
+  line-height:1.65;
 }
 
 .muted{
   color:rgba(11,18,32,.60);
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
+  line-height:1.65;
 }
 
 /* ===== Hero ===== */
@@ -334,19 +402,15 @@ section{scroll-margin-top:92px;}
   color:var(--black);
 }
 
-.accent{color:var(--blue);}
+.accent{
+  color:var(--blue);
+}
 
 .lead{
   margin:0 0 16px;
   color:rgba(11,18,32,.72);
   max-width:62ch;
-  text-align:justify;
-  text-justify:inter-word;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
-  word-break:normal;
-  overflow-wrap:normal;
+  line-height:1.68;
 }
 
 .no-break{
@@ -369,6 +433,7 @@ section{scroll-margin-top:92px;}
   font-weight:800;
   color:rgba(11,18,32,.72);
   font-size:14px;
+  line-height:1.45;
 }
 
 .dot{
@@ -377,6 +442,7 @@ section{scroll-margin-top:92px;}
   border-radius:999px;
   background:var(--blue);
   margin-top:7px;
+  flex:0 0 auto;
 }
 
 .hero__actions{
@@ -403,13 +469,15 @@ section{scroll-margin-top:92px;}
 }
 
 .card p{
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
+  margin-top:0;
+  line-height:1.66;
 }
 
-/* Bande bleue en bas (À propos) */
+.card p:last-child{
+  margin-bottom:0;
+}
+
+/* Bande bleue en bas À propos */
 .rail-bottom{
   overflow:hidden;
 }
@@ -431,8 +499,13 @@ section{scroll-margin-top:92px;}
 }
 
 @keyframes railSlide{
-  0%,100%{transform:translateX(0);}
-  50%{transform:translateX(10px);}
+  0%,100%{
+    transform:translateX(0);
+  }
+
+  50%{
+    transform:translateX(10px);
+  }
 }
 
 .list{
@@ -443,10 +516,7 @@ section{scroll-margin-top:92px;}
 .list li{
   margin:7px 0;
   color:rgba(11,18,32,.72);
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
+  line-height:1.6;
 }
 
 /* ===== Skills ===== */
@@ -502,6 +572,7 @@ section{scroll-margin-top:92px;}
   font-weight:900;
   color:rgba(11,18,32,.72);
   font-size:13px;
+  line-height:1.2;
 }
 
 /* ===== Experiences ===== */
@@ -544,15 +615,13 @@ section{scroll-margin-top:92px;}
 
 .t__body ul{
   margin:12px 0 0 18px;
+  padding-left:0;
 }
 
 .t__body li{
   margin:6px 0;
   color:rgba(11,18,32,.72);
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
+  line-height:1.6;
 }
 
 /* ===== Projects ===== */
@@ -590,13 +659,23 @@ section{scroll-margin-top:92px;}
   gap:10px;
 }
 
+.project__body p{
+  margin:0;
+  line-height:1.65;
+}
+
 .floaty.is-visible{
   animation:float 3.4s ease-in-out infinite;
 }
 
 @keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-5px);}
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-5px);
+  }
 }
 
 /* ===== Contact ===== */
@@ -618,10 +697,7 @@ section{scroll-margin-top:92px;}
   font-weight:900;
   color:rgba(11,18,32,.78);
   margin:10px 0;
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  -ms-hyphens:none;
+  line-height:1.55;
 }
 
 .contact__actions{
@@ -649,6 +725,7 @@ section{scroll-margin-top:92px;}
   color:rgba(255,255,255,0.85);
   font-weight:800;
   font-size:13px;
+  text-align:center;
 }
 
 .footer__meta a{
@@ -669,7 +746,7 @@ section{scroll-margin-top:92px;}
 }
 
 /* ===== Tablet ===== */
-@media (min-width: 768px){
+@media (min-width:768px){
   .container{
     width:min(1120px, calc(100% - 48px));
   }
@@ -718,7 +795,7 @@ section{scroll-margin-top:92px;}
 }
 
 /* ===== Desktop ===== */
-@media (min-width: 981px){
+@media (min-width:981px){
   .burger{
     display:none;
   }
@@ -735,3 +812,4 @@ section{scroll-margin-top:92px;}
     display:none !important;
   }
 }
+
