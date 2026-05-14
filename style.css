@@ -16,6 +16,7 @@
 
 *{
   box-sizing:border-box;
+  min-width:0;
 }
 
 html{
@@ -31,6 +32,7 @@ body{
   line-height:1.65;
   font-size:var(--fs);
   text-rendering:optimizeLegibility;
+  overflow-x:hidden;
 }
 
 a{
@@ -51,7 +53,10 @@ section{
   scroll-margin-top:92px;
 }
 
-/* TEXTES DESKTOP */
+/* =======================================================
+   TYPO
+======================================================= */
+
 p,
 li,
 .sub,
@@ -63,14 +68,18 @@ li,
 .t__intro,
 .t__body li,
 .contact__row{
+  margin-top:0;
   text-align:justify;
   text-align-last:left;
-  hyphens:none;
+  line-height:1.72;
+  word-spacing:-0.04em;
+  letter-spacing:-0.01em;
   word-break:normal;
   overflow-wrap:break-word;
+  hyphens:none;
+  text-justify:inter-word;
 }
 
-/* TITRES */
 .h1,
 .h2,
 .h3,
@@ -90,9 +99,9 @@ li,
 .skill-card h3{
   text-align:left;
   text-align-last:auto;
-  hyphens:none;
   word-break:normal;
   overflow-wrap:normal;
+  hyphens:none;
 }
 
 .reveal{
@@ -113,6 +122,10 @@ li,
     transition:none;
   }
 }
+
+/* =======================================================
+   HEADER
+======================================================= */
 
 .topbar{
   position:sticky;
@@ -137,7 +150,6 @@ li,
   text-decoration:none;
   font-weight:900;
   color:#fff;
-  min-width:0;
 }
 
 .brand__dot{
@@ -178,6 +190,10 @@ li,
   display:none;
   gap:10px;
 }
+
+/* =======================================================
+   BOUTONS
+======================================================= */
 
 .btn{
   display:inline-flex;
@@ -231,6 +247,10 @@ li,
   color:#fff;
   border-color:#fff;
 }
+
+/* =======================================================
+   BURGER
+======================================================= */
 
 .burger{
   display:inline-flex;
@@ -295,6 +315,10 @@ li,
   border-color:#fff;
 }
 
+/* =======================================================
+   SECTIONS
+======================================================= */
+
 .section{
   padding:var(--section-gap) 0;
 }
@@ -308,6 +332,19 @@ li,
 .section__head{
   margin-bottom:24px;
   max-width:760px;
+}
+
+/* =======================================================
+   TITRES
+======================================================= */
+
+.h1{
+  margin:0 0 16px;
+  font-size:clamp(32px, 3vw, 48px);
+  line-height:1.05;
+  color:var(--black);
+  font-weight:1000;
+  letter-spacing:-1px;
 }
 
 .h2{
@@ -328,6 +365,19 @@ li,
   line-height:1.25;
 }
 
+.accent{
+  color:var(--blue);
+}
+
+.kicker{
+  margin:0 0 10px;
+  font-weight:900;
+  color:rgba(11,18,32,.65);
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  font-size:12px;
+}
+
 .sub{
   margin:0;
   color:var(--muted);
@@ -337,6 +387,10 @@ li,
 .muted{
   color:var(--muted);
 }
+
+/* =======================================================
+   HERO
+======================================================= */
 
 .hero{
   padding-top:calc(var(--section-gap) + 10px);
@@ -363,32 +417,10 @@ li,
   object-fit:cover;
 }
 
-.kicker{
-  margin:0 0 10px;
-  font-weight:900;
-  color:rgba(11,18,32,.65);
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  font-size:12px;
-}
-
-.h1{
-  margin:0 0 16px;
-  font-size:clamp(32px, 3vw, 48px);
-  line-height:1.08;
-  color:var(--black);
-  font-weight:1000;
-}
-
-.accent{
-  color:var(--blue);
-}
-
 .lead{
   margin:0 0 14px;
   color:rgba(11,18,32,.75);
   max-width:66ch;
-  line-height:1.68;
   font-size:16px;
 }
 
@@ -420,6 +452,10 @@ li,
   font-size:14px;
 }
 
+/* =======================================================
+   CARDS
+======================================================= */
+
 .cards{
   display:grid;
   grid-template-columns:1fr;
@@ -443,10 +479,6 @@ li,
   padding:22px;
 }
 
-.card p{
-  margin:0;
-}
-
 .rail-bottom{
   overflow:hidden;
 }
@@ -461,6 +493,10 @@ li,
   background:var(--blue);
   border-radius:12px;
 }
+
+/* =======================================================
+   SERVICES
+======================================================= */
 
 .services{
   display:grid;
@@ -483,6 +519,10 @@ li,
   margin:0;
   color:var(--muted);
 }
+
+/* =======================================================
+   SKILLS
+======================================================= */
 
 .skill-groups{
   display:grid;
@@ -509,6 +549,10 @@ li,
   margin:6px 0;
   color:var(--muted);
 }
+
+/* =======================================================
+   TIMELINE
+======================================================= */
 
 .timeline{
   display:grid;
@@ -555,6 +599,10 @@ li,
   color:var(--muted);
 }
 
+/* =======================================================
+   PROJECTS
+======================================================= */
+
 .group-title{
   margin:30px 0 16px;
   color:var(--navy);
@@ -597,6 +645,10 @@ li,
   color:var(--muted);
 }
 
+/* =======================================================
+   CONTACT
+======================================================= */
+
 .contact__box{
   border-left:6px solid var(--blue);
   padding:20px;
@@ -615,6 +667,10 @@ li,
   flex-wrap:wrap;
   gap:10px;
 }
+
+/* =======================================================
+   FOOTER
+======================================================= */
 
 .footer{
   margin-top:46px;
@@ -657,8 +713,12 @@ li,
   border-color:#fff;
 }
 
-/* TABLETTE */
+/* =======================================================
+   TABLETTE
+======================================================= */
+
 @media (min-width:768px){
+
   .container{
     width:min(1120px, calc(100% - 48px));
   }
@@ -683,8 +743,12 @@ li,
   }
 }
 
-/* DESKTOP */
+/* =======================================================
+   DESKTOP
+======================================================= */
+
 @media (min-width:981px){
+
   .burger{
     display:none;
   }
@@ -707,15 +771,7 @@ li,
 }
 
 /* =======================================================
-   MOBILE — CORRECTION DÉFINITIVE
-   ✅ titre hero réduit
-   ✅ pas de coupure bizarre
-   ✅ textes sans espaces anormaux
-   ✅ lecture propre sur mobile
-======================================================= */
-
-/* =======================================================
-   MOBILE — CORRECTION TYPO + JUSTIFICATION PROPRE
+   MOBILE — CORRECTION FINALE
 ======================================================= */
 
 @media (max-width:767px){
@@ -725,7 +781,11 @@ li,
   }
 
   .container{
-    width:min(100% - 24px, 1120px);
+    width:min(100% - 22px, 1120px);
+  }
+
+  body{
+    font-size:14.5px;
   }
 
   .section{
@@ -733,7 +793,7 @@ li,
   }
 
   .hero{
-    padding-top:46px;
+    padding-top:44px;
   }
 
   .hero__grid{
@@ -741,27 +801,23 @@ li,
   }
 
   .photo img{
-    height:330px;
+    height:320px;
   }
 
   .kicker{
-    font-size:11px;
+    font-size:10.8px;
     line-height:1.45;
-    letter-spacing:.35px;
   }
 
-  /* =========================
-     TITRE HERO CORRIGÉ
-  ========================= */
+  /* =========================================
+     TITRE HERO MOBILE
+  ========================================= */
 
   .h1{
-    font-size:27px !important;
-    line-height:1.14 !important;
-    letter-spacing:-0.5px;
+    font-size:25px !important;
+    line-height:1.12 !important;
+    letter-spacing:-0.8px !important;
     white-space:normal !important;
-    word-break:normal !important;
-    overflow-wrap:normal !important;
-    hyphens:none !important;
     max-width:100%;
   }
 
@@ -771,26 +827,25 @@ li,
 
   .h1 .accent{
     display:block;
-    margin-top:2px;
+    margin-top:3px;
   }
 
   .h2{
-    font-size:21px;
-    line-height:1.2;
+    font-size:20px;
   }
 
   .h3,
   .service h3,
   .skill-card h3,
-  .t__title,
-  .group-title{
-    font-size:16.5px;
+  .group-title,
+  .t__title{
+    font-size:16px;
     line-height:1.28;
   }
 
-  /* =========================
-     JUSTIFICATION MOBILE PROPRE
-  ========================= */
+  /* =========================================
+     TEXTE JUSTIFIÉ SANS ESPACES BIZARRES
+  ========================================= */
 
   p,
   li,
@@ -807,20 +862,21 @@ li,
     text-align:justify !important;
     text-align-last:left !important;
 
-    line-height:1.68 !important;
+    word-spacing:-0.06em !important;
+    letter-spacing:-0.01em !important;
 
-    word-spacing:-0.03em;
-    letter-spacing:-0.01em;
+    line-height:1.7 !important;
 
     word-break:normal !important;
     overflow-wrap:break-word !important;
+
     hyphens:none !important;
 
     text-justify:inter-word;
   }
 
   .lead{
-    font-size:15.5px;
+    font-size:15px;
     max-width:100%;
   }
 
@@ -854,20 +910,21 @@ li,
   .info{
     font-size:13.5px;
     line-height:1.45;
-    overflow-wrap:break-word;
   }
 }
 
-/* PETITS MOBILES */
+/* =======================================================
+   TRÈS PETITS MOBILES
+======================================================= */
 
 @media (max-width:390px){
 
   .h1{
-    font-size:25px !important;
-    line-height:1.15 !important;
+    font-size:23px !important;
+    line-height:1.13 !important;
   }
 
   .photo img{
-    height:310px;
+    height:300px;
   }
 }
