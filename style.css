@@ -20,6 +20,7 @@
 
 html{
   scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
 }
 
 body{
@@ -50,6 +51,7 @@ section{
   scroll-margin-top:92px;
 }
 
+/* TEXTES DESKTOP */
 p,
 li,
 .sub,
@@ -65,9 +67,10 @@ li,
   text-align-last:left;
   hyphens:none;
   word-break:normal;
-  overflow-wrap:normal;
+  overflow-wrap:break-word;
 }
 
+/* TITRES */
 .h1,
 .h2,
 .h3,
@@ -81,9 +84,15 @@ li,
 .brand,
 .nav a,
 .mobile-nav a,
-.footer__meta{
+.footer__meta,
+.group-title,
+.service h3,
+.skill-card h3{
   text-align:left;
   text-align-last:auto;
+  hyphens:none;
+  word-break:normal;
+  overflow-wrap:normal;
 }
 
 .reveal{
@@ -368,6 +377,7 @@ li,
   font-size:clamp(32px, 3vw, 48px);
   line-height:1.08;
   color:var(--black);
+  font-weight:1000;
 }
 
 .accent{
@@ -647,6 +657,7 @@ li,
   border-color:#fff;
 }
 
+/* TABLETTE */
 @media (min-width:768px){
   .container{
     width:min(1120px, calc(100% - 48px));
@@ -672,6 +683,7 @@ li,
   }
 }
 
+/* DESKTOP */
 @media (min-width:981px){
   .burger{
     display:none;
@@ -694,35 +706,51 @@ li,
   }
 }
 
-
-
 /* =======================================================
-   CORRECTION MOBILE — TITRE HERO + TEXTES PROPRES
+   MOBILE — CORRECTION DÉFINITIVE
+   ✅ titre hero réduit
+   ✅ pas de coupure bizarre
+   ✅ textes sans espaces anormaux
+   ✅ lecture propre sur mobile
 ======================================================= */
 
-.h1,
-.h2,
-.h3,
-.t__title,
-.group-title,
-.service h3,
-.skill-card h3,
-.project__body h3{
-  word-break:normal !important;
-  overflow-wrap:normal !important;
-  hyphens:none !important;
-}
-
-@media (max-width:600px){
+@media (max-width:767px){
+  :root{
+    --section-gap:56px;
+  }
 
   .container{
     width:min(100% - 24px, 1120px);
   }
 
+  .section{
+    padding:56px 0;
+  }
+
+  .hero{
+    padding-top:46px;
+  }
+
+  .hero__grid{
+    gap:24px;
+  }
+
+  .photo img{
+    height:330px;
+  }
+
+  .kicker{
+    font-size:11px;
+    line-height:1.45;
+    letter-spacing:.35px;
+  }
+
   .h1{
-    font-size:clamp(27px, 7.2vw, 32px) !important;
-    line-height:1.12 !important;
-    letter-spacing:-.4px;
+    font-size:28px !important;
+    line-height:1.13 !important;
+    letter-spacing:-.6px;
+    max-width:100%;
+    white-space:normal !important;
   }
 
   .h1 br{
@@ -731,7 +759,21 @@ li,
 
   .h1 .accent{
     display:block;
-    margin-top:3px;
+    margin-top:2px;
+  }
+
+  .h2{
+    font-size:21px;
+    line-height:1.2;
+  }
+
+  .h3,
+  .service h3,
+  .skill-card h3,
+  .t__title,
+  .group-title{
+    font-size:16.5px;
+    line-height:1.28;
   }
 
   p,
@@ -750,19 +792,55 @@ li,
     hyphens:none !important;
     word-break:normal !important;
     overflow-wrap:break-word !important;
+    line-height:1.65;
   }
 
   .lead{
     font-size:15.5px;
-    line-height:1.65;
+    max-width:100%;
   }
 
   .card,
   .service,
   .skill-card,
   .t__body,
-  .project__body,
   .contact__box{
     padding:18px;
+  }
+
+  .project__body{
+    padding:18px;
+  }
+
+  .hero__actions,
+  .contact__actions,
+  .footer__actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .infos{
+    padding:14px;
+  }
+
+  .info{
+    font-size:13.5px;
+    line-height:1.45;
+    overflow-wrap:break-word;
+  }
+}
+
+@media (max-width:390px){
+  .h1{
+    font-size:26px !important;
+    line-height:1.14 !important;
+  }
+
+  .photo img{
+    height:310px;
   }
 }
