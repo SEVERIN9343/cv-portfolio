@@ -693,3 +693,76 @@ li,
     grid-template-columns:repeat(3, minmax(0,1fr));
   }
 }
+
+
+
+/* =======================================================
+   CORRECTION MOBILE — TITRE HERO + TEXTES PROPRES
+======================================================= */
+
+.h1,
+.h2,
+.h3,
+.t__title,
+.group-title,
+.service h3,
+.skill-card h3,
+.project__body h3{
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+  hyphens:none !important;
+}
+
+@media (max-width:600px){
+
+  .container{
+    width:min(100% - 24px, 1120px);
+  }
+
+  .h1{
+    font-size:clamp(27px, 7.2vw, 32px) !important;
+    line-height:1.12 !important;
+    letter-spacing:-.4px;
+  }
+
+  .h1 br{
+    display:none;
+  }
+
+  .h1 .accent{
+    display:block;
+    margin-top:3px;
+  }
+
+  p,
+  li,
+  .sub,
+  .muted,
+  .lead,
+  .card p,
+  .service p,
+  .project p,
+  .t__intro,
+  .t__body li,
+  .contact__row{
+    text-align:left !important;
+    text-align-last:auto !important;
+    hyphens:none !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+  }
+
+  .lead{
+    font-size:15.5px;
+    line-height:1.65;
+  }
+
+  .card,
+  .service,
+  .skill-card,
+  .t__body,
+  .project__body,
+  .contact__box{
+    padding:18px;
+  }
+}
