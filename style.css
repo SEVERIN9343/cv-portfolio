@@ -1833,6 +1833,76 @@ li,
   gap:10px;
 }
 
+
+
+.linkedin-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:11px 16px;
+  border-radius:999px;
+  border:2px solid #0A66C2;
+  background:#0A66C2;
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:900;
+  font-size:14px;
+  line-height:1.2;
+  transition:transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.linkedin-btn:hover{
+  transform:translateY(-1px);
+  background:#084f96;
+  border-color:#084f96;
+  color:#fff !important;
+}
+
+.linkedin-btn svg{
+  width:17px;
+  height:17px;
+  fill:currentColor;
+  flex:0 0 auto;
+}
+
+.topbar__cta{
+  display:none;
+  gap:10px;
+  align-items:center;
+}
+
+.mobile-nav__actions{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding-top:10px;
+}
+
+.mobile-nav__actions .linkedin-btn,
+.mobile-nav__actions .btn{
+  width:100%;
+}
+
+.footer__actions .linkedin-btn{
+  background:#0A66C2;
+  border-color:#0A66C2;
+  color:#fff !important;
+}
+
+@media (min-width:981px){
+  .topbar__cta{
+    display:flex;
+  }
+}
+
+@media (max-width:767px){
+  .linkedin-btn,
+  .btn{
+    width:100%;
+  }
+}
+
 /* =======================================================
    FOOTER
 ======================================================= */
