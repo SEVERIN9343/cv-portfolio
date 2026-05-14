@@ -714,7 +714,12 @@ li,
    ✅ lecture propre sur mobile
 ======================================================= */
 
+/* =======================================================
+   MOBILE — CORRECTION TYPO + JUSTIFICATION PROPRE
+======================================================= */
+
 @media (max-width:767px){
+
   :root{
     --section-gap:56px;
   }
@@ -745,12 +750,19 @@ li,
     letter-spacing:.35px;
   }
 
+  /* =========================
+     TITRE HERO CORRIGÉ
+  ========================= */
+
   .h1{
-    font-size:28px !important;
-    line-height:1.13 !important;
-    letter-spacing:-.6px;
-    max-width:100%;
+    font-size:27px !important;
+    line-height:1.14 !important;
+    letter-spacing:-0.5px;
     white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+    hyphens:none !important;
+    max-width:100%;
   }
 
   .h1 br{
@@ -776,6 +788,10 @@ li,
     line-height:1.28;
   }
 
+  /* =========================
+     JUSTIFICATION MOBILE PROPRE
+  ========================= */
+
   p,
   li,
   .sub,
@@ -787,12 +803,20 @@ li,
   .t__intro,
   .t__body li,
   .contact__row{
-    text-align:left !important;
-    text-align-last:auto !important;
-    hyphens:none !important;
+
+    text-align:justify !important;
+    text-align-last:left !important;
+
+    line-height:1.68 !important;
+
+    word-spacing:-0.03em;
+    letter-spacing:-0.01em;
+
     word-break:normal !important;
     overflow-wrap:break-word !important;
-    line-height:1.65;
+    hyphens:none !important;
+
+    text-justify:inter-word;
   }
 
   .lead{
@@ -834,10 +858,13 @@ li,
   }
 }
 
+/* PETITS MOBILES */
+
 @media (max-width:390px){
+
   .h1{
-    font-size:26px !important;
-    line-height:1.14 !important;
+    font-size:25px !important;
+    line-height:1.15 !important;
   }
 
   .photo img{
