@@ -1320,6 +1320,135 @@ li,
   line-height:1.9;
 }
 
+
+
+/* =======================================================
+   PROJETS ANALYTICS & SEO
+======================================================= */
+
+.projects--seo{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:32px;
+
+  width:100%;
+}
+
+/* CARTES */
+
+.projects--seo .project{
+  width:100%;
+  overflow:hidden;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.projects--seo .project:hover{
+  transform:translateY(-6px);
+
+  box-shadow:
+    0 22px 55px rgba(11,18,32,.12);
+}
+
+/* IMAGES */
+
+.projects--seo .project__img{
+  overflow:hidden;
+}
+
+.projects--seo .project__img img{
+  width:100%;
+  height:300px;
+
+  object-fit:cover;
+
+  transition:transform .6s ease;
+}
+
+.projects--seo .project:hover .project__img img{
+  transform:scale(1.04);
+}
+
+/* CONTENU */
+
+.projects--seo .project__body{
+  padding:26px;
+}
+
+.projects--seo .h3{
+  font-size:28px;
+  line-height:1.14;
+
+  margin-bottom:14px;
+}
+
+.projects--seo p{
+  font-size:16px;
+  line-height:1.85;
+}
+
+/* =======================================================
+   DESKTOP
+======================================================= */
+
+@media (min-width:981px){
+
+  .projects--seo{
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+
+    gap:38px;
+  }
+}
+
+/* =======================================================
+   TABLETTE
+======================================================= */
+
+@media (min-width:768px) and (max-width:980px){
+
+  .projects--seo{
+    grid-template-columns:1fr;
+
+    max-width:920px;
+    margin:auto;
+  }
+
+  .projects--seo .project__img img{
+    height:320px;
+  }
+}
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:767px){
+
+  .projects--seo{
+    gap:24px;
+  }
+
+  .projects--seo .project__img img{
+    height:220px;
+  }
+
+  .projects--seo .project__body{
+    padding:20px;
+  }
+
+  .projects--seo .h3{
+    font-size:23px;
+    line-height:1.18;
+  }
+
+  .projects--seo p{
+    font-size:15px;
+    line-height:1.75;
+  }
+}
 /* =======================================================
    DESKTOP
 ======================================================= */
