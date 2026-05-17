@@ -1321,23 +1321,26 @@ li,
 }
 
 
-
 /* =======================================================
    PROJETS ANALYTICS & SEO
 ======================================================= */
 
 .projects--seo{
   display:grid;
-  grid-template-columns:1fr;
-  gap:32px;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:38px;
 
   width:100%;
+  align-items:stretch;
 }
 
-/* CARTES */
-
 .projects--seo .project{
+  display:flex;
+  flex-direction:column;
+
   width:100%;
+  height:100%;
+
   overflow:hidden;
 
   transition:
@@ -1349,10 +1352,8 @@ li,
   transform:translateY(-6px);
 
   box-shadow:
-    0 22px 55px rgba(11,18,32,.12);
+    0 24px 60px rgba(11,18,32,.12);
 }
-
-/* IMAGES */
 
 .projects--seo .project__img{
   overflow:hidden;
@@ -1371,55 +1372,77 @@ li,
   transform:scale(1.04);
 }
 
-/* CONTENU */
-
 .projects--seo .project__body{
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+
   padding:26px;
+
+  flex:1;
 }
 
 .projects--seo .h3{
   font-size:28px;
   line-height:1.14;
 
-  margin-bottom:14px;
+  margin:0;
 }
 
 .projects--seo p{
+  margin:0;
+
   font-size:16px;
   line-height:1.85;
-}
-
-/* =======================================================
-   DESKTOP
-======================================================= */
-
-@media (min-width:981px){
-
-  .projects--seo{
-    grid-template-columns:
-      repeat(2, minmax(0,1fr));
-
-    gap:38px;
-  }
 }
 
 /* =======================================================
    TABLETTE
 ======================================================= */
 
-@media (min-width:768px) and (max-width:980px){
+@media (max-width:980px){
 
   .projects--seo{
     grid-template-columns:1fr;
-
-    max-width:920px;
-    margin:auto;
+    gap:28px;
   }
 
   .projects--seo .project__img img{
-    height:320px;
+    height:260px;
   }
 }
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:767px){
+
+  .projects--seo{
+    gap:22px;
+  }
+
+  .projects--seo .project__img img{
+    height:220px;
+  }
+
+  .projects--seo .project__body{
+    padding:20px;
+  }
+
+  .projects--seo .h3{
+    font-size:23px;
+    line-height:1.18;
+  }
+
+  .projects--seo p{
+    font-size:15px;
+    line-height:1.75;
+  }
+}
+
+
 
 /* =======================================================
    MOBILE
