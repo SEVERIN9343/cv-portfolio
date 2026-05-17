@@ -1274,3 +1274,119 @@ li,
 
 
 
+/* =======================================================
+   PROJETS WEB EN COURS
+   UNIQUEMENT POUR LES 2 GROS PROJETS
+======================================================= */
+
+.projects--ongoing{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+
+  width:100%;
+}
+
+/* CARTES */
+
+.projects--ongoing .project{
+  width:100%;
+  overflow:hidden;
+}
+
+/* IMAGES */
+
+.projects--ongoing .project__img img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+/* CONTENU */
+
+.projects--ongoing .project__body{
+  padding:28px;
+}
+
+.projects--ongoing .h3{
+  font-size:34px;
+  line-height:1.1;
+
+  margin-bottom:18px;
+}
+
+.projects--ongoing p{
+  font-size:17px;
+  line-height:1.9;
+}
+
+/* =======================================================
+   DESKTOP
+======================================================= */
+
+@media (min-width:981px){
+
+  .projects--ongoing{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+
+    gap:38px;
+
+    align-items:stretch;
+  }
+
+  .projects--ongoing .project{
+    min-height:100%;
+  }
+}
+
+/* =======================================================
+   TABLETTE
+======================================================= */
+
+@media (min-width:768px) and (max-width:980px){
+
+  .projects--ongoing{
+    grid-template-columns:1fr;
+
+    max-width:920px;
+    margin:auto;
+  }
+
+  .projects--ongoing .project__img img{
+    height:340px;
+  }
+}
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:767px){
+
+  .projects--ongoing{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .projects--ongoing .project__img img{
+    height:220px;
+  }
+
+  .projects--ongoing .project__body{
+    padding:20px;
+  }
+
+  .projects--ongoing .h3{
+    font-size:25px;
+    line-height:1.18;
+  }
+
+  .projects--ongoing p{
+    font-size:15px;
+    line-height:1.75;
+  }
+}
+
+
+
+
