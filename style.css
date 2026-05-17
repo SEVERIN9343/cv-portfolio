@@ -1322,79 +1322,87 @@ li,
 
 
 /* =======================================================
-   PROJETS ANALYTICS & SEO
+   PROJETS ANALYTICS & SEO — ALIGNÉ COMME LE RESTE
 ======================================================= */
+
+.projects-seo-section{
+  padding-top:0;
+}
 
 .projects--seo{
   display:grid;
   grid-template-columns:repeat(2, minmax(0,1fr));
   gap:38px;
-
   width:100%;
+  max-width:100%;
   align-items:stretch;
 }
 
 .projects--seo .project{
-  display:flex;
-  flex-direction:column;
-
   width:100%;
   height:100%;
-
-  overflow:hidden;
-
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
-}
-
-.projects--seo .project:hover{
-  transform:translateY(-6px);
-
-  box-shadow:
-    0 24px 60px rgba(11,18,32,.12);
-}
-
-.projects--seo .project__img{
+  display:flex;
+  flex-direction:column;
   overflow:hidden;
 }
 
 .projects--seo .project__img img{
   width:100%;
-  height:300px;
-
+  height:260px;
   object-fit:cover;
-
-  transition:transform .6s ease;
-}
-
-.projects--seo .project:hover .project__img img{
-  transform:scale(1.04);
 }
 
 .projects--seo .project__body{
-  display:flex;
-  flex-direction:column;
-
-  gap:12px;
-
-  padding:26px;
-
+  padding:22px;
   flex:1;
 }
 
 .projects--seo .h3{
-  font-size:28px;
-  line-height:1.14;
-
-  margin:0;
+  font-size:20px;
+  line-height:1.2;
+  margin:0 0 10px;
 }
 
 .projects--seo p{
+  font-size:15px;
+  line-height:1.72;
   margin:0;
+}
 
-  font-size:16px;
-  line-height:1.85;
+/* TABLETTE */
+@media (max-width:980px){
+  .projects--seo{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .projects--seo .project__img img{
+    height:250px;
+  }
+}
+
+/* MOBILE */
+@media (max-width:767px){
+  .projects--seo{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .projects--seo .project__img img{
+    height:220px;
+  }
+
+  .projects--seo .project__body{
+    padding:18px;
+  }
+
+  .projects--seo .h3{
+    font-size:18px;
+  }
+
+  .projects--seo p{
+    font-size:15px;
+  }
 }
 
 /* =======================================================
@@ -1472,6 +1480,9 @@ li,
     line-height:1.75;
   }
 }
+
+
+
 /* =======================================================
    DESKTOP
 ======================================================= */
