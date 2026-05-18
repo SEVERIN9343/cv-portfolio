@@ -1309,7 +1309,7 @@ li,
 }
 
 .projects--ongoing .h3{
-  font-size:34px;
+  font-size:22px;
   line-height:1.1;
 
   margin-bottom:18px;
@@ -1353,7 +1353,7 @@ li,
 }
 
 .projects--seo .project__body{
-  padding:16px;
+  padding:22px;
   flex:1;
 }
 
