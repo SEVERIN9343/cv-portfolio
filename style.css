@@ -1276,16 +1276,6 @@ li,
 
 
 
-Le problème était bien identifié : tu avais encore des règles desktop qui forçaient :
-
-```css
-.projects--ongoing .h3{
-  font-size:32px;
-}
-
-.projects--ongoing p{
-  font-size:32px;
-}
 
 
 
