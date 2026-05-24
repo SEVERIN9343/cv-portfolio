@@ -53,24 +53,24 @@ h2,
 h3{
   margin:0;
   font-family:var(--font-title);
-  line-height:1.12;
-  letter-spacing:-.035em;
+  line-height:1.16;
+  letter-spacing:-.025em;
   word-break:normal;
   overflow-wrap:normal;
   hyphens:none;
 }
 
 h1{
-  max-width:820px;
-  font-size:clamp(36px,4.8vw,64px);
+  max-width:780px;
+  font-size:clamp(28px,3.4vw,48px);
 }
 
 h2{
-  font-size:clamp(26px,3vw,42px);
+  font-size:clamp(22px,2.3vw,34px);
 }
 
 h3{
-  font-size:clamp(20px,2vw,30px);
+  font-size:clamp(18px,1.8vw,26px);
 }
 
 p{
@@ -208,14 +208,14 @@ p{
 /* HERO */
 
 .hero{
-  padding:clamp(54px,7vw,104px) 0 clamp(58px,7vw,100px);
+  padding:clamp(54px,7vw,96px) 0 clamp(58px,7vw,90px);
   background:#fff;
 }
 
 .hero__grid{
   display:grid;
-  grid-template-columns:1.08fr .92fr;
-  gap:68px;
+  grid-template-columns:1fr .82fr;
+  gap:64px;
   align-items:center;
 }
 
@@ -302,29 +302,22 @@ p{
 .photo-card{
   position:relative;
   overflow:hidden;
-  border-radius:30px;
-  padding:12px;
-  background:#111;
-  box-shadow:0 32px 86px rgba(0,0,0,.14);
+  border-radius:0;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
 }
 
 .photo-card::before{
-  content:"";
-  position:absolute;
-  right:-18%;
-  bottom:-18%;
-  width:60%;
-  height:60%;
-  background:radial-gradient(circle,var(--gold),transparent 70%);
-  opacity:.75;
+  display:none;
 }
 
 .photo-card img{
-  position:relative;
   width:100%;
   aspect-ratio:4/5;
   object-fit:cover;
-  border-radius:22px;
+  border-radius:26px;
+  box-shadow:0 25px 70px rgba(0,0,0,.12);
 }
 
 /* SECTIONS */
@@ -348,7 +341,7 @@ p{
   color:var(--muted);
 }
 
-/* CARDS */
+/* CARTES PROFIL */
 
 .cards-grid{
   display:grid;
@@ -394,11 +387,13 @@ p{
   border-radius:22px;
   background:#fff;
   box-shadow:var(--shadow);
-  transition:.3s ease;
+  transition:.35s ease;
+  transform-origin:left center;
 }
 
 .expertise:hover{
-  transform:translateX(6px);
+  transform:translateX(8px) scale(1.01);
+  box-shadow:0 24px 70px rgba(0,0,0,.08);
 }
 
 .expertise span{
@@ -412,7 +407,7 @@ p{
   font-size:14px;
 }
 
-/* PROJECTS DARK */
+/* PROJETS — FOND NOIR */
 
 .projects-section{
   padding:clamp(70px,8vw,118px) 0;
@@ -449,7 +444,9 @@ p{
   opacity:0;
   transform:translateX(46px) scale(.985);
   pointer-events:none;
-  transition:opacity .65s cubic-bezier(.2,.8,.2,1), transform .65s cubic-bezier(.2,.8,.2,1);
+  transition:
+    opacity .65s cubic-bezier(.2,.8,.2,1),
+    transform .65s cubic-bezier(.2,.8,.2,1);
 }
 
 .project-slide.is-active{
@@ -480,7 +477,7 @@ p{
 .project-slide__content h3{
   color:#fff;
   margin-bottom:18px;
-  font-size:clamp(24px,3vw,42px);
+  font-size:clamp(22px,2.5vw,36px);
 }
 
 .project-slide__content p{
@@ -560,6 +557,63 @@ p{
   width:26px;
   border-radius:999px;
   background:var(--gold);
+}
+
+/* PROJETS RÉALISÉS */
+
+.web-real-section{
+  padding:clamp(70px,8vw,110px) 0;
+  background:#fff;
+}
+
+.web-real-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.web-real-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:#fff;
+  box-shadow:var(--shadow);
+  transition:.35s ease;
+}
+
+.web-real-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 80px rgba(0,0,0,.08);
+}
+
+.web-real-card__img{
+  height:210px;
+  overflow:hidden;
+  background:#f6f6f6;
+}
+
+.web-real-card__img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.45s ease;
+}
+
+.web-real-card:hover img{
+  transform:scale(1.06);
+}
+
+.web-real-card__body{
+  padding:24px;
+}
+
+.web-real-card__body h3{
+  margin-bottom:12px;
+}
+
+.web-real-card__body p{
+  color:var(--muted);
+  margin-bottom:18px;
 }
 
 /* CONTACT */
@@ -662,7 +716,8 @@ p{
     margin:auto;
   }
 
-  .cards-grid{
+  .cards-grid,
+  .web-real-grid{
     grid-template-columns:1fr;
   }
 
@@ -700,15 +755,15 @@ p{
   }
 
   h1{
-    font-size:clamp(34px,10vw,48px);
+    font-size:clamp(28px,8.4vw,38px);
   }
 
   h2{
-    font-size:clamp(24px,8vw,34px);
+    font-size:clamp(22px,7vw,30px);
   }
 
   h3{
-    font-size:clamp(19px,6vw,26px);
+    font-size:clamp(18px,5.8vw,24px);
   }
 
   p{
@@ -755,6 +810,10 @@ p{
   }
 
   .project-slide__content h3{
-    font-size:clamp(22px,7vw,30px);
+    font-size:clamp(20px,6vw,28px);
+  }
+
+  .web-real-card__img{
+    height:190px;
   }
 }
