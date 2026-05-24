@@ -7,8 +7,8 @@
   <title>OGAH Sévérin — Portfolio WordPress, SEO & Analytics</title>
   <meta name="description" content="Portfolio numérique de OGAH Sévérin : développement WordPress, performance web, SEO technique, tracking GA4/GTM et projets digitaux." />
 
-  <link rel="stylesheet" href="./assets/css/style.css?v=5" />
-  <script src="./assets/js/main.js?v=5" defer></script>
+  <link rel="stylesheet" href="./assets/css/style.css?v=6" />
+  <script src="./assets/js/main.js?v=6" defer></script>
 </head>
 
 <body>
@@ -191,65 +191,68 @@
     </div>
   </section>
 
-  <section id="realisations" class="web-real-section">
+  <section id="realisations" class="projects-section projects-section--dark">
     <div class="container">
-      <div class="section__head reveal">
+      <div class="section__head section__head--dark reveal">
         <p class="kicker">Réalisations web</p>
         <h2>Projets web déjà réalisés.</h2>
-        <p>
-          Une sélection de réalisations web orientées visibilité, expérience utilisateur et présence digitale.
-        </p>
       </div>
 
-      <div class="web-real-grid">
-        <article class="web-real-card reveal">
-          <div class="web-real-card__img">
+      <div class="project-stage reveal">
+        <button class="project-control" type="button" data-prev-real aria-label="Réalisation précédente">‹</button>
+
+        <article class="project-slide is-active" data-real-project>
+          <div class="project-slide__image">
             <img src="./assets/images/Search.png" alt="Vect Pest Control Expert" />
           </div>
 
-          <div class="web-real-card__body">
-            <span>Site WordPress</span>
+          <div class="project-slide__content">
+            <span class="project-tag">Site WordPress</span>
             <h3>Vect Pest Control Expert</h3>
             <p>
               Site WordPress orienté présentation de services, visibilité locale,
               structuration SEO et amélioration de l’expérience utilisateur.
             </p>
-            <a class="btn btn--ghost" href="https://www.vpce-expert.com/" target="_blank" rel="noopener">Voir le projet</a>
+            <a class="btn" href="https://www.vpce-expert.com/" target="_blank" rel="noopener">Voir le projet</a>
           </div>
         </article>
 
-        <article class="web-real-card reveal" data-delay="100">
-          <div class="web-real-card__img">
+        <article class="project-slide" data-real-project>
+          <div class="project-slide__image">
             <img src="./assets/images/mario.JPG" alt="Mario Exclusive" />
           </div>
 
-          <div class="web-real-card__body">
-            <span>E-commerce</span>
+          <div class="project-slide__content">
+            <span class="project-tag">E-commerce</span>
             <h3>Mario Exclusive</h3>
             <p>
               Projet e-commerce orienté présentation produit,
               parcours client, contenu digital et gestion de présence en ligne.
             </p>
-            <a class="btn btn--ghost" href="https://marioexclusive.com/" target="_blank" rel="noopener">Voir le projet</a>
+            <a class="btn" href="https://marioexclusive.com/" target="_blank" rel="noopener">Voir le projet</a>
           </div>
         </article>
 
-        <article class="web-real-card reveal" data-delay="200">
-          <div class="web-real-card__img">
-            <img src="./assets/images/GA4.png" alt="Projet web personnel" />
+        <article class="project-slide" data-real-project>
+          <div class="project-slide__image">
+            <img src="./assets/images/GA4.png" alt="Projet mannequinat" />
           </div>
 
-          <div class="web-real-card__body">
-            <span>Projet personnel</span>
+          <div class="project-slide__content">
+            <span class="project-tag">Projet personnel</span>
             <h3>Site mannequinat</h3>
             <p>
               Projet WordPress personnel orienté image, contenu,
               présentation visuelle et mise en valeur d’un univers créatif.
             </p>
-            <a class="btn btn--ghost" href="https://acteurmode.wordpress.com/" target="_blank" rel="noopener">Voir le projet</a>
+            <a class="btn" href="https://acteurmode.wordpress.com/" target="_blank" rel="noopener">Voir le projet</a>
           </div>
         </article>
+
+        <button class="project-control" type="button" data-next-real aria-label="Réalisation suivante">›</button>
       </div>
+
+      <div class="project-dots" data-real-dots></div>
     </div>
   </section>
 
