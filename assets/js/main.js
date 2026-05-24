@@ -1,69 +1,155 @@
-const burger = document.querySelector(".burger");
-const mobileNav = document.querySelector("[data-mobile-nav]");
+const burger = document.querySelector('.burger');
+const mobileNav = document.querySelector('[data-mobile-nav]');
 
-burger?.addEventListener("click", () => {
-  const open = burger.getAttribute("aria-expanded") === "true";
-  burger.setAttribute("aria-expanded", String(!open));
-  mobileNav?.classList.toggle("is-open", !open);
+burger?.addEventListener('click', () => {
+  const open = burger.getAttribute('aria-expanded') === 'true';
+
+  burger.setAttribute('aria-expanded', String(!open));
+  mobileNav?.classList.toggle('is-open', !open);
 });
 
-mobileNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    burger?.setAttribute("aria-expanded", "false");
-    mobileNav?.classList.remove("is-open");
+mobileNav?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    burger?.setAttribute('aria-expanded', 'false');
+    mobileNav?.classList.remove('is-open');
   });
 });
 
-const revealItems = document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll('.reveal');
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    const delay = entry.target.dataset.delay || 0;
-    entry.target.style.transitionDelay = `${delay}ms`;
-    entry.target.classList.add("is-visible");
-    observer.unobserve(entry.target);
+    if(entry.isIntersecting){
+      const delay = entry.target.dataset.delay || 0;
+
+      entry.target.style.transitionDelay = `${delay}ms`;
+      entry.target.classList.add('is-visible');
+
+      observer.unobserve(entry.target);
+    }
   });
-}, { threshold: 0.15 });
+}, {
+  threshold: 0.14
+});
 
-revealItems.forEach((item) => observer.observe(item));
+reveals.forEach((el) => observer.observe(el));
 
-const slides = [...document.querySelectorAll("[data-project]")];
-const nextBtn = document.querySelector("[data-next]");
-const prevBtn = document.querySelector("[data-prev]");
-const dotsWrap = document.querySelector("[data-dots]");
-let current = 0;
-let timer = null;
+function createSlider(config){
+  const slides = document.querySelectorAll(config.slideSelector);
+  const prevBtn = document.querySelector(config.prevSelector);
+  const nextBtn = document.querySelector(config.nextSelector);
+  const dotsWrap = document.querySelector(config.dotsSelector);
 
-function renderDots() {
-  if (!dotsWrap) return;
-  dotsWrap.innerHTML = "";
-  slides.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = index === current ? "is-active" : "";
-    dot.setAttribute("aria-label", `Afficher le projet ${index + 1}`);
-    dot.addEventListener("click", () => showSlide(index));
-    dotsWrap.appendChild(dot);
+  if(!slides.length){
+    return;
+  }
+
+  let current = 0;
+  let timer = null;
+
+  function renderDots(){
+    if(!dotsWrap){
+      return;
+    }
+
+    dotsWrap.innerHTML = '';
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement('button');
+
+      if(index === current){
+        dot.classList.add('is-active');
+      }
+
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        restartAuto();
+      });
+
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function showSlide(index){
+    slides.forEach((slide) => {
+      slide.classList.remove('is-active');
+    });
+
+    slides[index].classList.add('is-active');
+
+    if(dotsWrap){
+      dotsWrap.querySelectorAll('button').forEach((dot) => {
+        dot.classList.remove('is-active');
+      });
+
+      dotsWrap.querySelectorAll('button')[index]?.classList.add('is-active');
+    }
+
+    current = index;
+  }
+
+  function next(){
+    let index = current + 1;
+
+    if(index >= slides.length){
+      index = 0;
+    }
+
+    showSlide(index);
+  }
+
+  function prev(){
+    let index = current - 1;
+
+    if(index < 0){
+      index = slides.length - 1;
+    }
+
+    showSlide(index);
+  }
+
+  function startAuto(){
+    timer = setInterval(next, config.interval || 6000);
+  }
+
+  function restartAuto(){
+    clearInterval(timer);
+    startAuto();
+  }
+
+  nextBtn?.addEventListener('click', () => {
+    next();
+    restartAuto();
   });
-}
 
-function showSlide(index) {
-  if (!slides.length) return;
-  current = (index + slides.length) % slides.length;
-  slides.forEach((slide, i) => slide.classList.toggle("is-active", i === current));
+  prevBtn?.addEventListener('click', () => {
+    prev();
+    restartAuto();
+  });
+
   renderDots();
-  restartAuto();
+  showSlide(0);
+  startAuto();
 }
 
-function restartAuto() {
-  clearInterval(timer);
-  timer = setInterval(() => showSlide(current + 1), 6500);
+createSlider({
+  slideSelector: '[data-web-project]',
+  prevSelector: '[data-prev-web]',
+  nextSelector: '[data-next-web]',
+  dotsSelector: '[data-web-dots]',
+  interval: 6500
+});
+
+createSlider({
+  slideSelector: '[data-seo-project]',
+  prevSelector: '[data-prev-seo]',
+  nextSelector: '[data-next-seo]',
+  dotsSelector: '[data-seo-dots]',
+  interval: 7000
+});
+
+const year = document.getElementById('year');
+
+if(year){
+  year.textContent = new Date().getFullYear();
 }
-
-nextBtn?.addEventListener("click", () => showSlide(current + 1));
-prevBtn?.addEventListener("click", () => showSlide(current - 1));
-renderDots();
-restartAuto();
-
-const year = document.getElementById("year");
-if (year) year.textContent = new Date().getFullYear();
