@@ -7,19 +7,19 @@
   <title>OGAH Sévérin — Portfolio WordPress, SEO & Analytics</title>
   <meta name="description" content="Portfolio numérique de OGAH Sévérin : développement WordPress, performance web, SEO technique, tracking GA4/GTM et projets digitaux." />
 
-  <link rel="stylesheet" href="./assets/css/style.css?v=6" />
-  <script src="./assets/js/main.js?v=6" defer></script>
+  <link rel="stylesheet" href="./assets/css/style.css?v=7" />
+  <script src="./assets/js/main.js?v=7" defer></script>
 </head>
 
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="#top" aria-label="Retour en haut">
+    <a class="brand" href="#top">
       <span class="brand__mark">S</span>
       <span class="brand__name">OGAH Sévérin</span>
     </a>
 
-    <nav class="nav" aria-label="Navigation principale">
+    <nav class="nav">
       <a href="#profil">Profil</a>
       <a href="#expertises">Expertises</a>
       <a href="#web">Projets web</a>
@@ -29,9 +29,7 @@
     </nav>
 
     <div class="topbar__actions">
-      <a class="cv-btn" href="./assets/docs/Développeur Web WordPress orienté Performance & SEO (2) (1).pdf" target="_blank" rel="noopener">
-        Mon CV
-      </a>
+      <a class="cv-btn" href="./assets/docs/Développeur Web WordPress orienté Performance & SEO (2) (1).pdf" target="_blank" rel="noopener">Mon CV</a>
 
       <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -46,20 +44,17 @@
     <a href="#realisations">Réalisations</a>
     <a href="#seo">Analytics & SEO</a>
     <a href="#contact">Contact</a>
-
-    <a class="cv-btn mobile-cv" href="./assets/docs/Développeur Web WordPress orienté Performance & SEO (2) (1).pdf" target="_blank" rel="noopener">
-      Télécharger mon CV
-    </a>
+    <a class="cv-btn mobile-cv" href="./assets/docs/Développeur Web WordPress orienté Performance & SEO (2) (1).pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
   </div>
 </header>
 
 <main id="top">
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__content reveal">
         <p class="kicker">WordPress • SEO technique • Analytics</p>
-
         <h1>Développeur web orienté performance & visibilité digitale</h1>
 
         <p class="hero__text">
@@ -92,6 +87,7 @@
     </div>
   </section>
 
+  <!-- PROFIL -->
   <section id="profil" class="section">
     <div class="container">
       <div class="section__head reveal">
@@ -122,7 +118,8 @@
     </div>
   </section>
 
-  <section id="expertises" class="section section--light">
+  <!-- EXPERTISES -->
+  <section id="expertises" class="section">
     <div class="container">
       <div class="section__head reveal">
         <p class="kicker">Domaines</p>
@@ -139,9 +136,10 @@
     </div>
   </section>
 
-  <section id="web" class="projects-section projects-section--dark">
+  <!-- PROJETS WEB EN COURS -->
+  <section id="web" class="projects-section">
     <div class="container">
-      <div class="section__head section__head--dark reveal">
+      <div class="section__head reveal">
         <p class="kicker">Projets web</p>
         <h2>Projets web en cours de développement.</h2>
       </div>
@@ -191,9 +189,10 @@
     </div>
   </section>
 
-  <section id="realisations" class="projects-section projects-section--dark">
+  <!-- RÉALISATIONS WEB -->
+  <section id="realisations" class="projects-section">
     <div class="container">
-      <div class="section__head section__head--dark reveal">
+      <div class="section__head reveal">
         <p class="kicker">Réalisations web</p>
         <h2>Projets web déjà réalisés.</h2>
       </div>
@@ -202,7 +201,7 @@
         <button class="project-control" type="button" data-prev-real aria-label="Réalisation précédente">‹</button>
 
         <article class="project-slide is-active" data-real-project>
-          <div class="project-slide__image">
+          <div class="project-slide__image project-slide__image--contain">
             <img src="./assets/images/Search.png" alt="Vect Pest Control Expert" />
           </div>
 
@@ -234,7 +233,7 @@
         </article>
 
         <article class="project-slide" data-real-project>
-          <div class="project-slide__image">
+          <div class="project-slide__image project-slide__image--contain">
             <img src="./assets/images/GA4.png" alt="Projet mannequinat" />
           </div>
 
@@ -256,9 +255,10 @@
     </div>
   </section>
 
-  <section id="seo" class="projects-section projects-section--dark">
+  <!-- ANALYTICS & SEO -->
+  <section id="seo" class="projects-section">
     <div class="container">
-      <div class="section__head section__head--dark reveal">
+      <div class="section__head reveal">
         <p class="kicker">Analytics & SEO</p>
         <h2>Projets Analytics, acquisition et SEO technique.</h2>
       </div>
@@ -267,50 +267,62 @@
         <button class="project-control" type="button" data-prev-seo aria-label="Projet précédent">‹</button>
 
         <article class="project-slide is-active" data-seo-project>
-          <div class="project-slide__image">
+          <div class="project-slide__image project-slide__image--contain">
             <img src="./assets/images/Search.png" alt="Indexation SEO" />
           </div>
 
           <div class="project-slide__content">
             <span class="project-tag">SEO technique</span>
-            <h3>Indexation & visibilité SEO</h3>
+            <h3>Indexation SEO des pages techniques</h3>
             <p>
-              Travail sur l’indexation, les pages stratégiques, la structure SEO,
-              le maillage interne et les opportunités de visibilité.
+              Après la création du site Vect Pest Control Expert, travail sur l’indexation
+              des pages importantes afin de faciliter leur visibilité dans les moteurs de recherche.
             </p>
-            <a class="btn" href="#contact">Découvrir</a>
           </div>
         </article>
 
         <article class="project-slide" data-seo-project>
-          <div class="project-slide__image">
+          <div class="project-slide__image project-slide__image--contain">
             <img src="./assets/images/GTM.png" alt="Google Tag Manager" />
           </div>
 
           <div class="project-slide__content">
             <span class="project-tag">Tracking Analytics</span>
-            <h3>GA4 & Google Tag Manager</h3>
+            <h3>Tracking GA4 & Google Tag Manager</h3>
             <p>
-              Mise en place d’événements pour suivre les clics, formulaires,
-              appels et interactions importantes du parcours utilisateur.
+              Création d’événements Analytics via Google Tag Manager pour suivre les clics,
+              formulaires, appels et mieux comprendre le comportement utilisateur.
             </p>
-            <a class="btn" href="#contact">Découvrir</a>
           </div>
         </article>
 
         <article class="project-slide" data-seo-project>
-          <div class="project-slide__image">
+          <div class="project-slide__image project-slide__image--contain">
             <img src="./assets/images/ADDS.png" alt="Google Ads" />
           </div>
 
           <div class="project-slide__content">
             <span class="project-tag">Acquisition digitale</span>
-            <h3>Campagne Google Ads</h3>
+            <h3>Lancement Google Ads</h3>
             <p>
-              Participation au lancement et au suivi de campagnes Google Ads :
-              analyse des performances, lecture des données et recommandations.
+              Participation au lancement d’une première campagne Google Ads demandée par l’entreprise,
+              avec suivi des performances et analyse des interactions.
             </p>
-            <a class="btn" href="#contact">Découvrir</a>
+          </div>
+        </article>
+
+        <article class="project-slide" data-seo-project>
+          <div class="project-slide__image project-slide__image--contain">
+            <img src="./assets/images/Semruch.png" alt="SEMrush" />
+          </div>
+
+          <div class="project-slide__content">
+            <span class="project-tag">Recherche de mots-clés</span>
+            <h3>Recherche de mots-clés avec SEMrush</h3>
+            <p>
+              Analyse concurrentielle et recherche de mots-clés via SEMrush afin d’identifier
+              des opportunités SEO et optimiser les pages stratégiques du site.
+            </p>
           </div>
         </article>
 
@@ -321,6 +333,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="contact-card reveal">
