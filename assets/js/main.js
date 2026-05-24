@@ -1,3 +1,7 @@
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
 const burger = document.querySelector('.burger');
 const mobileNav = document.querySelector('[data-mobile-nav]');
 
@@ -14,6 +18,10 @@ mobileNav?.querySelectorAll('a').forEach((link) => {
     mobileNav?.classList.remove('is-open');
   });
 });
+
+/* =========================================================
+   ANIMATION APPARITION AU SCROLL
+========================================================= */
 
 const revealItems = document.querySelectorAll('.reveal');
 
@@ -35,6 +43,10 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealItems.forEach((item) => {
   revealObserver.observe(item);
 });
+
+/* =========================================================
+   SLIDER RÉUTILISABLE
+========================================================= */
 
 function createSlider(settings){
   const slides = document.querySelectorAll(settings.slideSelector);
@@ -137,6 +149,10 @@ function createSlider(settings){
   startAuto();
 }
 
+/* =========================================================
+   INITIALISATION DES 3 BLOCS PROJETS
+========================================================= */
+
 createSlider({
   slideSelector: '[data-web-project]',
   prevSelector: '[data-prev-web]',
@@ -160,6 +176,10 @@ createSlider({
   dotsSelector: '[data-seo-dots]',
   interval: 7000
 });
+
+/* =========================================================
+   ANNÉE AUTOMATIQUE FOOTER
+========================================================= */
 
 const year = document.getElementById('year');
 
