@@ -146,6 +146,14 @@ createSlider({
 });
 
 createSlider({
+  slideSelector: '[data-real-project]',
+  prevSelector: '[data-prev-real]',
+  nextSelector: '[data-next-real]',
+  dotsSelector: '[data-real-dots]',
+  interval: 6800
+});
+
+createSlider({
   slideSelector: '[data-seo-project]',
   prevSelector: '[data-prev-seo]',
   nextSelector: '[data-next-seo]',
