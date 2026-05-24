@@ -15,9 +15,9 @@ mobileNav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
-const reveals = document.querySelectorAll('.reveal');
+const revealItems = document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       const delay = entry.target.dataset.delay || 0;
@@ -25,29 +25,31 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.style.transitionDelay = `${delay}ms`;
       entry.target.classList.add('is-visible');
 
-      observer.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
 }, {
   threshold: 0.14
 });
 
-reveals.forEach((el) => observer.observe(el));
+revealItems.forEach((item) => {
+  revealObserver.observe(item);
+});
 
-function createSlider(config){
-  const slides = document.querySelectorAll(config.slideSelector);
-  const prevBtn = document.querySelector(config.prevSelector);
-  const nextBtn = document.querySelector(config.nextSelector);
-  const dotsWrap = document.querySelector(config.dotsSelector);
+function createSlider(settings){
+  const slides = document.querySelectorAll(settings.slideSelector);
+  const prevBtn = document.querySelector(settings.prevSelector);
+  const nextBtn = document.querySelector(settings.nextSelector);
+  const dotsWrap = document.querySelector(settings.dotsSelector);
 
   if(!slides.length){
     return;
   }
 
   let current = 0;
-  let timer = null;
+  let interval = null;
 
-  function renderDots(){
+  function buildDots(){
     if(!dotsWrap){
       return;
     }
@@ -56,6 +58,9 @@ function createSlider(config){
 
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
+
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Voir le projet ${index + 1}`);
 
       if(index === current){
         dot.classList.add('is-active');
@@ -89,31 +94,31 @@ function createSlider(config){
   }
 
   function next(){
-    let index = current + 1;
+    let nextIndex = current + 1;
 
-    if(index >= slides.length){
-      index = 0;
+    if(nextIndex >= slides.length){
+      nextIndex = 0;
     }
 
-    showSlide(index);
+    showSlide(nextIndex);
   }
 
   function prev(){
-    let index = current - 1;
+    let prevIndex = current - 1;
 
-    if(index < 0){
-      index = slides.length - 1;
+    if(prevIndex < 0){
+      prevIndex = slides.length - 1;
     }
 
-    showSlide(index);
+    showSlide(prevIndex);
   }
 
   function startAuto(){
-    timer = setInterval(next, config.interval || 6000);
+    interval = setInterval(next, settings.interval || 6000);
   }
 
   function restartAuto(){
-    clearInterval(timer);
+    clearInterval(interval);
     startAuto();
   }
 
@@ -127,7 +132,7 @@ function createSlider(config){
     restartAuto();
   });
 
-  renderDots();
+  buildDots();
   showSlide(0);
   startAuto();
 }
