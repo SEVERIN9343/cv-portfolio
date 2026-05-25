@@ -26,27 +26,27 @@ mobileNav?.querySelectorAll('a').forEach((link) => {
 });
 
 /* HEADER AU SCROLL */
-window.addEventListener('scroll', () => {
+function handleHeaderScroll(){
   topbar?.classList.toggle('is-scrolled', window.scrollY > 20);
-});
+}
 
-/* AU CHARGEMENT : ON RESTE EN HAUT / PROFIL VISIBLE NORMAL */
+handleHeaderScroll();
+window.addEventListener('scroll', handleHeaderScroll);
+
+/* AU CHARGEMENT : ON RESTE EN HAUT */
 window.addEventListener('load', () => {
-  const profil = document.querySelector('#profil');
-
   if(window.location.hash){
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
 
-  if(profil){
-    profil.scrollIntoView({
-      behavior:'auto',
-      block:'start'
-    });
-  }
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior:'auto'
+  });
 });
 
-/* REVEAL AU SCROLL */
+/* REVEAL UNIFORME AU SCROLL */
 const revealItems = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -61,11 +61,15 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold:0.15,
-  rootMargin:'0px 0px -40px 0px'
+  threshold:0.12,
+  rootMargin:'0px 0px -45px 0px'
 });
 
-revealItems.forEach((item) => {
+revealItems.forEach((item, index) => {
+  if(!item.dataset.delay && item.closest('.cards-grid, .expertise-list')){
+    item.dataset.delay = String((index % 3) * 90);
+  }
+
   revealObserver.observe(item);
 });
 
