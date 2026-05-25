@@ -941,3 +941,81 @@ p{
     transform:none;
   }
 }
+
+
+/* =========================================================
+   ANIMATIONS UNIFORMES BLOCS
+========================================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:
+    opacity .78s cubic-bezier(.2,.8,.2,1),
+    transform .78s cubic-bezier(.2,.8,.2,1);
+  will-change:opacity, transform;
+}
+
+.reveal-left{
+  transform:translateX(-38px);
+}
+
+.reveal-right{
+  transform:translateX(38px);
+}
+
+.reveal-up{
+  transform:translateY(28px);
+}
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-up.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+.cards-grid .card.reveal:nth-child(1){
+  transform:translateX(-38px);
+}
+
+.cards-grid .card.reveal:nth-child(2){
+  transform:translateY(28px);
+}
+
+.cards-grid .card.reveal:nth-child(3){
+  transform:translateX(38px);
+}
+
+.cards-grid .card.reveal.is-visible{
+  transform:none;
+}
+
+.expertise.reveal{
+  transition:
+    opacity .82s cubic-bezier(.2,.8,.2,1),
+    transform .82s cubic-bezier(.2,.8,.2,1),
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+@media(max-width:640px){
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-up,
+  .cards-grid .card.reveal:nth-child(1),
+  .cards-grid .card.reveal:nth-child(2),
+  .cards-grid .card.reveal:nth-child(3){
+    transform:translateY(24px);
+  }
+
+  .reveal.is-visible,
+  .reveal-left.is-visible,
+  .reveal-right.is-visible,
+  .reveal-up.is-visible,
+  .cards-grid .card.reveal.is-visible{
+    transform:none;
+  }
+}
