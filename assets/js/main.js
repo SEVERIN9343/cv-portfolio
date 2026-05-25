@@ -1,14 +1,17 @@
 /* =========================================================
-   PORTFOLIO — JS PREMIUM
+   PORTFOLIO — JS PROPRE
 ========================================================= */
 
+document.documentElement.classList.add('js-ready');
+
+/* MENU MOBILE */
 const burger = document.querySelector('.burger');
 const mobileNav = document.querySelector('[data-mobile-nav]');
 const topbar = document.querySelector('.topbar');
 
-/* MENU MOBILE */
 burger?.addEventListener('click', () => {
   const open = burger.getAttribute('aria-expanded') === 'true';
+
   burger.setAttribute('aria-expanded', String(!open));
   mobileNav?.classList.toggle('is-open', !open);
   document.body.classList.toggle('menu-open', !open);
@@ -27,6 +30,19 @@ window.addEventListener('scroll', () => {
   topbar?.classList.toggle('is-scrolled', window.scrollY > 20);
 });
 
+/* AU CHARGEMENT : ON RESTE EN HAUT / PROFIL VISIBLE NORMAL */
+window.addEventListener('load', () => {
+  if(window.location.hash){
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior:'instant'
+  });
+});
+
 /* REVEAL AU SCROLL */
 const revealItems = document.querySelectorAll('.reveal');
 
@@ -34,16 +50,23 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       const delay = entry.target.dataset.delay || 0;
+
       entry.target.style.transitionDelay = `${delay}ms`;
       entry.target.classList.add('is-visible');
+
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.16 });
+}, {
+  threshold:0.15,
+  rootMargin:'0px 0px -40px 0px'
+});
 
-revealItems.forEach((item) => revealObserver.observe(item));
+revealItems.forEach((item) => {
+  revealObserver.observe(item);
+});
 
-/* SLIDER PREMIUM */
+/* SLIDER */
 function createSlider(settings){
   const slides = document.querySelectorAll(settings.slideSelector);
   const prevBtn = document.querySelector(settings.prevSelector);
@@ -63,6 +86,7 @@ function createSlider(settings){
 
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
+
       dot.type = 'button';
       dot.setAttribute('aria-label', `Voir le projet ${index + 1}`);
 
@@ -123,12 +147,12 @@ function createSlider(settings){
     slide.addEventListener('mouseenter', stopAuto);
     slide.addEventListener('mouseleave', startAuto);
 
-    slide.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
+    slide.addEventListener('touchstart', (event) => {
+      startX = event.touches[0].clientX;
     }, { passive:true });
 
-    slide.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
+    slide.addEventListener('touchend', (event) => {
+      const endX = event.changedTouches[0].clientX;
       const diff = startX - endX;
 
       if(Math.abs(diff) > 45){
@@ -143,6 +167,7 @@ function createSlider(settings){
   startAuto();
 }
 
+/* INITIALISATION */
 createSlider({
   slideSelector:'[data-web-project]',
   prevSelector:'[data-prev-web]',
@@ -169,4 +194,7 @@ createSlider({
 
 /* ANNÉE FOOTER */
 const year = document.getElementById('year');
-if(year) year.textContent = new Date().getFullYear();
+
+if(year){
+  year.textContent = new Date().getFullYear();
+}
