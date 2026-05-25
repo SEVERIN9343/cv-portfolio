@@ -1,82 +1,70 @@
 /* =========================================================
-   MENU MOBILE
+   PORTFOLIO — JS PREMIUM
 ========================================================= */
 
 const burger = document.querySelector('.burger');
 const mobileNav = document.querySelector('[data-mobile-nav]');
+const topbar = document.querySelector('.topbar');
 
+/* MENU MOBILE */
 burger?.addEventListener('click', () => {
   const open = burger.getAttribute('aria-expanded') === 'true';
-
   burger.setAttribute('aria-expanded', String(!open));
   mobileNav?.classList.toggle('is-open', !open);
+  document.body.classList.toggle('menu-open', !open);
 });
 
 mobileNav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     burger?.setAttribute('aria-expanded', 'false');
     mobileNav?.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
   });
 });
 
-/* =========================================================
-   ANIMATION APPARITION AU SCROLL
-========================================================= */
+/* HEADER AU SCROLL */
+window.addEventListener('scroll', () => {
+  topbar?.classList.toggle('is-scrolled', window.scrollY > 20);
+});
 
+/* REVEAL AU SCROLL */
 const revealItems = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       const delay = entry.target.dataset.delay || 0;
-
       entry.target.style.transitionDelay = `${delay}ms`;
       entry.target.classList.add('is-visible');
-
       revealObserver.unobserve(entry.target);
     }
   });
-}, {
-  threshold: 0.14
-});
+}, { threshold: 0.16 });
 
-revealItems.forEach((item) => {
-  revealObserver.observe(item);
-});
+revealItems.forEach((item) => revealObserver.observe(item));
 
-/* =========================================================
-   SLIDER RÉUTILISABLE
-========================================================= */
-
+/* SLIDER PREMIUM */
 function createSlider(settings){
   const slides = document.querySelectorAll(settings.slideSelector);
   const prevBtn = document.querySelector(settings.prevSelector);
   const nextBtn = document.querySelector(settings.nextSelector);
   const dotsWrap = document.querySelector(settings.dotsSelector);
 
-  if(!slides.length){
-    return;
-  }
+  if(!slides.length) return;
 
   let current = 0;
   let interval = null;
+  let startX = 0;
 
   function buildDots(){
-    if(!dotsWrap){
-      return;
-    }
+    if(!dotsWrap) return;
 
     dotsWrap.innerHTML = '';
 
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
-
       dot.type = 'button';
       dot.setAttribute('aria-label', `Voir le projet ${index + 1}`);
-
-      if(index === current){
-        dot.classList.add('is-active');
-      }
 
       dot.addEventListener('click', () => {
         showSlide(index);
@@ -88,49 +76,36 @@ function createSlider(settings){
   }
 
   function showSlide(index){
-    slides.forEach((slide) => {
-      slide.classList.remove('is-active');
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === index);
     });
 
-    slides[index].classList.add('is-active');
-
-    if(dotsWrap){
-      dotsWrap.querySelectorAll('button').forEach((dot) => {
-        dot.classList.remove('is-active');
-      });
-
-      dotsWrap.querySelectorAll('button')[index]?.classList.add('is-active');
-    }
+    dotsWrap?.querySelectorAll('button').forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === index);
+    });
 
     current = index;
   }
 
   function next(){
-    let nextIndex = current + 1;
-
-    if(nextIndex >= slides.length){
-      nextIndex = 0;
-    }
-
-    showSlide(nextIndex);
+    showSlide((current + 1) % slides.length);
   }
 
   function prev(){
-    let prevIndex = current - 1;
-
-    if(prevIndex < 0){
-      prevIndex = slides.length - 1;
-    }
-
-    showSlide(prevIndex);
+    showSlide((current - 1 + slides.length) % slides.length);
   }
 
   function startAuto(){
-    interval = setInterval(next, settings.interval || 6000);
+    stopAuto();
+    interval = setInterval(next, settings.interval || 6500);
+  }
+
+  function stopAuto(){
+    if(interval) clearInterval(interval);
   }
 
   function restartAuto(){
-    clearInterval(interval);
+    stopAuto();
     startAuto();
   }
 
@@ -144,45 +119,54 @@ function createSlider(settings){
     restartAuto();
   });
 
+  slides.forEach((slide) => {
+    slide.addEventListener('mouseenter', stopAuto);
+    slide.addEventListener('mouseleave', startAuto);
+
+    slide.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive:true });
+
+    slide.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if(Math.abs(diff) > 45){
+        diff > 0 ? next() : prev();
+        restartAuto();
+      }
+    });
+  });
+
   buildDots();
   showSlide(0);
   startAuto();
 }
 
-/* =========================================================
-   INITIALISATION DES 3 BLOCS PROJETS
-========================================================= */
-
 createSlider({
-  slideSelector: '[data-web-project]',
-  prevSelector: '[data-prev-web]',
-  nextSelector: '[data-next-web]',
-  dotsSelector: '[data-web-dots]',
-  interval: 6500
+  slideSelector:'[data-web-project]',
+  prevSelector:'[data-prev-web]',
+  nextSelector:'[data-next-web]',
+  dotsSelector:'[data-web-dots]',
+  interval:6500
 });
 
 createSlider({
-  slideSelector: '[data-real-project]',
-  prevSelector: '[data-prev-real]',
-  nextSelector: '[data-next-real]',
-  dotsSelector: '[data-real-dots]',
-  interval: 6800
+  slideSelector:'[data-real-project]',
+  prevSelector:'[data-prev-real]',
+  nextSelector:'[data-next-real]',
+  dotsSelector:'[data-real-dots]',
+  interval:6800
 });
 
 createSlider({
-  slideSelector: '[data-seo-project]',
-  prevSelector: '[data-prev-seo]',
-  nextSelector: '[data-next-seo]',
-  dotsSelector: '[data-seo-dots]',
-  interval: 7000
+  slideSelector:'[data-seo-project]',
+  prevSelector:'[data-prev-seo]',
+  nextSelector:'[data-next-seo]',
+  dotsSelector:'[data-seo-dots]',
+  interval:7000
 });
 
-/* =========================================================
-   ANNÉE AUTOMATIQUE FOOTER
-========================================================= */
-
+/* ANNÉE FOOTER */
 const year = document.getElementById('year');
-
-if(year){
-  year.textContent = new Date().getFullYear();
-}
+if(year) year.textContent = new Date().getFullYear();
