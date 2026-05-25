@@ -32,15 +32,18 @@ window.addEventListener('scroll', () => {
 
 /* AU CHARGEMENT : ON RESTE EN HAUT / PROFIL VISIBLE NORMAL */
 window.addEventListener('load', () => {
+  const profil = document.querySelector('#profil');
+
   if(window.location.hash){
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
 
-  window.scrollTo({
-    top:0,
-    left:0,
-    behavior:'instant'
-  });
+  if(profil){
+    profil.scrollIntoView({
+      behavior:'auto',
+      block:'start'
+    });
+  }
 });
 
 /* REVEAL AU SCROLL */
