@@ -2068,3 +2068,63 @@ p{
   }
 
 }
+
+
+/* =====================================================
+   FIX DÉFINITIF — ALIGNEMENT HERO HOME
+===================================================== */
+
+.hero > .container.hero__inner{
+  width:min(1180px, calc(100% - 32px)) !important;
+  max-width:1180px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+
+.hero__content{
+  width:100%;
+  max-width:1040px;
+  margin:0;
+}
+
+/* Mobile */
+@media (max-width:639px){
+
+  .hero > .container.hero__inner{
+    width:calc(100% - 32px) !important;
+  }
+
+}
+
+/* Tablette */
+@media (min-width:640px) and (max-width:979px){
+
+  .hero > .container.hero__inner{
+    width:calc(100% - 48px) !important;
+  }
+
+}
+
+/* Desktop */
+@media (min-width:980px){
+
+  .hero > .container.hero__inner{
+    width:min(1120px, calc(100% - 96px)) !important;
+  }
+
+  .hero__content{
+    max-width:1000px;
+  }
+
+}
+
+/* Très grands écrans */
+@media (min-width:1400px){
+
+  .hero > .container.hero__inner{
+    width:1120px !important;
+  }
+
+}
