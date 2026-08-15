@@ -1,6 +1,5 @@
 /* =====================================================
-   PORTFOLIO OGAH SÉVÉRIN
-   DEVELOPMENT-WEB.HTML
+   PORTFOLIO — PROJETS WEB
    MOBILE FIRST
 ===================================================== */
 
@@ -11,257 +10,297 @@
 
 .projects-hero{
   position:relative;
+
   min-height:72svh;
-  padding:118px 0 76px;
+
+  padding:
+    118px 0
+    76px;
+
   display:flex;
   align-items:center;
+
   overflow:hidden;
+
   background:#070707;
 }
 
+
 .projects-hero__glow{
   position:absolute;
-  top:-210px;
-  right:-300px;
+
   width:570px;
   height:570px;
+
+  right:-300px;
+  top:-210px;
+
   border-radius:50%;
-  pointer-events:none;
+
   background:
     radial-gradient(
       circle,
-      rgba(200,162,103,.11) 0%,
-      rgba(200,162,103,.035) 38%,
+      rgba(200,162,103,.11),
       transparent 68%
     );
+
+  pointer-events:none;
 }
+
 
 .projects-hero .container{
   position:relative;
+
   z-index:2;
 }
 
+
 .projects-hero__title{
-  width:100%;
   max-width:1080px;
-  color:#f7f7f4;
-  font-size:clamp(42px,11vw,65px);
+
+  color:#f5f5f1;
+
+  font-size:clamp(
+    42px,
+    11vw,
+    65px
+  );
+
   line-height:.99;
+
   letter-spacing:-.055em;
 }
 
+
 .projects-hero__title span{
   display:inline;
-  color:#91918c;
+
+  color:#92928d;
 }
 
+
 .projects-hero__intro{
-  max-width:730px;
+  max-width:720px;
+
   margin-top:27px;
-  color:#b5b5b0;
+
+  color:#b0b0ab;
+
   font-size:14px;
   line-height:1.82;
 }
 
 
 /* =====================================================
-   LISTE DES PROJETS
+   LISTE PROJETS
 ===================================================== */
 
 .projects-list{
-  padding:60px 0 95px;
+  padding:
+    60px 0
+    95px;
+
   background:#080808;
 }
 
+
 .project-big{
   position:relative;
+
   padding:35px 0;
+
   display:grid;
+
   gap:28px;
+
   border-top:1px solid rgba(255,255,255,.11);
 }
+
 
 .project-big:last-child{
   border-bottom:1px solid rgba(255,255,255,.11);
 }
 
-.project-big > *{
-  min-width:0;
-}
 
 .project-big__index{
-  color:#83837e;
+  color:#73736e;
+
   font-family:var(--font-title);
+
   font-size:10px;
 }
+
 
 .project-big__content{
   min-width:0;
   max-width:900px;
 }
 
+
 .project-big__type{
   color:var(--gold);
+
   font-size:9px;
   font-weight:700;
-  line-height:1.4;
+
   letter-spacing:.08em;
   text-transform:uppercase;
 }
 
+
 .project-big h2{
-  width:100%;
   max-width:960px;
+
   margin-top:15px;
-  color:#f7f7f4;
-  font-size:clamp(34px,9vw,52px);
+
+  color:#f5f5f1;
+
+  font-size:clamp(
+    34px,
+    9vw,
+    52px
+  );
+
   line-height:1.03;
 }
 
+
 .project-big h2 span{
   display:inline;
-  color:#91918c;
+
+  color:#92928d;
 }
+
 
 .project-big__content > p{
   max-width:720px;
+
   margin-top:21px;
-  color:#b0b0ab;
+
+  color:#aaa9a4;
+
   font-size:12px;
   line-height:1.82;
 }
 
+
 .project-big__stack{
   margin-top:24px;
+
   display:flex;
   flex-wrap:wrap;
+
   gap:7px;
 }
 
+
 .project-big__stack span{
   padding:7px 10px;
-  color:#aaa9a4;
-  border:1px solid rgba(255,255,255,.12);
+
+  border:1px solid rgba(255,255,255,.11);
   border-radius:999px;
+
+  color:#a0a09b;
+
   font-size:9px;
-  line-height:1.25;
 }
+
 
 .project-big__link,
 .project-big__status{
   margin-top:28px;
 }
 
+
 .project-big__link{
   width:max-content;
   max-width:100%;
+
   display:inline-flex;
   align-items:center;
+
   gap:8px;
+
   color:#deded9;
+
   font-size:10px;
   font-weight:700;
 }
 
+
 .project-big__link span{
   color:var(--gold);
+
   transition:transform .3s ease;
 }
+
 
 .project-big__link:hover span{
   transform:translate(3px,-3px);
 }
 
+
 .project-big__status{
-  color:#999994;
+  color:#8a8a85;
+
   font-size:9px;
   font-weight:600;
 }
 
 
 /* =====================================================
-   INTERACTION PROJET
-===================================================== */
-
-.project-big::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-1px;
-  width:100%;
-  height:1px;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      90deg,
-      var(--gold),
-      rgba(200,162,103,.18),
-      transparent 70%
-    );
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .5s var(--ease);
-}
-
-.project-big:hover::after{
-  transform:scaleX(1);
-}
-
-
-/* =====================================================
-   PASSERELLE VERS SEO
+   BRIDGE SEO
 ===================================================== */
 
 .projects-seo-bridge{
   position:relative;
+
   padding:95px 0;
+
   overflow:hidden;
+
   background:#f4f2ed;
 }
 
-.projects-seo-bridge::after{
-  content:"";
-  position:absolute;
-  right:-270px;
-  bottom:-280px;
-  width:540px;
-  height:540px;
-  border-radius:50%;
-  pointer-events:none;
-  background:
-    radial-gradient(
-      circle,
-      rgba(200,162,103,.09),
-      transparent 68%
-    );
-}
 
 .projects-seo-bridge__inner{
-  position:relative;
-  z-index:2;
   max-width:1000px;
 }
 
+
 .projects-seo-bridge h2{
-  width:100%;
   max-width:980px;
+
   color:#151515;
-  font-size:clamp(34px,9vw,52px);
+
+  font-size:clamp(
+    34px,
+    9vw,
+    52px
+  );
+
   line-height:1.05;
 }
 
+
 .projects-seo-bridge h2 span{
   display:inline;
+
   color:#99958e;
 }
 
+
 .projects-seo-bridge p:not(.eyebrow){
   max-width:720px;
+
   margin-top:24px;
+
   color:#625f59;
+
   font-size:13px;
   line-height:1.82;
 }
+
 
 .projects-seo-bridge .btn{
   margin-top:29px;
@@ -275,24 +314,29 @@
 @media(min-width:640px){
 
   .projects-hero__title{
-    font-size:clamp(54px,8.4vw,76px);
+    font-size:clamp(
+      54px,
+      8.4vw,
+      76px
+    );
   }
 
-  .project-big{
-    padding:42px 0;
-  }
 
   .project-big h2{
-    max-width:920px;
-    font-size:clamp(42px,6.4vw,60px);
+    font-size:clamp(
+      42px,
+      6.4vw,
+      60px
+    );
   }
 
-  .project-big__content > p{
-    font-size:13px;
-  }
 
   .projects-seo-bridge h2{
-    font-size:clamp(42px,6.2vw,58px);
+    font-size:clamp(
+      42px,
+      6.2vw,
+      58px
+    );
   }
 
 }
@@ -306,54 +350,86 @@
 
   .projects-hero{
     min-height:76svh;
-    padding:150px 0 90px;
+
+    padding:
+      150px 0
+      90px;
   }
+
 
   .projects-hero__title{
-    max-width:1120px;
-    font-size:clamp(66px,6.5vw,84px);
+    max-width:1100px;
+
+    font-size:clamp(
+      66px,
+      6.8vw,
+      86px
+    );
   }
 
+
   .projects-hero__intro{
-    max-width:760px;
     font-size:16px;
   }
 
+
   .projects-list{
-    padding:85px 0 135px;
+    padding:
+      85px 0
+      135px;
   }
+
 
   .project-big{
     min-height:480px;
+
     padding:55px 0;
+
     grid-template-columns:
       145px minmax(0,1fr);
+
     gap:45px;
+
     align-items:start;
   }
 
+
   .project-big__index{
     position:sticky;
+
     top:120px;
   }
 
+
   .project-big h2{
-    max-width:940px;
-    font-size:clamp(50px,4.55vw,65px);
+    max-width:900px;
+
+    font-size:clamp(
+      50px,
+      4.7vw,
+      67px
+    );
   }
 
+
   .project-big__content > p{
-    max-width:740px;
     font-size:13px;
   }
+
 
   .projects-seo-bridge{
     padding:130px 0;
   }
 
+
   .projects-seo-bridge h2{
-    max-width:1000px;
-    font-size:clamp(48px,4.45vw,62px);
+    max-width:980px;
+
+    font-size:clamp(
+      48px,
+      4.6vw,
+      64px
+    );
   }
 
 }
@@ -366,15 +442,12 @@
 @media(min-width:1280px){
 
   .projects-hero__title{
-    font-size:84px;
+    font-size:86px;
   }
+
 
   .project-big h2{
-    font-size:65px;
-  }
-
-  .projects-seo-bridge h2{
-    font-size:62px;
+    font-size:67px;
   }
 
 }
