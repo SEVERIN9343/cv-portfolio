@@ -231,7 +231,7 @@ p{
 .section-label{
   display:flex;
   align-items:center;
-  gap:11px;
+  gap:8px;
 
   width:max-content;
   max-width:100%;
