@@ -1194,7 +1194,6 @@ p{
 
 .web-projects{
   padding:85px 0;
-
   background:#080808;
 }
 
@@ -1204,52 +1203,175 @@ p{
 
   color:#f7f7f4;
 
-  font-size:clamp(
-    32px,
-    8.5vw,
-    48px
-  );
-
+  font-size:clamp(32px,8.5vw,48px);
   line-height:1.08;
 }
 
 .web-projects__title span{
   display:inline;
-
   color:#92928d;
 }
 
+
+/* =====================================================
+   GRID
+===================================================== */
+
 .web-grid{
   display:grid;
-
-  gap:12px;
+  grid-template-columns:1fr;
+  gap:18px;
 }
+
+
+/* =====================================================
+   CARD
+===================================================== */
 
 .web-card{
   min-width:0;
-  min-height:350px;
-
-  padding:22px;
 
   display:flex;
   flex-direction:column;
+
+  overflow:hidden;
 
   background:#0e0e0e;
 
   border:1px solid rgba(255,255,255,.09);
 
   transition:
-    transform .4s var(--ease),
+    transform .45s var(--ease),
     border-color .35s ease,
     background .35s ease;
 }
 
 .web-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 
-  border-color:rgba(200,162,103,.31);
+  border-color:rgba(200,162,103,.30);
 
-  background:#121212;
+  background:#111;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.web-card__media{
+  position:relative;
+
+  display:block;
+
+  width:100%;
+  aspect-ratio:16 / 9;
+
+  overflow:hidden;
+
+  background:#151515;
+}
+
+.web-card__media::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.25),
+      transparent 45%
+    );
+
+  opacity:.65;
+
+  transition:opacity .4s ease;
+}
+
+.web-card__media img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  transform:scale(1.01);
+
+  transition:
+    transform .7s var(--ease),
+    filter .5s ease;
+}
+
+.web-card:hover .web-card__media img{
+  transform:scale(1.045);
+}
+
+.web-card:hover .web-card__media::after{
+  opacity:.25;
+}
+
+
+/* =====================================================
+   FLECHE IMAGE
+===================================================== */
+
+.web-card__media-arrow{
+  position:absolute;
+
+  top:16px;
+  right:16px;
+
+  z-index:2;
+
+  width:40px;
+  height:40px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:rgba(7,7,7,.82);
+
+  border:1px solid rgba(255,255,255,.13);
+
+  color:var(--gold);
+
+  font-size:14px;
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .35s var(--ease);
+}
+
+.web-card:hover .web-card__media-arrow{
+  transform:translate(2px,-2px);
+
+  background:var(--gold);
+
+  color:#080808;
+}
+
+
+/* =====================================================
+   CORPS
+===================================================== */
+
+.web-card__body{
+  min-height:320px;
+
+  padding:22px;
+
+  display:flex;
+  flex-direction:column;
 }
 
 .web-card__top{
@@ -1270,6 +1392,7 @@ p{
 
 .web-card__content{
   margin:auto 0;
+  padding:36px 0;
 }
 
 .web-card h3{
@@ -1277,11 +1400,7 @@ p{
 
   color:#f2f2ee;
 
-  font-size:clamp(
-    26px,
-    7vw,
-    34px
-  );
+  font-size:clamp(25px,7vw,34px);
 
   line-height:1.08;
 }
@@ -1296,6 +1415,11 @@ p{
   font-size:12px;
   line-height:1.78;
 }
+
+
+/* =====================================================
+   FOOTER CARD
+===================================================== */
 
 .web-card__footer{
   padding-top:20px;
@@ -1319,7 +1443,7 @@ p{
   width:max-content;
   max-width:100%;
 
-  display:flex;
+  display:inline-flex;
   align-items:center;
 
   gap:7px;
@@ -1337,13 +1461,66 @@ p{
 }
 
 .web-card__footer a:hover span{
-  transform:translate(3px,-3px);
+  transform:translateX(4px);
 }
+
+
+/* =====================================================
+   BOUTON GLOBAL
+===================================================== */
 
 .web-projects__more{
-  margin-top:31px;
+  margin-top:34px;
 }
 
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media(min-width:640px){
+
+  .web-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .web-card__body{
+    min-height:340px;
+  }
+
+  .web-card__footer{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media(min-width:980px){
+
+  .web-grid{
+    gap:20px;
+  }
+
+  .web-card__body{
+    min-height:360px;
+    padding:27px;
+  }
+
+  .web-card__content{
+    padding:42px 0;
+  }
+
+  .web-card h3{
+    font-size:clamp(27px,2.3vw,35px);
+  }
+
+}
 
 /* =====================================================
    DOCUMENTS
