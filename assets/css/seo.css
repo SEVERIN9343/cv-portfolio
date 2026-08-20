@@ -81,7 +81,7 @@
 .seo-page-hero__title span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -90,9 +90,9 @@
 
   margin-top:27px;
 
-  color:#b0b0ab;
+  color:#e3e3de;
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.82;
 }
 
@@ -119,9 +119,9 @@
 
 
 .seo-page-hero__meta span{
-  color:#6c6c67;
+  color:#bdbdb8;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -130,7 +130,7 @@
 
   color:#b8b8b3;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:600;
 
   letter-spacing:.05em;
@@ -197,7 +197,7 @@
 .seo-method-card > span{
   color:#a77f47;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 }
 
@@ -216,7 +216,7 @@
 
   color:#69655f;
 
-  font-size:12px;
+  font-size:14px;
   line-height:1.75;
 }
 
@@ -259,7 +259,7 @@
 .seo-case-list__title span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -289,7 +289,7 @@
 .seo-case-card__tag{
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   letter-spacing:.07em;
@@ -298,9 +298,9 @@
 
 
 .seo-case-card__number{
-  color:#696965;
+  color:#bcbcb7;
 
-  font-size:10px;
+  font-size:12px;
 }
 
 
@@ -334,9 +334,9 @@
 .seo-case-card__content > p:not(.eyebrow){
   margin-top:20px;
 
-  color:#aaa9a4;
+  color:#deded9;
 
-  font-size:13px;
+  font-size:15px;
   line-height:1.8;
 }
 
@@ -357,9 +357,9 @@
   border:1px solid rgba(255,255,255,.11);
   border-radius:999px;
 
-  color:#a2a29d;
+  color:#d6d6d1;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -387,9 +387,9 @@
 
 
 .seo-case-card__results small{
-  color:#969691;
+  color:#cecec9;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 
@@ -408,7 +408,7 @@
 .seo-case-card__results span{
   color:var(--gold);
 
-  font-size:8px;
+  font-size:10px;
   font-weight:700;
 }
 
@@ -461,7 +461,7 @@
 
   color:#242424;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 
   text-align:center;
@@ -518,7 +518,7 @@
 .seo-page-cta h2 span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -580,9 +580,9 @@
 
   margin-bottom:42px;
 
-  color:#999994;
+  color:#d2d2cd;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:600;
 
   transition:color .25s ease;
@@ -625,7 +625,7 @@
 .case-hero__title span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -634,9 +634,9 @@
 
   margin-top:27px;
 
-  color:#b0b0ab;
+  color:#e3e3de;
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.82;
 }
 
@@ -670,16 +670,16 @@
 
 
 .case-hero__facts span{
-  color:#858580;
+  color:#c4c4bf;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
 .case-hero__facts strong{
   color:#d2d2cd;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:600;
 
   text-align:right;
@@ -722,9 +722,9 @@
 
 
 .case-kpi > span{
-  color:#999994;
+  color:#d2d2cd;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -739,16 +739,16 @@
 
 
 .case-kpi small{
-  color:#868681;
+  color:#c4c4bf;
 
-  font-size:14px;
+  font-size:16px;
 }
 
 
 .case-kpi b{
   color:var(--gold);
 
-  font-size:15px;
+  font-size:16px;
 }
 
 
@@ -763,7 +763,7 @@
 .case-kpi p{
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   text-align:left;
@@ -829,7 +829,7 @@
 .case-dark-title span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -839,7 +839,7 @@
 
   margin-top:23px;
 
-  font-size:13px;
+  font-size:15px;
   line-height:1.82;
 }
 
@@ -850,7 +850,7 @@
 
 
 .case-dark-text{
-  color:#aaa9a4;
+  color:#deded9;
 }
 
 
@@ -860,7 +860,7 @@
 
 
 .case-dark-text--small{
-  font-size:11px;
+  font-size:13px;
 }
 
 
@@ -894,7 +894,7 @@
 .case-process__item > span{
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -910,9 +910,9 @@
 .case-process__item p{
   margin-top:12px;
 
-  color:#a0a09b;
+  color:#d4d4cf;
 
-  font-size:11px;
+  font-size:13px;
   line-height:1.72;
 }
 
@@ -949,7 +949,7 @@
 .audit-card > span{
   color:#706b64;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -968,7 +968,7 @@
 .audit-card p{
   color:#625f59;
 
-  font-size:10px;
+  font-size:12px;
   line-height:1.55;
 }
 
@@ -987,7 +987,7 @@
 .case-note strong{
   color:#202020;
 
-  font-size:11px;
+  font-size:13px;
 }
 
 
@@ -998,7 +998,7 @@
 
   color:#625f59;
 
-  font-size:11px;
+  font-size:13px;
   line-height:1.72;
 }
 
@@ -1034,16 +1034,16 @@
 
 
 .keywords-row span{
-  color:#969691;
+  color:#cecec9;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
 .keywords-row strong{
   color:#deded9;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:600;
 }
 
@@ -1056,9 +1056,9 @@
 .case-caption{
   margin-top:17px;
 
-  color:#8e8e89;
+  color:#c9c9c4;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -1089,7 +1089,7 @@
 .case-optim-card > span{
   color:#a47d45;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 }
 
@@ -1119,7 +1119,7 @@
 
   color:#625f59;
 
-  font-size:10px;
+  font-size:12px;
 }
 
 
@@ -1158,9 +1158,9 @@
 
 
 .url-fix small{
-  color:#8a8a85;
+  color:#c7c7c2;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 
@@ -1169,7 +1169,7 @@
 
   font-family:var(--font-title);
 
-  font-size:11px;
+  font-size:13px;
 
   overflow-wrap:anywhere;
 }
@@ -1210,9 +1210,9 @@
 
 
 .performance-block > small{
-  color:#999994;
+  color:#d2d2cd;
 
-  font-size:9px;
+  font-size:11px;
 }
 
 
@@ -1236,9 +1236,9 @@
 
 
 .performance-block__numbers span{
-  color:#83837e;
+  color:#c1c1bc;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 
@@ -1265,7 +1265,7 @@
 .performance-block > p{
   color:var(--gold);
 
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 
   text-align:left;
@@ -1289,9 +1289,9 @@
   border:1px solid rgba(255,255,255,.11);
   border-radius:999px;
 
-  color:#aaa9a4;
+  color:#deded9;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 
@@ -1334,7 +1334,7 @@
 .final-result span{
   color:#716d66;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 
@@ -1358,7 +1358,7 @@
 .final-result small{
   color:#967047;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 
@@ -1376,7 +1376,7 @@
 .case-result-note p{
   color:#625f59;
 
-  font-size:10px;
+  font-size:12px;
   line-height:1.7;
 }
 
@@ -1457,7 +1457,7 @@
 .case-conclusion h2 span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -1466,9 +1466,9 @@
 
   margin-top:26px;
 
-  color:#aaa9a4;
+  color:#deded9;
 
-  font-size:13px;
+  font-size:15px;
   line-height:1.82;
 }
 
