@@ -30,7 +30,7 @@
   --text-soft:#625f59;
 
   --muted:#b2b2ad;
-  --muted-soft:#92928d;
+  --muted-soft:#ecece7;
 
   --gold:#c8a267;
   --gold-light:#ddbd86;
@@ -173,7 +173,7 @@ p{
 
   color:var(--gold);
 
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 
   line-height:1.45;
@@ -206,7 +206,7 @@ p{
 
   color:var(--text-soft);
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.85;
 }
 
@@ -221,7 +221,7 @@ p{
 
   color:#68645e;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 
   line-height:1.3;
@@ -248,7 +248,7 @@ p{
 }
 
 .section-label--light{
-  color:#a0a09b;
+  color:#d4d4cf;
 }
 
 .section-label--light::after{
@@ -324,7 +324,7 @@ p{
   color:var(--gold);
 
   font-family:var(--font-title);
-  font-size:12px;
+  font-size:14px;
   font-weight:700;
 
   transition:
@@ -345,7 +345,7 @@ p{
 
   font-family:var(--font-title);
 
-  font-size:12px;
+  font-size:14px;
   font-weight:600;
 
   white-space:nowrap;
@@ -491,7 +491,7 @@ p{
 
   color:#d6d6d1;
 
-  font-size:12px;
+  font-size:14px;
   font-weight:600;
 
   text-align:left;
@@ -535,7 +535,7 @@ p{
   border:1px solid transparent;
   border-radius:999px;
 
-  font-size:11px;
+  font-size:13px;
   font-weight:700;
 
   white-space:nowrap;
@@ -610,7 +610,7 @@ p{
 
   color:#d6d6d1;
 
-  font-size:11px;
+  font-size:13px;
   font-weight:600;
 }
 
@@ -768,7 +768,7 @@ p{
 .hero__title span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 .hero__intro{
@@ -776,9 +776,9 @@ p{
 
   margin-top:27px;
 
-  color:#b5b5b0;
+  color:#e7e7e2;
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.82;
 }
 
@@ -828,9 +828,9 @@ p{
 }
 
 .hero__signature-items span{
-  color:#70706b;
+  color:#c8c8c3;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:600;
 }
 
@@ -839,7 +839,7 @@ p{
 
   font-family:var(--font-title);
 
-  font-size:10px;
+  font-size:12px;
   font-weight:600;
 
   letter-spacing:.055em;
@@ -912,7 +912,7 @@ p{
 .seo-feature__title span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 .seo-feature__main{
@@ -942,7 +942,7 @@ p{
 
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   letter-spacing:.08em;
@@ -950,9 +950,9 @@ p{
 }
 
 .seo-feature__content > p{
-  color:#b5b5b0;
+  color:#e7e7e2;
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.82;
 }
 
@@ -971,9 +971,9 @@ p{
   border:1px solid rgba(255,255,255,.12);
   border-radius:999px;
 
-  color:#aaa9a4;
+  color:#deded9;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:600;
 }
 
@@ -1029,9 +1029,9 @@ p{
 }
 
 .result-card__label{
-  color:#a4a49f;
+  color:#d8d8d3;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:600;
 }
 
@@ -1044,11 +1044,11 @@ p{
 
   gap:8px;
 
-  color:#92928d;
+  color:#ecece7;
 
   font-family:var(--font-title);
 
-  font-size:15px;
+  font-size:16px;
 }
 
 .result-card__value strong{
@@ -1072,7 +1072,7 @@ p{
 .result-card small{
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 }
 
@@ -1163,7 +1163,7 @@ p{
 .expertise-card__number{
   color:#9e9991;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 }
 
@@ -1183,7 +1183,7 @@ p{
 
   color:#625f59;
 
-  font-size:12px;
+  font-size:14px;
   line-height:1.75;
 }
 
@@ -1209,7 +1209,7 @@ p{
 
 .web-projects__title span{
   display:inline;
-  color:#92928d;
+  color:#ecece7;
 }
 
 
@@ -1341,7 +1341,7 @@ p{
 
   color:var(--gold);
 
-  font-size:14px;
+  font-size:16px;
 
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
@@ -1381,9 +1381,9 @@ p{
 
   gap:20px;
 
-  color:#92928d;
+  color:#ecece7;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   letter-spacing:.07em;
@@ -1410,9 +1410,9 @@ p{
 
   margin-top:18px;
 
-  color:#aaa9a4;
+  color:#deded9;
 
-  font-size:12px;
+  font-size:14px;
   line-height:1.78;
 }
 
@@ -1433,9 +1433,9 @@ p{
 }
 
 .web-card__footer > span{
-  color:#92928d;
+  color:#ecece7;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:600;
 }
 
@@ -1450,7 +1450,7 @@ p{
 
   color:#deded9;
 
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 }
 
@@ -1582,7 +1582,7 @@ p{
 .document-card__type{
   color:#9d7641;
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   letter-spacing:.09em;
@@ -1610,7 +1610,7 @@ p{
 
   color:#625f59;
 
-  font-size:11px;
+  font-size:13px;
   line-height:1.72;
 }
 
@@ -1693,7 +1693,7 @@ p{
 .contact-card h2 span{
   display:inline;
 
-  color:#92928d;
+  color:#ecece7;
 }
 
 .contact-card > p:not(.eyebrow){
@@ -1701,9 +1701,9 @@ p{
 
   margin-top:25px;
 
-  color:#b0b0ab;
+  color:#e3e3de;
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.82;
 }
 
@@ -1746,15 +1746,15 @@ p{
 
   font-family:var(--font-title);
 
-  font-size:11px;
+  font-size:13px;
   font-weight:600;
 }
 
 .footer span,
 .footer p{
-  color:#8a8a85;
+  color:#c7c7c2;
 
-  font-size:9px;
+  font-size:11px;
 
   text-align:left;
 }
@@ -1801,7 +1801,7 @@ p{
   }
 
   .brand__text{
-    font-size:11px;
+    font-size:13px;
   }
 
   .hero__title{
@@ -1857,7 +1857,7 @@ p{
   }
 
   .hero__intro{
-    font-size:15px;
+    font-size:16px;
   }
 
   .hero__actions{
@@ -1940,9 +1940,9 @@ p{
 
     padding:8px 0;
 
-    color:#aaa9a4;
+    color:#deded9;
 
-    font-size:10px;
+    font-size:12px;
     font-weight:600;
 
     white-space:nowrap;
@@ -1996,7 +1996,7 @@ p{
 
     color:#deded9;
 
-    font-size:9px;
+    font-size:11px;
     font-weight:700;
 
     transition:
@@ -2072,7 +2072,7 @@ p{
 
     margin-top:29px;
 
-    font-size:15px;
+    font-size:16px;
   }
 
   .hero__signature{
