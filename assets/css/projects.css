@@ -1,5 +1,5 @@
 /* =====================================================
-   PORTFOLIO OGAH SÉVÉRIN
+   PORTFOLIO OGAH SÃ‰VÃ‰RIN
    DEVELOPPEMENT WEB
    MOBILE FIRST
 ===================================================== */
@@ -64,7 +64,7 @@
 
 .projects-hero__title span{
   display:inline;
-  color:#92928d;
+  color:#ecece7;
 }
 
 .projects-hero__intro{
@@ -72,9 +72,9 @@
 
   margin-top:27px;
 
-  color:#b5b5b0;
+  color:#e7e7e2;
 
-  font-size:14px;
+  font-size:16px;
   line-height:1.82;
 }
 
@@ -171,7 +171,7 @@
 
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   backdrop-filter:blur(10px);
@@ -195,7 +195,7 @@
 .project-showcase__type{
   color:var(--gold);
 
-  font-size:9px;
+  font-size:11px;
   font-weight:700;
 
   letter-spacing:.08em;
@@ -219,9 +219,9 @@
 
   margin-top:20px;
 
-  color:#aaa9a4;
+  color:#deded9;
 
-  font-size:12px;
+  font-size:14px;
   line-height:1.82;
 }
 
@@ -247,9 +247,9 @@
 
   margin-bottom:6px;
 
-  color:#797974;
+  color:#bebeb9;
 
-  font-size:8px;
+  font-size:10px;
   font-weight:700;
 
   letter-spacing:.08em;
@@ -257,9 +257,9 @@
 }
 
 .project-showcase__meta p{
-  color:#b0b0ab;
+  color:#deded9;
 
-  font-size:10px;
+  font-size:12px;
   line-height:1.6;
 }
 
@@ -277,9 +277,9 @@
 
   gap:8px;
 
-  color:#e2e2de;
+  color:#f2f2ee;
 
-  font-size:11px;
+  font-size:13px;
   font-weight:700;
 }
 
@@ -353,7 +353,7 @@
 
 .projects-seo-bridge h2 span{
   display:inline;
-  color:#99958e;
+  color:#77736d;
 }
 
 .projects-seo-bridge p:not(.eyebrow){
@@ -361,9 +361,9 @@
 
   margin-top:24px;
 
-  color:#625f59;
+  color:#514e49;
 
-  font-size:13px;
+  font-size:15px;
   line-height:1.82;
 }
 
@@ -459,7 +459,7 @@
   }
 
   .project-showcase__info > div:first-child > p{
-    font-size:13px;
+    font-size:15px;
   }
 
   .projects-seo-bridge{
