@@ -270,3 +270,29 @@
   }
 
 }
+
+
+.presentation-video{
+  width:100%;
+
+  margin-top:48px;
+
+  display:flex;
+  justify-content:center;
+}
+
+.presentation-video__player{
+  display:block;
+
+  width:min(100%, 430px);
+
+  max-height:760px;
+
+  background:#000;
+
+  border:1px solid rgba(255,255,255,.10);
+
+  border-radius:18px;
+
+  object-fit:contain;
+}
