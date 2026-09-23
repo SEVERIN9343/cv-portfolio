@@ -1,1 +1,923 @@
 
+/* =========================================================
+   AUTOMATISATION.HTML
+   Design cohérent avec la Home
+   Typographies :
+   - Montserrat : titres / labels / boutons
+   - Inter      : textes
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES LOCALES DE SÉCURITÉ
+   Les variables globales restent celles de style.css.
+   ========================================================= */
+
+.auto-hero,
+.auto-intro,
+.auto-project,
+.auto-skills{
+  font-family:var(--font-body, "Inter", sans-serif);
+}
+
+.auto-hero h1,
+.auto-intro h2,
+.auto-project h2,
+.auto-project h3,
+.auto-skills h2,
+.auto-skills h3,
+.auto-project__index strong{
+  font-family:var(--font-title, "Montserrat", sans-serif);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.auto-hero{
+  position:relative;
+  min-height:100svh;
+  padding:125px 0 58px;
+  overflow:hidden;
+  background:#080808;
+  color:#f5f5f1;
+}
+
+.auto-hero__glow{
+  position:absolute;
+  top:5%;
+  right:-180px;
+
+  width:520px;
+  height:520px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(200,162,103,.12),
+      transparent 68%
+    );
+
+  pointer-events:none;
+}
+
+.auto-hero__inner{
+  position:relative;
+  z-index:2;
+}
+
+.auto-eyebrow,
+.auto-project__kicker{
+  color:#c8a267;
+
+  font-family:var(--font-title, "Montserrat", sans-serif);
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.auto-hero__title{
+  width:100%;
+  max-width:1020px;
+
+  margin-top:25px;
+
+  color:#f7f7f4;
+
+  font-size:clamp(
+    39px,
+    10.5vw,
+    58px
+  );
+
+  font-weight:600;
+  line-height:1.02;
+  letter-spacing:-.045em;
+}
+
+.auto-hero__title span{
+  display:block;
+  color:#aaa69f;
+}
+
+.auto-hero__intro{
+  width:100%;
+  max-width:720px;
+
+  margin-top:28px;
+
+  color:#d9d9d4;
+
+  font-size:15px;
+  line-height:1.82;
+}
+
+.auto-hero__actions{
+  margin-top:31px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+
+  gap:10px;
+}
+
+.auto-hero__meta{
+  margin-top:62px;
+  padding-top:22px;
+
+  border-top:1px solid rgba(255,255,255,.11);
+
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+
+  gap:22px 15px;
+}
+
+.auto-hero__meta > div{
+  min-width:0;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:6px;
+}
+
+.auto-hero__meta span{
+  color:#8f8f8a;
+
+  font-size:10px;
+  font-weight:600;
+}
+
+.auto-hero__meta strong{
+  color:#ecece7;
+
+  font-family:var(--font-title, "Montserrat", sans-serif);
+  font-size:12px;
+  font-weight:600;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.auto-intro{
+  padding:85px 0;
+  background:#f2efe9;
+}
+
+.auto-intro__grid{
+  display:grid;
+  gap:32px;
+}
+
+.auto-intro__grid > *{
+  min-width:0;
+}
+
+.auto-section-title{
+  width:100%;
+  max-width:980px;
+
+  color:#151515;
+
+  font-size:clamp(
+    31px,
+    8vw,
+    48px
+  );
+
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.04em;
+}
+
+.auto-section-title span{
+  display:inline;
+  color:#8c8881;
+}
+
+.auto-intro__text{
+  width:100%;
+  max-width:760px;
+
+  margin-top:25px;
+
+  color:#5f5b55;
+
+  font-size:15px;
+  line-height:1.86;
+}
+
+
+/* =========================================================
+   PROJETS — BASE
+   ========================================================= */
+
+.auto-project{
+  position:relative;
+  padding:88px 0;
+}
+
+.auto-project--dark{
+  background:#080808;
+  color:#f4f4ef;
+}
+
+.auto-project--light{
+  background:#f2efe9;
+  color:#151515;
+}
+
+.auto-project__head{
+  display:grid;
+  gap:31px;
+}
+
+.auto-project__index{
+  display:flex;
+  align-items:flex-end;
+
+  gap:9px;
+}
+
+.auto-project__index span{
+  padding-bottom:7px;
+
+  color:#8e8a83;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.1em;
+}
+
+.auto-project__index strong{
+  color:#c8a267;
+
+  font-size:48px;
+  font-weight:500;
+  line-height:1;
+}
+
+.auto-project__heading{
+  min-width:0;
+}
+
+.auto-project__title{
+  width:100%;
+  max-width:960px;
+
+  margin-top:16px;
+
+  font-size:clamp(
+    31px,
+    8.3vw,
+    49px
+  );
+
+  font-weight:600;
+  line-height:1.07;
+  letter-spacing:-.04em;
+}
+
+.auto-project--dark .auto-project__title{
+  color:#f5f5f1;
+}
+
+.auto-project--light .auto-project__title{
+  color:#151515;
+}
+
+.auto-project__title span{
+  display:inline;
+}
+
+.auto-project--dark .auto-project__title span{
+  color:#aaa69f;
+}
+
+.auto-project--light .auto-project__title span{
+  color:#85817a;
+}
+
+.auto-project__lead{
+  width:100%;
+  max-width:740px;
+
+  margin-top:23px;
+
+  font-size:15px;
+  line-height:1.84;
+}
+
+.auto-project--dark .auto-project__lead{
+  color:#d6d6d1;
+}
+
+.auto-project--light .auto-project__lead{
+  color:#5e5a54;
+}
+
+
+/* =========================================================
+   CAPTURE WORKFLOW
+   ========================================================= */
+
+.workflow-shot{
+  width:100%;
+
+  margin:48px 0 0;
+
+  overflow:hidden;
+
+  background:#101010;
+
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.workflow-shot--light{
+  background:#fff;
+
+  border-color:#d6d1c8;
+}
+
+.workflow-shot > img{
+  display:block;
+
+  width:100%;
+  height:auto;
+}
+
+.workflow-shot__placeholder{
+  width:100%;
+  min-height:280px;
+
+  padding:30px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  gap:11px;
+
+  background:
+    radial-gradient(
+      circle at 72% 24%,
+      rgba(200,162,103,.13),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #0d0d0d,
+      #171717
+    );
+
+  text-align:center;
+}
+
+.workflow-shot__placeholder span{
+  color:#c8a267;
+
+  font-family:var(--font-title, "Montserrat", sans-serif);
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.12em;
+}
+
+.workflow-shot__placeholder strong{
+  color:#f2f2ee;
+
+  font-family:var(--font-title, "Montserrat", sans-serif);
+  font-size:clamp(
+    21px,
+    6vw,
+    31px
+  );
+
+  font-weight:600;
+}
+
+.workflow-shot__placeholder small{
+  max-width:450px;
+
+  color:#a9a9a4;
+
+  font-size:12px;
+  line-height:1.6;
+}
+
+.workflow-shot figcaption{
+  padding:13px 17px;
+
+  color:#9f9f9a;
+
+  font-size:10px;
+  line-height:1.5;
+
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.workflow-shot--light figcaption{
+  color:#716d66;
+
+  border-top-color:#ddd8d0;
+}
+
+
+/* =========================================================
+   BLOCS OBJECTIF / LOGIQUE / CONTRÔLE
+   ========================================================= */
+
+.auto-project__content{
+  margin-top:18px;
+
+  display:grid;
+  grid-template-columns:1fr;
+
+  gap:1px;
+}
+
+.auto-info{
+  min-width:0;
+  min-height:220px;
+
+  padding:25px;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.auto-project--dark .auto-info{
+  background:#101010;
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.auto-project--light .auto-info{
+  background:#faf8f4;
+
+  border:1px solid #dcd7ce;
+}
+
+.auto-info__number{
+  color:#a27b47;
+
+  font-size:10px;
+  font-weight:700;
+}
+
+.auto-info h3{
+  margin-top:auto;
+  padding-top:35px;
+
+  font-size:20px;
+  font-weight:600;
+  line-height:1.15;
+}
+
+.auto-project--dark .auto-info h3{
+  color:#f0f0ec;
+}
+
+.auto-project--light .auto-info h3{
+  color:#181818;
+}
+
+.auto-info p{
+  margin-top:12px;
+
+  font-size:13px;
+  line-height:1.76;
+}
+
+.auto-project--dark .auto-info p{
+  color:#c8c8c3;
+}
+
+.auto-project--light .auto-info p{
+  color:#625e58;
+}
+
+
+/* =========================================================
+   ARCHITECTURE SIMPLIFIÉE
+   ========================================================= */
+
+.auto-flow{
+  margin-top:18px;
+  padding:25px;
+
+  background:#101010;
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.auto-flow--light{
+  background:#faf8f4;
+
+  border-color:#dcd7ce;
+}
+
+.auto-flow__label{
+  margin-bottom:19px;
+
+  color:#c8a267;
+
+  font-family:var(--font-title, "Montserrat", sans-serif);
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.auto-flow__steps{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+
+  gap:9px;
+}
+
+.auto-flow__steps span{
+  padding:8px 11px;
+
+  color:#e6e6e1;
+
+  border:1px solid rgba(255,255,255,.13);
+
+  font-size:10px;
+  font-weight:600;
+}
+
+.auto-flow__steps i{
+  color:#c8a267;
+
+  font-style:normal;
+  font-size:12px;
+}
+
+.auto-flow--light .auto-flow__steps span{
+  color:#44413c;
+
+  border-color:#d2cdc4;
+}
+
+
+/* =========================================================
+   STACK + BOUTON PDF
+   ========================================================= */
+
+.auto-project__bottom{
+  margin-top:31px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+
+  gap:25px;
+}
+
+.auto-stack{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:7px;
+}
+
+.auto-stack span{
+  padding:7px 10px;
+
+  border-radius:999px;
+
+  font-size:10px;
+  font-weight:600;
+}
+
+.auto-project--dark .auto-stack span{
+  color:#d5d5d0;
+
+  border:1px solid rgba(255,255,255,.13);
+}
+
+.auto-project--light .auto-stack span{
+  color:#55514b;
+
+  border:1px solid #d1cbc2;
+}
+
+
+/* =========================================================
+   COMPÉTENCES
+   ========================================================= */
+
+.auto-skills{
+  padding:85px 0;
+
+  background:#fff;
+}
+
+.auto-skills__grid{
+  display:grid;
+  gap:34px;
+}
+
+.auto-skills__grid > *{
+  min-width:0;
+}
+
+.auto-skills__list{
+  margin-top:43px;
+
+  border-top:1px solid #d9d4cc;
+}
+
+.auto-skill{
+  padding:25px 0;
+
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr);
+
+  gap:16px;
+
+  border-bottom:1px solid #d9d4cc;
+}
+
+.auto-skill > span{
+  color:#9d7641;
+
+  font-size:10px;
+  font-weight:700;
+}
+
+.auto-skill h3{
+  color:#171717;
+
+  font-size:18px;
+  font-weight:600;
+}
+
+.auto-skill p{
+  max-width:620px;
+
+  margin-top:9px;
+
+  color:#625f59;
+
+  font-size:13px;
+  line-height:1.72;
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media(min-width:640px){
+
+  .auto-hero{
+    padding-top:145px;
+  }
+
+  .auto-hero__title{
+    font-size:clamp(
+      52px,
+      7.8vw,
+      68px
+    );
+  }
+
+  .auto-hero__actions{
+    flex-direction:row;
+    flex-wrap:wrap;
+  }
+
+  .auto-hero__meta{
+    grid-template-columns:
+      repeat(4,minmax(0,1fr));
+  }
+
+  .auto-project__content{
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
+  }
+
+  .workflow-shot__placeholder{
+    min-height:390px;
+  }
+
+  .auto-project__bottom{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media(min-width:980px){
+
+  .auto-hero{
+    padding:
+      155px 0
+      72px;
+  }
+
+  .auto-hero__title{
+    max-width:1040px;
+
+    font-size:clamp(
+      60px,
+      5.25vw,
+      74px
+    );
+  }
+
+  .auto-hero__intro{
+    margin-top:30px;
+
+    font-size:16px;
+  }
+
+  .auto-hero__meta{
+    margin-top:75px;
+  }
+
+
+  /* INTRO */
+
+  .auto-intro{
+    padding:125px 0;
+  }
+
+  .auto-intro__grid{
+    grid-template-columns:
+      210px minmax(0,1fr);
+
+    gap:65px;
+  }
+
+  .auto-section-title{
+    font-size:clamp(
+      44px,
+      4vw,
+      58px
+    );
+  }
+
+
+  /* PROJETS */
+
+  .auto-project{
+    padding:125px 0;
+  }
+
+  .auto-project__head{
+    grid-template-columns:
+      210px minmax(0,1fr);
+
+    gap:65px;
+  }
+
+  .auto-project__title{
+    font-size:clamp(
+      44px,
+      4.1vw,
+      59px
+    );
+  }
+
+  .workflow-shot{
+    margin-top:65px;
+  }
+
+  .workflow-shot__placeholder{
+    min-height:500px;
+  }
+
+  .auto-project__content{
+    margin-top:20px;
+
+    gap:12px;
+  }
+
+  .auto-info{
+    min-height:275px;
+
+    padding:28px;
+  }
+
+  .auto-info h3{
+    font-size:22px;
+  }
+
+  .auto-flow{
+    margin-top:20px;
+    padding:28px;
+  }
+
+
+  /* COMPÉTENCES */
+
+  .auto-skills{
+    padding:125px 0;
+  }
+
+  .auto-skills__grid{
+    grid-template-columns:
+      210px minmax(0,1fr);
+
+    gap:65px;
+  }
+
+  .auto-skill{
+    grid-template-columns:
+      55px minmax(0,1fr);
+
+    padding:29px 0;
+  }
+
+}
+
+
+/* =========================================================
+   GRAND DESKTOP
+   ========================================================= */
+
+@media(min-width:1280px){
+
+  .auto-hero__title{
+    font-size:74px;
+  }
+
+  .auto-section-title{
+    font-size:58px;
+  }
+
+  .auto-project__title{
+    font-size:59px;
+  }
+
+}
+
+
+/* =========================================================
+   PETITS MOBILES
+   ========================================================= */
+
+@media(max-width:389px){
+
+  .auto-hero__title{
+    font-size:clamp(
+      36px,
+      10.7vw,
+      42px
+    );
+  }
+
+  .auto-hero__actions{
+    width:100%;
+  }
+
+  .auto-hero__actions .btn{
+    width:100%;
+    white-space:normal;
+    text-align:center;
+  }
+
+  .auto-project__bottom .btn{
+    width:100%;
+    white-space:normal;
+    text-align:center;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  .auto-project,
+  .auto-info,
+  .workflow-shot{
+    scroll-behavior:auto;
+  }
+
+}
