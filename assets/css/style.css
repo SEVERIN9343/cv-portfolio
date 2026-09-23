@@ -1,2275 +1,1267 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>OGAH Sévérin — SEO, GEO, Automatisation & IA</title>
 
-/* =====================================================
-   PORTFOLIO OGAH SÉVÉRIN
-   STYLE GLOBAL
-   MOBILE FIRST
-===================================================== */
+  <meta
+    name="description"
+    content="Portfolio de OGAH Sévérin : projets SEO/GEO, automatisation n8n et IA, analyse de données, WordPress et performance web."
+  >
 
+  <meta name="theme-color" content="#070707">
 
-/* =====================================================
-   VARIABLES
-===================================================== */
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/main.js" defer></script>
+</head>
 
-:root{
-  --bg:#070707;
-  --bg-soft:#0b0b0b;
-  --bg-soft-2:#101010;
+<body>
 
-  --surface:#111111;
-  --surface-2:#161616;
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
-  --light:#f4f2ed;
-  --light-soft:#faf8f4;
+  <header class="site-header" data-header>
 
-  --white:#f7f7f4;
-  --white-soft:#deded9;
+    <div class="container site-header__inner">
 
-  --text:#131313;
-  --text-soft:#625f59;
+      <a class="brand" href="#top" aria-label="Retour à l'accueil">
 
-  --muted:#b2b2ad;
-  --muted-soft:#ecece7;
+        <span class="brand__mark">
+          S
+        </span>
 
-  --gold:#c8a267;
-  --gold-light:#ddbd86;
-  --gold-soft:rgba(200,162,103,.12);
+        <span class="brand__text">
+          OGAH Sévérin
+        </span>
 
-  --line-dark:rgba(255,255,255,.10);
-  --line-light:#dedad2;
+      </a>
 
-  --font-title:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      <nav class="desktop-nav" aria-label="Navigation principale">
 
-  --container:1180px;
+        <a href="#seo">SEO</a>
+        <a href="#automatisation">Automatisation</a>
+        <a href="#expertises">Expertises</a>
+        <a href="#web">Projets Web</a>
+        <a href="#profil">Profil</a>
+        <a href="#contact">Contact</a>
 
-  --page-x:18px;
+      </nav>
 
-  --ease:cubic-bezier(.2,.75,.25,1);
-}
+      <div class="site-header__actions">
 
+        <a
+          class="header-cv"
+          href="./assets/docs/SEO  GEO  Acquisition & Web Performance.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Mon CV
+          <span aria-hidden="true">↗</span>
+        </a>
 
-/* =====================================================
-   RESET
-===================================================== */
+        <button
+          class="burger"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          data-burger
+        >
+          <span></span>
+          <span></span>
+        </button>
 
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
-}
+      </div>
 
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:88px;
-  -webkit-text-size-adjust:100%;
-}
+    </div>
 
-body{
-  margin:0;
-  min-width:320px;
+    <nav
+      class="mobile-nav"
+      aria-label="Navigation mobile"
+      data-mobile-nav
+    >
 
-  background:var(--bg);
-  color:var(--white);
+      <a href="#seo">SEO</a>
+      <a href="#expertises">Expertises</a>
+      <a href="#web">Projets Web</a>
+      <a href="#profil">Profil</a>
+      <a href="#contact">Contact</a>
 
-  font-family:var(--font-body);
-  line-height:1.65;
+      <a
+        class="mobile-nav__cv"
+        href="./assets/docs/SEO  GEO  Acquisition & Web Performance.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Consulter mon CV
+      </a>
 
-  overflow-x:hidden;
+    </nav>
 
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
+  </header>
 
-body.menu-open{
-  overflow:hidden;
-}
 
-img{
-  display:block;
-  max-width:100%;
-  height:auto;
-}
+  <main id="top">
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
 
-button,
-input,
-textarea,
-select{
-  font:inherit;
-}
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-button,
-a{
-  -webkit-tap-highlight-color:transparent;
-}
+    <section class="hero">
 
-::selection{
-  background:var(--gold);
-  color:#070707;
-}
+      <div class="hero__glow hero__glow--one"></div>
+      <div class="hero__glow hero__glow--two"></div>
 
+      <div class="container hero__inner">
 
-/* =====================================================
-   CONTENEUR GLOBAL
-===================================================== */
+        <div class="hero__content">
 
-.container{
-  width:min(
-    var(--container),
-    calc(100% - (var(--page-x) * 2))
-  );
+          <p class="eyebrow hero__eyebrow reveal">
+            SEO · GEO · AUTOMATISATION · IA
+          </p>
 
-  margin-left:auto;
-  margin-right:auto;
-}
+          <h1 class="hero__title reveal" data-delay="80">
+            J'optimise la <span>visibilité</span>
+            et j'automatise les
+            <span>processus digitaux.</span>
+          </h1>
 
+          <p class="hero__intro reveal" data-delay="160">
+            J'associe stratégie SEO/GEO, analyse de données et automatisation
+            pour améliorer la visibilité organique, exploiter les données
+            et construire des workflows intelligents.
+          </p>
 
-/* =====================================================
-   TYPOGRAPHIE GLOBALE
-===================================================== */
+         <div class="hero__actions">
+            <a class="btn btn--light" href="./seo.html">
+              Découvrir mes projets SEO
+            </a>
+            <a class="btn btn--ghost-light" href="./automatisation.html">
+              Voir mes automatisations
+              <span aria-hidden="true">↘</span>
+            </a>
+            <a class="btn btn--ghost-light" href="./presentation.html">
+              Découvrir mon profil en 2 min
+              <span aria-hidden="true">▶</span>
+            </a>
+          </div>
 
-h1,
-h2,
-h3,
-h4{
-  margin:0;
 
-  font-family:var(--font-title);
-  font-weight:600;
+        </div>
 
-  line-height:1.08;
-  letter-spacing:-.04em;
 
-  hyphens:none;
-  -webkit-hyphens:none;
+        <div
+          class="hero__signature reveal"
+          data-delay="320"
+          aria-hidden="true"
+        >
 
-  word-break:normal;
-  overflow-wrap:normal;
+          <div class="hero__signature-line"></div>
 
-  text-wrap:balance;
-}
+          <div class="hero__signature-items">
 
-p{
-  margin:0;
+            <div>
+              <span>01</span>
+              <strong>SEO / GEO</strong>
+            </div>
 
-  text-align:justify;
-  text-justify:inter-word;
+            <div>
+              <span>02</span>
+              <strong>Automatisation</strong>
+            </div>
 
-  hyphens:none;
-  -webkit-hyphens:none;
+            <div>
+              <span>03</span>
+              <strong>Data & Analytics</strong>
+            </div>
 
-  word-break:normal;
-  overflow-wrap:break-word;
-}
+            <div>
+              <span>04</span>
+              <strong>WordPress / Web</strong>
+            </div>
 
-.eyebrow{
-  margin:0 0 16px;
+          </div>
 
-  color:var(--gold);
+        </div>
 
-  font-size:12px;
-  font-weight:700;
+      </div>
 
-  line-height:1.45;
+    </section>
 
-  letter-spacing:.15em;
-  text-transform:uppercase;
 
-  text-align:left;
-}
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
 
-.section-title{
-  width:100%;
-  max-width:980px;
+    <section class="intro-section" id="profil">
 
-  color:#111;
+      <div class="container intro-grid">
 
-  font-size:clamp(31px,8vw,46px);
-  line-height:1.08;
-}
+        <div class="section-label reveal">
+          <span>01</span>
+          Profil
+        </div>
 
-.section-title span{
-  display:inline;
-  color:#9a9790;
-}
+        <div class="intro-content">
 
-.section-text{
-  max-width:760px;
+          <h2 class="section-title reveal">
+            SEO/GEO et automatisation comme axes principaux.
+            <span>
+              Le développement web comme force technique.
+            </span>
+          </h2>
 
-  margin-top:24px;
+          <p class="section-text reveal" data-delay="80">
+            Mon approche combine référencement naturel, analyse de données,
+            automatisation et compétences techniques web. Je peux analyser
+            les problématiques SEO d'un site, exploiter ses données,
+            automatiser des tâches récurrentes et intervenir sur WordPress
+            lorsque la mise en œuvre nécessite une action technique.
+          </p>
 
-  color:var(--text-soft);
+        </div>
 
-  font-size:16px;
-  line-height:1.85;
-}
+      </div>
 
-.section-label{
-  width:max-content;
-  max-width:100%;
+    </section>
 
-  display:flex;
-  align-items:center;
 
-  gap:11px;
+    <!-- =====================================================
+         ÉTUDE DE CAS SEO VEDETTE
+    ====================================================== -->
 
-  color:#68645e;
+    <section class="seo-feature" id="seo">
 
-  font-size:12px;
-  font-weight:700;
+      <div class="container">
 
-  line-height:1.3;
+        <div class="seo-feature__head">
 
-  letter-spacing:.12em;
-  text-transform:uppercase;
+          <div class="section-label section-label--light reveal">
+            <span>02</span>
+            Étude de cas SEO
+          </div>
 
-  white-space:nowrap;
-}
+          <div>
 
-.section-label span{
-  color:var(--gold);
-}
+            <p class="eyebrow reveal">
+              Projet sélectionné
+            </p>
 
-.section-label::after{
-  content:"";
+            <h2 class="seo-feature__title reveal">
+              Optimisation SEO complète
+              <span>du site VPCE.</span>
+            </h2>
 
-  width:34px;
-  height:1px;
+          </div>
 
-  flex:0 0 auto;
+        </div>
 
-  background:#cec9c0;
-}
 
-.section-label--light{
-  color:#d4d4cf;
-}
+        <div class="seo-feature__main">
 
-.section-label--light::after{
-  background:rgba(255,255,255,.18);
-}
+          <div class="seo-feature__content reveal">
 
+            <div class="seo-project-tag">
+              VPCE · WordPress
+            </div>
 
-/* =====================================================
-   HEADER
-===================================================== */
+            <p>
+              Audit et optimisation SEO d'un site WordPress spécialisé
+              dans la lutte anti-nuisibles : SEO technique, recherche
+              de mots-clés, optimisation On-Page, Web Performance,
+              indexation et analyse des résultats.
+            </p>
 
-.site-header{
-  position:fixed;
+            <div class="seo-feature__skills">
 
-  top:0;
-  left:0;
+              <span>Audit SEO</span>
+              <span>SEMrush</span>
+              <span>Screaming Frog</span>
+              <span>Search Console</span>
+              <span>SEO On-Page</span>
+              <span>Core Web Vitals</span>
 
-  width:100%;
+            </div>
 
-  z-index:100;
+            <div class="seo-feature__actions">
 
-  background:rgba(7,7,7,.78);
+              <a
+                class="btn btn--gold"
+                href="./projet-seo-vpce.html"
+              >
+                Découvrir l'étude de cas
+                <span aria-hidden="true">→</span>
+              </a>
 
-  border-bottom:1px solid transparent;
+              <a
+                class="text-link"
+                href="./assets/docs/PROJET SEO POUR VPCE.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Rapport SEO complet
+                <span aria-hidden="true">↗</span>
+              </a>
 
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+            </div>
 
-  transition:
-    background .35s ease,
-    border-color .35s ease,
-    box-shadow .35s ease;
-}
+          </div>
 
-.site-header.is-scrolled{
-  background:rgba(7,7,7,.96);
 
-  border-color:var(--line-dark);
+          <div class="seo-results">
 
-  box-shadow:
-    0 14px 36px rgba(0,0,0,.22);
-}
+            <article class="result-card reveal">
 
-.site-header__inner{
-  min-height:68px;
+              <span class="result-card__label">
+                Performance mobile
+              </span>
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+              <div class="result-card__value">
+                <span>65</span>
+                <span class="result-arrow">→</span>
+                <strong
+                  class="counter"
+                  data-counter="97"
+                >
+                  97
+                </strong>
+              </div>
 
-  gap:16px;
-}
+              <small>
+                +32 points Lighthouse
+              </small>
 
-.brand{
-  display:inline-flex;
-  align-items:center;
+            </article>
 
-  gap:10px;
 
-  flex:0 0 auto;
-}
+            <article
+              class="result-card reveal"
+              data-delay="80"
+            >
 
-.brand__mark{
-  width:34px;
-  height:34px;
+              <span class="result-card__label">
+                LCP mobile
+              </span>
 
-  display:grid;
-  place-items:center;
+              <div class="result-card__value">
+                <span>13,3 s</span>
+                <span class="result-arrow">→</span>
+                <strong>2,5 s</strong>
+              </div>
 
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:50%;
+              <small>
+                −81 %
+              </small>
 
-  color:var(--gold);
+            </article>
 
-  font-family:var(--font-title);
-  font-size:14px;
-  font-weight:700;
 
-  transition:
-    background .3s ease,
-    color .3s ease,
-    border-color .3s ease;
-}
+            <article
+              class="result-card reveal"
+              data-delay="160"
+            >
 
-.brand:hover .brand__mark{
-  background:var(--gold);
-  border-color:var(--gold);
+              <span class="result-card__label">
+                Clics organiques
+              </span>
 
-  color:#080808;
-}
+              <div class="result-card__value">
+                <span>5</span>
+                <span class="result-arrow">→</span>
+                <strong
+                  class="counter"
+                  data-counter="41"
+                >
+                  41
+                </strong>
+              </div>
 
-.brand__text{
-  color:var(--white);
+              <small>
+                +720 %
+              </small>
 
-  font-family:var(--font-title);
+            </article>
 
-  font-size:14px;
-  font-weight:600;
 
-  white-space:nowrap;
-}
+            <article
+              class="result-card reveal"
+              data-delay="240"
+            >
 
-.desktop-nav{
-  display:none;
-}
+              <span class="result-card__label">
+                CTR moyen
+              </span>
 
-.site-header__actions{
-  display:flex;
-  align-items:center;
+              <div class="result-card__value">
+                <span>1 %</span>
+                <span class="result-arrow">→</span>
+                <strong>9,3 %</strong>
+              </div>
 
-  gap:9px;
-}
+              <small>
+                +8,3 points
+              </small>
 
-.header-cv{
-  display:none;
-}
+            </article>
 
+          </div>
 
-/* =====================================================
-   BURGER
-===================================================== */
+        </div>
 
-.burger{
-  position:relative;
+      </div>
 
-  width:42px;
-  height:42px;
+    </section>
 
-  flex:0 0 42px;
 
-  padding:0;
 
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:50%;
+    <!-- =====================================================
+         AUTOMATISATION & IA
+    ====================================================== -->
 
-  background:transparent;
+    <section class="automation-section" id="automatisation">
+      <div class="container">
 
-  cursor:pointer;
-}
+        <div class="automation-section__head">
+          <div class="section-label reveal">
+            <span>03</span>
+            Automatisation & IA
+          </div>
 
-.burger span{
-  position:absolute;
+          <div>
+            <p class="eyebrow reveal">Workflows n8n</p>
+            <h2 class="automation-section__title reveal">
+              Des automatisations pensées pour
+              <span>transformer les données en actions.</span>
+            </h2>
+            <p class="automation-section__intro reveal" data-delay="80">
+              Deux projets construits autour de n8n pour automatiser des
+              processus métier : traitement de demandes et reporting SEO.
+              Chaque projet dispose d'une fiche technique dédiée.
+            </p>
+          </div>
+        </div>
 
-  left:50%;
+        <div class="automation-grid">
 
-  width:18px;
-  height:1px;
+          <article class="automation-card reveal">
+            <div class="automation-card__visual">
+              <div class="automation-card__placeholder">
+                <span>Capture du workflow à ajouter</span>
+              </div>
+            </div>
 
-  background:#fff;
+            <div class="automation-card__body">
+              <div class="automation-card__top">
+                <span>n8n · IA · Google Sheets</span>
+                <span>01</span>
+              </div>
 
-  transform:translateX(-50%);
+              <h3>Automatisation du traitement des demandes</h3>
 
-  transition:
-    top .3s ease,
-    transform .3s ease;
-}
+              <p>
+                Workflow automatisé depuis la soumission d'un formulaire :
+                enregistrement des données, traitement par IA et routage des
+                demandes vers les destinataires concernés.
+              </p>
 
-.burger span:first-child{
-  top:17px;
-}
+              <div class="automation-card__tags">
+                <span>n8n</span>
+                <span>Google Sheets</span>
+                <span>OpenAI</span>
+                <span>E-mail</span>
+              </div>
 
-.burger span:last-child{
-  top:23px;
-}
+              <div class="automation-card__actions">
+                <a class="btn btn--gold" href="./automatisation.html#projet-1">
+                  Découvrir le projet <span aria-hidden="true">→</span>
+                </a>
+                <a class="automation-card__pdf"
+                   href="./assets/docs/fiche-technique-automatisation-demandes.pdf"
+                   target="_blank" rel="noopener">
+                  Fiche technique <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-.burger[aria-expanded="true"] span:first-child{
-  top:20px;
+          <article class="automation-card reveal" data-delay="100">
+            <div class="automation-card__visual">
+              <div class="automation-card__placeholder">
+                <span>Capture du workflow SEO à ajouter</span>
+              </div>
+            </div>
 
-  transform:
-    translateX(-50%)
-    rotate(45deg);
-}
+            <div class="automation-card__body">
+              <div class="automation-card__top">
+                <span>n8n · SEO · Search Console · IA</span>
+                <span>02</span>
+              </div>
 
-.burger[aria-expanded="true"] span:last-child{
-  top:20px;
+              <h3>Reporting SEO hebdomadaire automatisé</h3>
 
-  transform:
-    translateX(-50%)
-    rotate(-45deg);
-}
+              <p>
+                Workflow multi-sites qui récupère les données Google Search
+                Console, prépare les données SEO, les fait analyser par IA,
+                génère un rapport, l'envoie par e-mail et conserve un historique.
+              </p>
 
+              <div class="automation-card__tags">
+                <span>n8n</span>
+                <span>Search Console</span>
+                <span>OpenAI</span>
+                <span>Google Sheets</span>
+                <span>Gmail</span>
+              </div>
 
-/* =====================================================
-   NAVIGATION MOBILE
-===================================================== */
+              <div class="automation-card__actions">
+                <a class="btn btn--gold" href="./automatisation.html#projet-2">
+                  Découvrir le projet <span aria-hidden="true">→</span>
+                </a>
+                <a class="automation-card__pdf"
+                   href="./assets/docs/fiche-technique-reporting-seo-n8n.pdf"
+                   target="_blank" rel="noopener">
+                  Fiche technique <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-.mobile-nav{
-  position:fixed;
+        </div>
 
-  top:72px;
-  left:12px;
-  right:12px;
+        <div class="automation-section__more reveal">
+          <a class="btn btn--dark-outline" href="./automatisation.html">
+            Voir mes projets d'automatisation
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
 
-  z-index:99;
+      </div>
+    </section>
 
-  padding:13px;
+    <!-- =====================================================
+         EXPERTISES
+    ====================================================== -->
 
-  display:grid;
-  gap:7px;
+    <section class="expertises-section" id="expertises">
 
-  background:#0d0d0d;
+      <div class="container">
 
-  border:1px solid var(--line-dark);
-  border-radius:19px;
+        <div class="section-heading">
 
-  box-shadow:
-    0 28px 70px rgba(0,0,0,.5);
+          <div class="section-label reveal">
+            <span>03</span>
+            Expertises
+          </div>
 
-  opacity:0;
-  visibility:hidden;
+          <div>
 
-  transform:translateY(-10px);
+            <p class="eyebrow reveal">
+              Ce que je maîtrise
+            </p>
 
-  pointer-events:none;
+            <h2 class="section-title reveal">
+              Une approche
+              <span>SEO, automatisation + technique.</span>
+            </h2>
 
-  transition:
-    opacity .3s ease,
-    visibility .3s ease,
-    transform .3s ease;
-}
+          </div>
 
-.mobile-nav.is-open{
-  opacity:1;
-  visibility:visible;
+        </div>
 
-  transform:translateY(0);
 
-  pointer-events:auto;
-}
+        <div class="expertise-grid">
 
-.mobile-nav a{
-  min-height:47px;
 
-  padding:0 14px;
+          <article class="expertise-card reveal">
 
-  display:flex;
-  align-items:center;
+            <span class="expertise-card__number">
+              01
+            </span>
 
-  border-radius:12px;
+            <h3>
+              SEO technique
+            </h3>
 
-  color:#d6d6d1;
+            <p>
+              Crawl, indexation, codes HTTP, redirections,
+              robots.txt, sitemap, structure des URL et
+              optimisation technique.
+            </p>
 
-  font-size:14px;
-  font-weight:600;
+          </article>
 
-  text-align:left;
 
-  transition:
-    background .25s ease,
-    color .25s ease;
-}
+          <article
+            class="expertise-card reveal"
+            data-delay="70"
+          >
 
-.mobile-nav a:hover{
-  background:#171717;
-  color:#fff;
-}
+            <span class="expertise-card__number">
+              02
+            </span>
 
-.mobile-nav__cv{
-  justify-content:center;
+            <h3>
+              SEO On-Page
+            </h3>
 
-  background:var(--gold);
+            <p>
+              Recherche de mots-clés, intentions de recherche,
+              Titles, Meta Descriptions, structure Hn, ALT et
+              maillage interne.
+            </p>
 
-  color:#080808 !important;
-}
+          </article>
 
 
-/* =====================================================
-   BOUTONS
-===================================================== */
+          <article
+            class="expertise-card reveal"
+            data-delay="140"
+          >
 
-.btn{
-  min-height:46px;
+            <span class="expertise-card__number">
+              03
+            </span>
 
-  max-width:100%;
+            <h3>
+              Automatisation & IA
+            </h3>
 
-  padding:0 19px;
+            <p>
+              Workflows n8n, traitement de données, intégration d'IA,
+              Google Sheets, routage et automatisation de rapports.
+            </p>
 
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+          </article>
 
-  gap:8px;
 
-  border:1px solid transparent;
-  border-radius:999px;
+          <article
+            class="expertise-card reveal"
+            data-delay="210"
+          >
 
-  font-size:13px;
-  font-weight:700;
+            <span class="expertise-card__number">
+              04
+            </span>
 
-  white-space:nowrap;
+            <h3>
+              WordPress
+            </h3>
 
-  transition:
-    transform .3s var(--ease),
-    background .3s ease,
-    border-color .3s ease,
-    color .3s ease,
-    box-shadow .3s ease;
-}
+            <p>
+              PHP, thèmes enfants, HTML, CSS, JavaScript,
+              personnalisation WordPress, responsive et
+              intégration technique.
+            </p>
 
-.btn:hover{
-  transform:translateY(-3px);
-}
+          </article>
 
-.btn--primary{
-  background:var(--white);
-  color:#080808;
-}
 
-.btn--primary:hover{
-  box-shadow:
-    0 14px 36px rgba(255,255,255,.12);
-}
+          <article
+            class="expertise-card reveal"
+            data-delay="280"
+          >
 
-.btn--ghost{
-  color:var(--white);
+            <span class="expertise-card__number">
+              05
+            </span>
 
-  background:transparent;
+            <h3>
+              Analytics
+            </h3>
 
-  border-color:rgba(255,255,255,.19);
-}
+            <p>
+              Google Search Console, GA4, Google Tag Manager,
+              suivi des performances et analyse des données.
+            </p>
 
-.btn--ghost:hover{
-  border-color:rgba(255,255,255,.45);
-}
+          </article>
 
-.btn--gold{
-  background:var(--gold);
-  color:#080808;
-}
 
-.btn--gold:hover{
-  background:var(--gold-light);
+          <article
+            class="expertise-card reveal"
+            data-delay="350"
+          >
 
-  box-shadow:
-    0 16px 40px rgba(200,162,103,.16);
-}
+            <span class="expertise-card__number">
+              06
+            </span>
 
-.btn--ghost-light{
-  color:#fff;
+            <h3>
+              SEO & Web Performance
+            </h3>
 
-  background:transparent;
+            <p>
+              SEMrush, Screaming Frog, PageSpeed Insights, Core Web Vitals,
+              benchmark concurrentiel et priorisation des actions.
+            </p>
 
-  border-color:rgba(255,255,255,.18);
-}
+          </article>
 
-.btn--ghost-light:hover{
-  background:#fff;
+        </div>
 
-  border-color:#fff;
+      </div>
 
-  color:#080808;
-}
+    </section>
 
-.text-link{
-  display:inline-flex;
-  align-items:center;
 
-  gap:8px;
+   <!-- =====================================================
+     PROJETS WEB
+====================================================== -->
 
-  color:#d6d6d1;
+<section class="web-projects" id="web">
 
-  font-size:13px;
-  font-weight:600;
-}
+  <div class="container">
 
-.text-link span{
-  color:var(--gold);
+    <div class="section-heading">
 
-  transition:transform .3s ease;
-}
+      <div class="section-label section-label--light reveal">
+        <span>04</span>
+        Développement
+      </div>
 
-.text-link:hover span{
-  transform:translate(3px,-3px);
-}
+      <div>
 
+        <p class="eyebrow reveal">
+          WordPress & Web
+        </p>
 
-/* =====================================================
-   HERO HOME
-===================================================== */
+        <h2 class="web-projects__title reveal">
+          Quelques projets
+          <span>de développement web.</span>
+        </h2>
 
-.hero{
-  position:relative;
+      </div>
 
-  min-height:100svh;
+    </div>
 
-  padding:108px 0 55px;
 
-  display:flex;
-  align-items:center;
+    <div class="web-grid">
 
-  overflow:hidden;
 
-  background:
-    linear-gradient(
-      180deg,
-      #070707 0%,
-      #080808 75%,
-      #090909 100%
-    );
-}
+      <!-- =================================================
+           MASER ENGINEERING
+      ================================================== -->
 
-.hero::after{
-  content:"";
+      <article class="web-card reveal">
 
-  position:absolute;
+        <a
+          class="web-card__media"
+          href="./developpement-web.html"
+          aria-label="Découvrir le projet MASER ENGINEERING"
+        >
 
-  left:0;
-  right:0;
-  bottom:0;
+          <img
+            src="./assets/images/WhatsApp Image 2026-05-17 at 17.08.23 (1).jpeg"
+            alt="Aperçu du site corporate MASER ENGINEERING"
+            loading="lazy"
+            width="1440"
+            height="820"
+          >
 
-  height:1px;
+          <span class="web-card__media-arrow" aria-hidden="true">
+            ↗
+          </span>
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255,255,255,.13),
-      transparent
-    );
-}
+        </a>
 
-.hero__glow{
-  position:absolute;
 
-  pointer-events:none;
+        <div class="web-card__body">
 
-  border-radius:50%;
-}
+          <div class="web-card__top">
 
-.hero__glow--one{
-  width:520px;
-  height:520px;
+            <span>
+              WordPress · Refonte corporate
+            </span>
 
-  top:-180px;
-  right:-260px;
+            <span>
+              01
+            </span>
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(200,162,103,.12) 0%,
-      rgba(200,162,103,.04) 35%,
-      transparent 70%
-    );
-}
+          </div>
 
-.hero__glow--two{
-  width:420px;
-  height:420px;
 
-  left:-260px;
-  bottom:-160px;
+          <div class="web-card__content">
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.04),
-      transparent 70%
-    );
-}
+            <h3>
+              MASER ENGINEERING
+            </h3>
 
+            <p>
+              Refonte d’un site corporate WordPress : templates,
+              responsive, personnalisation, performance et SEO technique.
+              Mise en production prévue en novembre 2026.
+            </p>
 
-/* =====================================================
-   CORRECTION CENTRAGE HERO
-===================================================== */
+          </div>
 
-/*
-   Le HTML contient :
 
-   <div class="container hero__inner">
+          <div class="web-card__footer">
 
-   Donc hero__inner NE DOIT JAMAIS avoir width:100%.
-   Cette règle garde exactement le même container que
-   le header et toutes les autres sections.
-*/
+            <span>
+              WordPress · PHP · JS · CSS
+            </span>
 
-.hero > .container.hero__inner{
-  position:relative;
-  z-index:2;
+            <a href="./developpement-web.html">
+              Découvrir le projet
+              <span aria-hidden="true">→</span>
+            </a>
 
-  width:min(
-    var(--container),
-    calc(100% - (var(--page-x) * 2))
-  );
+          </div>
 
-  margin-left:auto;
-  margin-right:auto;
-}
+        </div>
 
-.hero__content{
-  width:100%;
-  max-width:1020px;
-}
+      </article>
 
-.hero__eyebrow{
-  margin-bottom:22px;
-}
 
-.hero__title{
-  width:100%;
-  max-width:1020px;
+      <!-- =================================================
+           VPCE
+      ================================================== -->
 
-  color:var(--white);
+      <article
+        class="web-card reveal"
+        data-delay="90"
+      >
 
-  font-size:clamp(
-    40px,
-    11vw,
-    60px
-  );
+        <a
+          class="web-card__media"
+          href="./developpement-web.html"
+          aria-label="Découvrir le projet VPCE"
+        >
 
-  line-height:1.01;
+          <img
+            src="./assets/images/VECT PEST.JPG"
+            alt="Aperçu du site WordPress Vect Pest Control Expert"
+            loading="lazy"
+            width="1440"
+            height="820"
+          >
 
-  letter-spacing:-.052em;
+          <span class="web-card__media-arrow" aria-hidden="true">
+            ↗
+          </span>
 
-  text-wrap:balance;
-}
+        </a>
 
-.hero__title span{
-  display:inline;
 
-  color:#ecece7;
-}
+        <div class="web-card__body">
 
-.hero__intro{
-  max-width:710px;
+          <div class="web-card__top">
 
-  margin-top:27px;
+            <span>
+              WordPress · SEO
+            </span>
 
-  color:#e7e7e2;
+            <span>
+              02
+            </span>
 
-  font-size:16px;
-  line-height:1.82;
-}
+          </div>
 
-.hero__actions{
-  margin-top:30px;
 
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+          <div class="web-card__content">
 
-  gap:11px;
-}
+            <h3>
+              VECT PEST CONTROL EXPERT
+            </h3>
 
+            <p>
+              Site WordPress vitrine combinant développement responsive,
+              optimisation des performances, architecture SEO et visibilité
+              organique.
+            </p>
 
-/* =====================================================
-   SIGNATURE HERO
-===================================================== */
+          </div>
 
-.hero__signature{
-  margin-top:52px;
-}
 
-.hero__signature-line{
-  width:100%;
-  height:1px;
+          <div class="web-card__footer">
 
-  background:rgba(255,255,255,.10);
-}
+            <span>
+              WordPress · SEO · Performance
+            </span>
 
-.hero__signature-items{
-  padding-top:18px;
+            <a href="./developpement-web.html">
+              Découvrir le projet
+              <span aria-hidden="true">→</span>
+            </a>
 
-  display:grid;
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
+          </div>
 
-  gap:18px;
-}
+        </div>
 
-.hero__signature-items div{
-  min-width:0;
+      </article>
 
-  display:flex;
-  flex-direction:column;
 
-  gap:3px;
-}
+      <!-- =================================================
+           OASIS DES PARFUMS
+      ================================================== -->
 
-.hero__signature-items span{
-  color:#c8c8c3;
+      <article
+        class="web-card reveal"
+        data-delay="180"
+      >
 
-  font-size:11px;
-  font-weight:600;
-}
+        <a
+          class="web-card__media"
+          href="./developpement-web.html"
+          aria-label="Découvrir le projet Oasis des Parfums"
+        >
 
-.hero__signature-items strong{
-  color:#bdbdb8;
+          <img
+            src="./assets/images/OASIS.JPG"
+            alt="Aperçu du site e-commerce Oasis des Parfums"
+            loading="lazy"
+            width="1440"
+            height="820"
+          >
 
-  font-family:var(--font-title);
+          <span class="web-card__media-arrow" aria-hidden="true">
+            ↗
+          </span>
 
-  font-size:12px;
-  font-weight:600;
+        </a>
 
-  letter-spacing:.055em;
-  text-transform:uppercase;
-}
 
+        <div class="web-card__body">
 
-/* =====================================================
-   PROFIL
-===================================================== */
+          <div class="web-card__top">
 
-.intro-section{
-  padding:82px 0;
+            <span>
+              WooCommerce
+            </span>
 
-  background:var(--light);
-}
+            <span>
+              03
+            </span>
 
-.intro-grid{
-  display:grid;
+          </div>
 
-  gap:32px;
-}
 
-.intro-grid > *{
-  min-width:0;
-}
+          <div class="web-card__content">
 
-.intro-content{
-  min-width:0;
-}
+            <h3>
+              Oasis des Parfums
+            </h3>
 
+            <p>
+              Création d’un site e-commerce WordPress / WooCommerce,
+              responsive et optimisé pour le parcours utilisateur.
+              Mise en production prévue en septembre 2026.
+            </p>
 
-/* =====================================================
-   ÉTUDE SEO VEDETTE
-===================================================== */
+          </div>
 
-.seo-feature{
-  padding:85px 0;
 
-  background:#090909;
-}
+          <div class="web-card__footer">
 
-.seo-feature__head{
-  margin-bottom:46px;
+            <span>
+              WordPress · WooCommerce
+            </span>
 
-  display:grid;
+            <a href="./developpement-web.html">
+              Découvrir le projet
+              <span aria-hidden="true">→</span>
+            </a>
 
-  gap:32px;
-}
+          </div>
 
-.seo-feature__head > *{
-  min-width:0;
-}
+        </div>
 
-.seo-feature__title{
-  width:100%;
-  max-width:940px;
+      </article>
 
-  color:#f7f7f4;
 
-  font-size:clamp(
-    32px,
-    8.5vw,
-    48px
-  );
+      <!-- =================================================
+           MARIO EXCLUSIVE
+      ================================================== -->
 
-  line-height:1.08;
-}
+      <article
+        class="web-card reveal"
+        data-delay="270"
+      >
 
-.seo-feature__title span{
-  display:inline;
+        <a
+          class="web-card__media"
+          href="./developpement-web.html"
+          aria-label="Découvrir le projet Mario Exclusive"
+        >
 
-  color:#ecece7;
-}
+          <img
+            src="./assets/images/mario.JPG"
+            alt="Aperçu du site e-commerce Mario Exclusive"
+            loading="lazy"
+            width="1440"
+            height="820"
+          >
 
-.seo-feature__main{
-  display:grid;
+          <span class="web-card__media-arrow" aria-hidden="true">
+            ↗
+          </span>
 
-  gap:42px;
-}
+        </a>
 
-.seo-feature__main > *{
-  min-width:0;
-}
 
-.seo-feature__content{
-  max-width:700px;
-}
+        <div class="web-card__body">
 
-.seo-project-tag{
-  width:max-content;
-  max-width:100%;
+          <div class="web-card__top">
 
-  margin-bottom:22px;
+            <span>
+              E-commerce
+            </span>
 
-  padding:7px 11px;
+            <span>
+              04
+            </span>
 
-  border:1px solid rgba(200,162,103,.31);
-  border-radius:999px;
+          </div>
 
-  color:var(--gold);
 
-  font-size:11px;
-  font-weight:700;
+          <div class="web-card__content">
 
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
+            <h3>
+              Mario Exclusive
+            </h3>
 
-.seo-feature__content > p{
-  color:#e7e7e2;
+            <p>
+              Participation à un projet e-commerce axé sur la présentation
+              produit, l’expérience utilisateur et la valorisation de
+              l’identité de marque.
+            </p>
 
-  font-size:16px;
-  line-height:1.82;
-}
+          </div>
 
-.seo-feature__skills{
-  margin-top:26px;
 
-  display:flex;
-  flex-wrap:wrap;
+          <div class="web-card__footer">
 
-  gap:8px;
-}
+            <span>
+              Web · E-commerce
+            </span>
 
-.seo-feature__skills span{
-  padding:7px 10px;
+            <a href="./developpement-web.html">
+              Découvrir le projet
+              <span aria-hidden="true">→</span>
+            </a>
 
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:999px;
+          </div>
 
-  color:#deded9;
+        </div>
 
-  font-size:11px;
-  font-weight:600;
-}
+      </article>
 
-.seo-feature__actions{
-  margin-top:31px;
+    </div>
 
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
 
-  gap:17px;
-}
+    <div class="web-projects__more reveal">
 
+      <a
+        class="btn btn--ghost-light"
+        href="./developpement-web.html"
+      >
+        Voir tous mes projets Web
+        <span aria-hidden="true">→</span>
+      </a>
 
-/* =====================================================
-   KPI SEO
-===================================================== */
+    </div>
 
-.seo-results{
-  display:grid;
-  grid-template-columns:1fr;
+  </div>
 
-  gap:11px;
-}
+</section>
 
-.result-card{
-  min-width:0;
-  min-height:165px;
 
-  padding:22px;
+    <!-- =====================================================
+         DOCUMENTS
+    ====================================================== -->
 
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+    <section class="documents-section">
 
-  background:#101010;
+      <div class="container">
 
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:18px;
+        <div class="documents-grid">
 
-  transition:
-    transform .35s var(--ease),
-    border-color .35s ease,
-    background .35s ease;
-}
+          <div>
 
-.result-card:hover{
-  transform:translateY(-4px);
+            <div class="section-label reveal">
+              <span>05</span>
+              Documents
+            </div>
 
-  border-color:rgba(200,162,103,.34);
+            <h2 class="section-title reveal">
+              Pour aller
+              <span>plus loin.</span>
+            </h2>
 
-  background:#131313;
-}
+          </div>
 
-.result-card__label{
-  color:#d8d8d3;
 
-  font-size:12px;
-  font-weight:600;
-}
+          <div class="documents-list">
 
-.result-card__value{
-  margin:17px 0 8px;
 
-  display:flex;
-  align-items:baseline;
-  flex-wrap:wrap;
+            <a
+              class="document-card reveal"
+              href="./assets/docs/SEO  GEO  Acquisition & Web Performance.pdf"
+              target="_blank"
+              rel="noopener"
+            >
 
-  gap:8px;
+              <div>
 
-  color:#ecece7;
+                <span class="document-card__type">
+                  PDF · Étude SEO
+                </span>
 
-  font-family:var(--font-title);
+                <h3>
+                  Rapport SEO complet — VPCE
+                </h3>
 
-  font-size:16px;
-}
+                <p>
+                  Audit, stratégie, optimisations techniques,
+                  SEO On-Page, Web Performance et résultats.
+                </p>
 
-.result-card__value strong{
-  color:#f5f5f1;
+              </div>
 
-  font-size:clamp(
-    28px,
-    8vw,
-    40px
-  );
+              <span class="document-card__arrow">
+                ↗
+              </span>
 
-  font-weight:600;
+            </a>
 
-  letter-spacing:-.045em;
-}
 
-.result-arrow{
-  color:var(--gold);
-}
+            <a
+              class="document-card reveal"
+              data-delay="100"
+              href="./assets/docs/SEO GEO  Web Performance.pdf"
+              target="_blank"
+              rel="noopener"
+            >
 
-.result-card small{
-  color:var(--gold);
+              <div>
 
-  font-size:11px;
-  font-weight:700;
-}
+                <span class="document-card__type">
+                  PDF · CV
+                </span>
 
+                <h3>
+                  Curriculum Vitae
+                </h3>
 
-/* =====================================================
-   EXPERTISES
-===================================================== */
+                <p>
+                  SEO, WordPress, développement web,
+                  Web Performance et Analytics.
+                </p>
 
-.expertises-section{
-  padding:85px 0;
+              </div>
 
-  background:var(--light);
-}
+              <span class="document-card__arrow">
+                ↗
+              </span>
 
-.section-heading{
-  margin-bottom:44px;
+            </a>
 
-  display:grid;
+          </div>
 
-  gap:32px;
-}
+        </div>
 
-.section-heading > *{
-  min-width:0;
-}
+      </div>
 
-.expertise-grid{
-  display:grid;
+    </section>
 
-  gap:11px;
-}
 
-.expertise-card{
-  position:relative;
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
 
-  min-width:0;
-  min-height:225px;
+    <section class="contact-section" id="contact">
 
-  padding:22px;
+      <div class="contact-glow"></div>
 
-  display:flex;
-  flex-direction:column;
+      <div class="container">
 
-  overflow:hidden;
+        <div class="contact-card reveal">
 
-  background:#faf8f4;
+          <p class="eyebrow">
+            Contact
+          </p>
 
-  border:1px solid var(--line-light);
+          <h2>
+            Un projet,
+            <span>une opportunité ?</span>
+          </h2>
 
-  transition:
-    transform .35s var(--ease),
-    background .35s ease,
-    border-color .35s ease;
-}
+          <p>
+            Je suis disponible pour échanger autour d'un projet
+            SEO/GEO, d'automatisation, de WordPress ou d'une opportunité
+            professionnelle.
+          </p>
 
-.expertise-card::after{
-  content:"";
+          <div class="contact-actions">
 
-  position:absolute;
+            <a
+              class="btn btn--gold"
+              href="mailto:severinolagassou@gmail.com"
+            >
+              Me contacter
+            </a>
 
-  left:0;
-  right:0;
-  bottom:0;
+            <a
+              class="btn btn--ghost-light"
+              href="https://github.com/SEVERIN9343"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub
+              <span aria-hidden="true">↗</span>
+            </a>
 
-  height:2px;
+            <a
+              class="btn btn--ghost-light"
+              href="https://www.linkedin.com/in/k-s%C3%A9v%C3%A9rin-ogah-lagassou-218701293/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+              <span aria-hidden="true">↗</span>
+            </a>
 
-  background:var(--gold);
+          </div>
 
-  transform:scaleX(0);
-  transform-origin:left;
+        </div>
 
-  transition:
-    transform .45s var(--ease);
-}
+      </div>
 
-.expertise-card:hover{
-  transform:translateY(-4px);
+    </section>
 
-  background:#fff;
+  </main>
 
-  border-color:#cac5bc;
-}
 
-.expertise-card:hover::after{
-  transform:scaleX(1);
-}
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
-.expertise-card__number{
-  color:#9e9991;
+  <footer class="footer">
 
-  font-size:11px;
-  font-weight:700;
-}
+    <div class="container footer__inner">
 
-.expertise-card h3{
-  margin-top:auto;
+      <div>
+        <strong>
+          OGAH Sévérin
+        </strong>
 
-  color:#151515;
+        <span>
+          SEO · GEO · Automatisation · WordPress
+        </span>
+      </div>
 
-  font-size:22px;
-  line-height:1.12;
+      <p>
+        © <span id="year"></span> — Portfolio numérique
+      </p>
 
-  letter-spacing:-.03em;
-}
+    </div>
 
-.expertise-card p{
-  margin-top:13px;
+  </footer>
 
-  color:#625f59;
+</body>
 
-  font-size:14px;
-  line-height:1.75;
-}
-
-
-/* =====================================================
-   PROJETS WEB HOME
-===================================================== */
-
-.web-projects{
-  padding:85px 0;
-  background:#080808;
-}
-
-.web-projects__title{
-  width:100%;
-  max-width:940px;
-
-  color:#f7f7f4;
-
-  font-size:clamp(32px,8.5vw,48px);
-  line-height:1.08;
-}
-
-.web-projects__title span{
-  display:inline;
-  color:#ecece7;
-}
-
-
-/* =====================================================
-   GRID
-===================================================== */
-
-.web-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:18px;
-}
-
-
-/* =====================================================
-   CARD
-===================================================== */
-
-.web-card{
-  min-width:0;
-
-  display:flex;
-  flex-direction:column;
-
-  overflow:hidden;
-
-  background:#0e0e0e;
-
-  border:1px solid rgba(255,255,255,.09);
-
-  transition:
-    transform .45s var(--ease),
-    border-color .35s ease,
-    background .35s ease;
-}
-
-.web-card:hover{
-  transform:translateY(-6px);
-
-  border-color:rgba(200,162,103,.30);
-
-  background:#111;
-}
-
-
-/* =====================================================
-   IMAGE
-===================================================== */
-
-.web-card__media{
-  position:relative;
-
-  display:block;
-
-  width:100%;
-  aspect-ratio:16 / 9;
-
-  overflow:hidden;
-
-  background:#151515;
-}
-
-.web-card__media::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  pointer-events:none;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.25),
-      transparent 45%
-    );
-
-  opacity:.65;
-
-  transition:opacity .4s ease;
-}
-
-.web-card__media img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-  object-position:center;
-
-  transform:scale(1.01);
-
-  transition:
-    transform .7s var(--ease),
-    filter .5s ease;
-}
-
-.web-card:hover .web-card__media img{
-  transform:scale(1.045);
-}
-
-.web-card:hover .web-card__media::after{
-  opacity:.25;
-}
-
-
-/* =====================================================
-   FLECHE IMAGE
-===================================================== */
-
-.web-card__media-arrow{
-  position:absolute;
-
-  top:16px;
-  right:16px;
-
-  z-index:2;
-
-  width:40px;
-  height:40px;
-
-  display:grid;
-  place-items:center;
-
-  border-radius:50%;
-
-  background:rgba(7,7,7,.82);
-
-  border:1px solid rgba(255,255,255,.13);
-
-  color:var(--gold);
-
-  font-size:16px;
-
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-
-  transition:
-    background .3s ease,
-    color .3s ease,
-    transform .35s var(--ease);
-}
-
-.web-card:hover .web-card__media-arrow{
-  transform:translate(2px,-2px);
-
-  background:var(--gold);
-
-  color:#080808;
-}
-
-
-/* =====================================================
-   CORPS
-===================================================== */
-
-.web-card__body{
-  min-height:320px;
-
-  padding:22px;
-
-  display:flex;
-  flex-direction:column;
-}
-
-.web-card__top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:20px;
-
-  color:#ecece7;
-
-  font-size:11px;
-  font-weight:700;
-
-  letter-spacing:.07em;
-  text-transform:uppercase;
-}
-
-.web-card__content{
-  margin:auto 0;
-  padding:36px 0;
-}
-
-.web-card h3{
-  max-width:520px;
-
-  color:#f2f2ee;
-
-  font-size:clamp(25px,7vw,34px);
-
-  line-height:1.08;
-}
-
-.web-card p{
-  max-width:570px;
-
-  margin-top:18px;
-
-  color:#deded9;
-
-  font-size:14px;
-  line-height:1.78;
-}
-
-
-/* =====================================================
-   FOOTER CARD
-===================================================== */
-
-.web-card__footer{
-  padding-top:20px;
-
-  border-top:1px solid rgba(255,255,255,.09);
-
-  display:flex;
-  flex-direction:column;
-
-  gap:13px;
-}
-
-.web-card__footer > span{
-  color:#ecece7;
-
-  font-size:11px;
-  font-weight:600;
-}
-
-.web-card__footer a{
-  width:max-content;
-  max-width:100%;
-
-  display:inline-flex;
-  align-items:center;
-
-  gap:7px;
-
-  color:#deded9;
-
-  font-size:12px;
-  font-weight:700;
-}
-
-.web-card__footer a span{
-  color:var(--gold);
-
-  transition:transform .3s ease;
-}
-
-.web-card__footer a:hover span{
-  transform:translateX(4px);
-}
-
-
-/* =====================================================
-   BOUTON GLOBAL
-===================================================== */
-
-.web-projects__more{
-  margin-top:34px;
-}
-
-
-/* =====================================================
-   TABLETTE
-===================================================== */
-
-@media(min-width:640px){
-
-  .web-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  .web-card__body{
-    min-height:340px;
-  }
-
-  .web-card__footer{
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-  }
-
-}
-
-
-/* =====================================================
-   DESKTOP
-===================================================== */
-
-@media(min-width:980px){
-
-  .web-grid{
-    gap:20px;
-  }
-
-  .web-card__body{
-    min-height:360px;
-    padding:27px;
-  }
-
-  .web-card__content{
-    padding:42px 0;
-  }
-
-  .web-card h3{
-    font-size:clamp(27px,2.3vw,35px);
-  }
-
-}
-
-/* =====================================================
-   DOCUMENTS
-===================================================== */
-
-.documents-section{
-  padding:85px 0;
-
-  background:var(--light);
-}
-
-.documents-grid{
-  display:grid;
-
-  gap:44px;
-}
-
-.documents-grid > *{
-  min-width:0;
-}
-
-.documents-list{
-  display:grid;
-
-  gap:11px;
-}
-
-.document-card{
-  position:relative;
-
-  min-width:0;
-
-  padding:22px;
-
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-
-  gap:20px;
-
-  background:#faf8f4;
-
-  border:1px solid var(--line-light);
-
-  transition:
-    transform .35s var(--ease),
-    background .35s ease,
-    border-color .35s ease;
-}
-
-.document-card:hover{
-  transform:translateY(-4px);
-
-  background:#fff;
-
-  border-color:#c8c2b7;
-}
-
-.document-card__type{
-  color:#9d7641;
-
-  font-size:11px;
-  font-weight:700;
-
-  letter-spacing:.09em;
-  text-transform:uppercase;
-}
-
-.document-card h3{
-  margin-top:11px;
-
-  color:#171717;
-
-  font-size:clamp(
-    20px,
-    5.5vw,
-    27px
-  );
-
-  line-height:1.15;
-}
-
-.document-card p{
-  max-width:570px;
-
-  margin-top:11px;
-
-  color:#625f59;
-
-  font-size:13px;
-  line-height:1.72;
-}
-
-.document-card__arrow{
-  flex:0 0 auto;
-
-  color:#a17d4c;
-
-  font-size:18px;
-
-  transition:transform .3s ease;
-}
-
-.document-card:hover .document-card__arrow{
-  transform:translate(3px,-3px);
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact-section{
-  position:relative;
-
-  padding:95px 0;
-
-  overflow:hidden;
-
-  background:#080808;
-}
-
-.contact-glow{
-  position:absolute;
-
-  width:600px;
-  height:600px;
-
-  left:50%;
-  top:50%;
-
-  transform:translate(-50%,-50%);
-
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(200,162,103,.09),
-      transparent 67%
-    );
-
-  pointer-events:none;
-}
-
-.contact-card{
-  position:relative;
-
-  z-index:2;
-
-  width:100%;
-  max-width:950px;
-}
-
-.contact-card h2{
-  width:100%;
-  max-width:950px;
-
-  color:#f7f7f4;
-
-  font-size:clamp(
-    37px,
-    9.5vw,
-    59px
-  );
-
-  line-height:1.04;
-}
-
-.contact-card h2 span{
-  display:inline;
-
-  color:#ecece7;
-}
-
-.contact-card > p:not(.eyebrow){
-  max-width:690px;
-
-  margin-top:25px;
-
-  color:#e3e3de;
-
-  font-size:16px;
-  line-height:1.82;
-}
-
-.contact-actions{
-  margin-top:31px;
-
-  display:flex;
-  flex-wrap:wrap;
-
-  gap:9px;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer{
-  padding:25px 0;
-
-  background:#050505;
-
-  border-top:1px solid var(--line-dark);
-}
-
-.footer__inner{
-  display:flex;
-  flex-direction:column;
-
-  gap:13px;
-}
-
-.footer__inner > div{
-  display:flex;
-  flex-direction:column;
-}
-
-.footer strong{
-  color:#e0e0dc;
-
-  font-family:var(--font-title);
-
-  font-size:13px;
-  font-weight:600;
-}
-
-.footer span,
-.footer p{
-  color:#c7c7c2;
-
-  font-size:11px;
-
-  text-align:left;
-}
-
-
-/* =====================================================
-   ANIMATIONS
-===================================================== */
-
-.js-ready .reveal{
-  opacity:0;
-
-  transform:translateY(25px);
-
-  filter:blur(2px);
-
-  transition:
-    opacity .78s var(--ease),
-    transform .78s var(--ease),
-    filter .78s ease;
-
-  will-change:
-    opacity,
-    transform;
-}
-
-.js-ready .reveal.is-visible{
-  opacity:1;
-
-  transform:none;
-
-  filter:blur(0);
-}
-
-
-/* =====================================================
-   PETITS MOBILES
-===================================================== */
-
-@media(max-width:389px){
-
-  :root{
-    --page-x:15px;
-  }
-
-  .brand__text{
-    font-size:13px;
-  }
-
-  .hero__title{
-    font-size:clamp(
-      36px,
-      10.8vw,
-      42px
-    );
-  }
-
-  .btn{
-    white-space:normal;
-    text-align:center;
-  }
-
-  .hero__actions{
-    width:100%;
-  }
-
-  .hero__actions .btn{
-    width:100%;
-  }
-
-  .contact-actions{
-    flex-direction:column;
-  }
-
-  .contact-actions .btn{
-    width:100%;
-  }
-
-}
-
-
-/* =====================================================
-   TABLETTE
-===================================================== */
-
-@media(min-width:640px){
-
-  :root{
-    --page-x:28px;
-  }
-
-  .hero__title{
-    max-width:980px;
-
-    font-size:clamp(
-      52px,
-      7.8vw,
-      67px
-    );
-  }
-
-  .hero__intro{
-    font-size:16px;
-  }
-
-  .hero__actions{
-    flex-direction:row;
-  }
-
-  .hero__signature-items{
-    grid-template-columns:
-      repeat(4,minmax(0,1fr));
-  }
-
-  .section-title{
-    font-size:clamp(
-      38px,
-      6vw,
-      52px
-    );
-  }
-
-  .seo-feature__title,
-  .web-projects__title{
-    font-size:clamp(
-      39px,
-      6vw,
-      54px
-    );
-  }
-
-  .seo-results{
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-  }
-
-  .expertise-grid{
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-  }
-
-  .web-card__footer{
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-  }
-
-  .footer__inner{
-    flex-direction:row;
-    align-items:flex-end;
-    justify-content:space-between;
-  }
-
-}
-
-
-/* =====================================================
-   DESKTOP
-===================================================== */
-
-@media(min-width:980px){
-
-  :root{
-    --page-x:42px;
-  }
-
-
-  /* HEADER */
-
-  .site-header__inner{
-    min-height:80px;
-  }
-
-  .desktop-nav{
-    display:flex;
-    align-items:center;
-
-    gap:27px;
-  }
-
-  .desktop-nav a{
-    position:relative;
-
-    padding:8px 0;
-
-    color:#deded9;
-
-    font-size:12px;
-    font-weight:600;
-
-    white-space:nowrap;
-
-    transition:color .3s ease;
-  }
-
-  .desktop-nav a::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:2px;
-
-    width:100%;
-    height:1px;
-
-    background:var(--gold);
-
-    transform:scaleX(0);
-    transform-origin:right;
-
-    transition:
-      transform .35s var(--ease);
-  }
-
-  .desktop-nav a:hover,
-  .desktop-nav a[aria-current="page"]{
-    color:#fff;
-  }
-
-  .desktop-nav a:hover::after,
-  .desktop-nav a[aria-current="page"]::after{
-    transform:scaleX(1);
-    transform-origin:left;
-  }
-
-  .header-cv{
-    min-height:39px;
-
-    padding:0 16px;
-
-    display:inline-flex;
-    align-items:center;
-
-    gap:6px;
-
-    border:1px solid rgba(255,255,255,.16);
-    border-radius:999px;
-
-    color:#deded9;
-
-    font-size:11px;
-    font-weight:700;
-
-    transition:
-      background .3s ease,
-      color .3s ease,
-      transform .3s ease;
-  }
-
-  .header-cv:hover{
-    transform:translateY(-2px);
-
-    background:#fff;
-
-    color:#080808;
-  }
-
-  .burger{
-    display:none;
-  }
-
-  .mobile-nav{
-    display:none !important;
-  }
-
-
-  /* ===================================================
-     HERO DESKTOP
-  =================================================== */
-
-  .hero{
-    min-height:100svh;
-
-    padding:
-      140px 0
-      70px;
-  }
-
-  /*
-     Important :
-     on garde EXACTEMENT le container global.
-  */
-
-  .hero > .container.hero__inner{
-    width:min(
-      var(--container),
-      calc(100% - (var(--page-x) * 2))
-    );
-
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .hero__content{
-    width:100%;
-    max-width:1010px;
-  }
-
-  .hero__title{
-    width:100%;
-    max-width:1010px;
-
-    font-size:clamp(
-      60px,
-      5.35vw,
-      74px
-    );
-
-    line-height:1.01;
-  }
-
-  .hero__intro{
-    max-width:710px;
-
-    margin-top:29px;
-
-    font-size:16px;
-  }
-
-  .hero__signature{
-    margin-top:68px;
-  }
-
-
-  /* SECTIONS */
-
-  .intro-section,
-  .seo-feature,
-  .expertises-section,
-  .web-projects,
-  .documents-section{
-    padding:125px 0;
-  }
-
-  .intro-grid,
-  .section-heading,
-  .seo-feature__head{
-    grid-template-columns:
-      210px minmax(0,1fr);
-
-    gap:65px;
-  }
-
-  .section-title{
-    max-width:980px;
-
-    font-size:clamp(
-      44px,
-      4vw,
-      58px
-    );
-  }
-
-  .seo-feature__title,
-  .web-projects__title{
-    max-width:980px;
-
-    font-size:clamp(
-      44px,
-      4.1vw,
-      59px
-    );
-  }
-
-  .seo-feature__main{
-    grid-template-columns:
-      minmax(0,.82fr)
-      minmax(0,1.18fr);
-
-    gap:70px;
-
-    align-items:start;
-  }
-
-  .result-card{
-    min-height:195px;
-
-    padding:27px;
-  }
-
-  .expertise-grid{
-    grid-template-columns:
-      repeat(3,minmax(0,1fr));
-  }
-
-  .expertise-card{
-    min-height:265px;
-
-    padding:27px;
-  }
-
-  .web-grid{
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-  }
-
-  .web-card{
-    min-height:440px;
-
-    padding:29px;
-  }
-
-  .documents-grid{
-    grid-template-columns:
-      minmax(0,.7fr)
-      minmax(0,1.3fr);
-
-    gap:80px;
-
-    align-items:start;
-  }
-
-  .document-card{
-    padding:28px;
-  }
-
-  .contact-section{
-    padding:135px 0;
-  }
-
-  .contact-card h2{
-    max-width:1000px;
-
-    font-size:clamp(
-      52px,
-      4.9vw,
-      69px
-    );
-  }
-
-}
-
-
-/* =====================================================
-   GRAND DESKTOP
-===================================================== */
-
-@media(min-width:1280px){
-
-  :root{
-    --page-x:48px;
-  }
-
-  .hero__title{
-    max-width:1010px;
-
-    font-size:74px;
-  }
-
-  .section-title{
-    font-size:58px;
-  }
-
-  .seo-feature__title,
-  .web-projects__title{
-    font-size:59px;
-  }
-
-}
-
-
-/* =====================================================
-   TRÈS GRAND ÉCRAN
-===================================================== */
-
-@media(min-width:1500px){
-
-  /*
-     Le container reste 1180px.
-     Il est automatiquement centré.
-     Donc sur un écran très large, le contenu gagne
-     naturellement une vraie marge à gauche et à droite.
-  */
-
-  .hero__content{
-    max-width:1010px;
-  }
-
-  .hero__title{
-    max-width:1010px;
-
-    font-size:74px;
-  }
-
-}
-
-
-/* =====================================================
-   ACCESSIBILITÉ
-===================================================== */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-
-    transition-duration:.01ms !important;
-
-    scroll-behavior:auto !important;
-  }
-
-  .js-ready .reveal{
-    opacity:1;
-
-    transform:none;
-
-    filter:none;
-  }
-
-}
+</html>
