@@ -714,16 +714,6 @@ p{
    CORRECTION CENTRAGE HERO
 ===================================================== */
 
-/*
-   Le HTML contient :
-
-   <div class="container hero__inner">
-
-   Donc hero__inner NE DOIT JAMAIS avoir width:100%.
-   Cette règle garde exactement le même container que
-   le header et toutes les autres sections.
-*/
-
 .hero > .container.hero__inner{
   position:relative;
   z-index:2;
@@ -742,11 +732,10 @@ p{
   max-width:1020px;
 }
 
-.hero__eyebrow{
-  margin-bottom:22px;
-}
 
-
+/* =====================================================
+   TITRE HERO — CORRECTION RETOUR À LA LIGNE
+===================================================== */
 
 .hero__title{
   width:100%;
@@ -763,21 +752,49 @@ p{
   line-height:1.01;
   letter-spacing:-.052em;
 
-  /* CORRECTION : utiliser toute la largeur avant retour à la ligne */
+  /*
+   * IMPORTANT :
+   * contrairement à "balance", wrap laisse le navigateur
+   * remplir la ligne avant de passer à la suivante.
+   */
   text-wrap:wrap;
   white-space:normal;
 
   /* Aucun mot coupé */
   word-break:normal;
   overflow-wrap:normal;
+
   hyphens:none;
   -webkit-hyphens:none;
 }
 
 .hero__title span{
   display:inline;
+
   color:#ecece7;
 }
+
+.hero__intro{
+  max-width:710px;
+
+  margin-top:27px;
+
+  color:#e7e7e2;
+
+  font-size:16px;
+  line-height:1.82;
+}
+
+.hero__actions{
+  margin-top:30px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+
+  gap:11px;
+}
+
 
 /* =====================================================
    SIGNATURE HERO
@@ -1461,7 +1478,7 @@ p{
 
 
 /* =====================================================
-   TABLETTE
+   TABLETTE WEB CARDS
 ===================================================== */
 
 @media(min-width:640px){
@@ -1484,7 +1501,7 @@ p{
 
 
 /* =====================================================
-   DESKTOP
+   DESKTOP WEB CARDS
 ===================================================== */
 
 @media(min-width:980px){
@@ -1507,6 +1524,7 @@ p{
   }
 
 }
+
 
 /* =====================================================
    DOCUMENTS
@@ -1790,12 +1808,32 @@ p{
     font-size:13px;
   }
 
+  /*
+   * HERO :
+   * taille légèrement réduite pour exploiter correctement
+   * la largeur des écrans 320px / 360px / 375px.
+   */
   .hero__title{
+    width:100%;
+    max-width:none;
+
     font-size:clamp(
-      36px,
-      10.8vw,
-      42px
+      34px,
+      10.3vw,
+      40px
     );
+
+    line-height:1.04;
+    letter-spacing:-.045em;
+
+    text-wrap:wrap;
+    white-space:normal;
+
+    word-break:normal;
+    overflow-wrap:normal;
+
+    hyphens:none;
+    -webkit-hyphens:none;
   }
 
   .btn{
@@ -1840,6 +1878,12 @@ p{
       7.8vw,
       67px
     );
+
+    /*
+     * On conserve également le retour naturel
+     * à la ligne sur tablette.
+     */
+    text-wrap:wrap;
   }
 
   .hero__intro{
@@ -2020,11 +2064,6 @@ p{
       70px;
   }
 
-  /*
-     Important :
-     on garde EXACTEMENT le container global.
-  */
-
   .hero > .container.hero__inner{
     width:min(
       var(--container),
@@ -2051,6 +2090,9 @@ p{
     );
 
     line-height:1.01;
+
+    /* Pas d'équilibrage artificiel */
+    text-wrap:wrap;
   }
 
   .hero__intro{
@@ -2189,6 +2231,8 @@ p{
     max-width:1010px;
 
     font-size:74px;
+
+    text-wrap:wrap;
   }
 
   .section-title{
@@ -2209,13 +2253,6 @@ p{
 
 @media(min-width:1500px){
 
-  /*
-     Le container reste 1180px.
-     Il est automatiquement centré.
-     Donc sur un écran très large, le contenu gagne
-     naturellement une vraie marge à gauche et à droite.
-  */
-
   .hero__content{
     max-width:1010px;
   }
@@ -2224,6 +2261,8 @@ p{
     max-width:1010px;
 
     font-size:74px;
+
+    text-wrap:wrap;
   }
 
 }
@@ -2259,6 +2298,7 @@ p{
   }
 
 }
+
 
 /* =====================================================
    HOME — AUTOMATISATION & IA
@@ -2298,7 +2338,9 @@ p{
   gap:32px;
 }
 
-.automation-section__head > *{min-width:0;}
+.automation-section__head > *{
+  min-width:0;
+}
 
 .automation-section__title{
   width:100%;
@@ -2332,7 +2374,10 @@ p{
   overflow:hidden;
   background:#faf8f4;
   border:1px solid var(--line-light);
-  transition:transform .4s var(--ease),border-color .35s ease,background .35s ease;
+  transition:
+    transform .4s var(--ease),
+    border-color .35s ease,
+    background .35s ease;
 }
 
 .automation-card:hover{
@@ -2360,57 +2405,89 @@ p{
   display:grid;
   place-items:center;
   padding:24px;
+
   background:
-    radial-gradient(circle at 75% 20%,rgba(200,162,103,.16),transparent 34%),
-    linear-gradient(135deg,#0b0b0b,#151515);
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(200,162,103,.16),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #0b0b0b,
+      #151515
+    );
+
   color:#aaa69f;
   font-size:12px;
   font-weight:600;
   text-align:center;
 }
 
-.automation-card__body{padding:22px;}
+.automation-card__body{
+  padding:22px;
+}
 
 .automation-card__top{
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   gap:18px;
+
   color:#8f6b3e;
+
   font-size:10px;
   font-weight:700;
+
   letter-spacing:.07em;
   text-transform:uppercase;
 }
 
 .automation-card h3{
   max-width:580px;
+
   margin-top:28px;
+
   color:#151515;
-  font-size:clamp(24px,7vw,34px);
+
+  font-size:clamp(
+    24px,
+    7vw,
+    34px
+  );
+
   line-height:1.08;
 }
 
 .automation-card p{
   max-width:620px;
+
   margin-top:17px;
+
   color:#625f59;
+
   font-size:14px;
   line-height:1.78;
 }
 
 .automation-card__tags{
   margin-top:23px;
+
   display:flex;
   flex-wrap:wrap;
+
   gap:7px;
 }
 
 .automation-card__tags span{
   padding:6px 9px;
+
   border:1px solid #d5d0c7;
   border-radius:999px;
+
   color:#5f5b55;
+
   font-size:10px;
   font-weight:600;
 }
@@ -2418,34 +2495,52 @@ p{
 .automation-card__actions{
   margin-top:27px;
   padding-top:21px;
+
   border-top:1px solid #dedad2;
+
   display:flex;
   flex-direction:column;
   align-items:flex-start;
+
   gap:15px;
 }
 
 .automation-card__pdf{
   display:inline-flex;
   align-items:center;
+
   gap:7px;
+
   color:#4d4943;
+
   font-size:12px;
   font-weight:700;
 }
 
 .automation-card__pdf span{
   color:#9d7641;
+
   transition:transform .3s ease;
 }
 
-.automation-card__pdf:hover span{transform:translate(3px,-3px);}
+.automation-card__pdf:hover span{
+  transform:translate(3px,-3px);
+}
 
-.automation-section__more{margin-top:34px;}
+.automation-section__more{
+  margin-top:34px;
+}
+
+
+/* =====================================================
+   AUTOMATISATION — TABLETTE
+===================================================== */
 
 @media(min-width:640px){
+
   .automation-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
   }
 
   .automation-card__actions{
@@ -2453,28 +2548,62 @@ p{
     align-items:center;
     justify-content:space-between;
   }
+
 }
 
+
+/* =====================================================
+   AUTOMATISATION — DESKTOP
+===================================================== */
+
 @media(min-width:980px){
-  .automation-section{padding:125px 0;}
+
+  .automation-section{
+    padding:125px 0;
+  }
 
   .automation-section__head{
-    grid-template-columns:210px minmax(0,1fr);
+    grid-template-columns:
+      210px minmax(0,1fr);
+
     gap:65px;
   }
 
   .automation-section__title{
-    font-size:clamp(44px,4vw,58px);
+    font-size:clamp(
+      44px,
+      4vw,
+      58px
+    );
   }
 
-  .automation-grid{gap:20px;}
-  .automation-card__body{padding:28px;}
+  .automation-grid{
+    gap:20px;
+  }
+
+  .automation-card__body{
+    padding:28px;
+  }
 
   .automation-card h3{
-    font-size:clamp(27px,2.3vw,35px);
+    font-size:clamp(
+      27px,
+      2.3vw,
+      35px
+    );
   }
+
 }
 
+
+/* =====================================================
+   AUTOMATISATION — GRAND DESKTOP
+===================================================== */
+
 @media(min-width:1280px){
-  .automation-section__title{font-size:58px;}
+
+  .automation-section__title{
+    font-size:58px;
+  }
+
 }
